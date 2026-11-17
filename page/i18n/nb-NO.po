@@ -1,0 +1,200 @@
+msgid "appName"
+msgstr "Timesignal"
+
+msgid "title"
+msgstr "TIMESIGNAL"
+
+msgid "statusOff"
+msgstr "Signal av"
+
+msgid "statusPickChannel"
+msgstr "Aktiver minst 1 kanal!"
+
+msgid "statusNext"
+msgstr "Neste:"
+
+msgid "shortBuz"
+msgstr "Sum"
+
+msgid "shortSpk"
+msgstr "Høyt"
+
+msgid "shortVib"
+msgstr "Vib"
+
+msgid "masterOn"
+msgstr "●  AKTIV (PÅ)"
+
+msgid "masterOff"
+msgstr "○  AV"
+
+msgid "channelsHeader"
+msgstr "AKTIVE KANALER"
+
+msgid "chBuzzer"
+msgstr "SUMMER"
+
+msgid "chSpeaker"
+msgstr "HØYTT."
+
+msgid "chVibrate"
+msgstr "VIBR."
+
+msgid "secBuzzer"
+msgstr "SUMMER: TONE & GJENT."
+
+msgid "secSpeaker"
+msgstr "HØYTTALER & VOLUM"
+
+msgid "secVibrate"
+msgstr "VIBRASJON: MODUS & STYRKE"
+
+msgid "secHours"
+msgstr "AKTIVE TIMER"
+
+msgid "volumePrefix"
+msgstr "Volum:"
+
+msgid "powerPrefix"
+msgstr "Styrke:"
+
+msgid "modeAllDay"
+msgstr "Modus: HELE DØGNET (24T)"
+
+msgid "modeRange"
+msgstr "Modus: TIDSROM"
+
+msgid "labelFrom"
+msgstr "FRA"
+
+msgid "labelTo"
+msgstr "TIL"
+
+msgid "btnTest"
+msgstr "TEST SIGNAL"
+
+msgid "strWeak"
+msgstr "Svak"
+
+msgid "strMedium"
+msgstr "Middels"
+
+msgid "strStrong"
+msgstr "Sterk"
+
+msgid "vib_1"
+msgstr "1/7 2x Kort"
+
+msgid "vib_2"
+msgstr "2/7 2x Krone"
+
+msgid "vib_3"
+msgstr "3/7 3x Rask"
+
+msgid "vib_4"
+msgstr "4/7 Kort+Lang"
+
+msgid "vib_5"
+msgstr "5/7 Lang+Kort"
+
+msgid "vib_6"
+msgstr "6/7 1x Enkel"
+
+msgid "vib_7"
+msgstr "7/7 System 2x"
+
+msgid "repeatsPrefix"
+msgstr "Gjenta:"
+
+msgid "hw_1"
+msgstr "1/6 Klikk"
+
+msgid "hw_2"
+msgstr "2/6 Påminn. 1"
+
+msgid "hw_3"
+msgstr "3/6 Påminn. 2"
+
+msgid "hw_4"
+msgstr "4/6 Alarm"
+
+msgid "hw_5"
+msgstr "5/6 Suksess"
+
+msgid "hw_6"
+msgstr "6/6 Varsel"
+
+msgid "spk_1"
+msgstr "1/18 Piezo 4k 500ms"
+
+msgid "spk_2"
+msgstr "2/18 Piezo 2k 500ms"
+
+msgid "spk_3"
+msgstr "3/18 Piezo 3.2k 500"
+
+msgid "spk_4"
+msgstr "4/18 Piezo 2.7k 500"
+
+msgid "spk_5"
+msgstr "5/18 Piezo 4k Skarp"
+
+msgid "spk_6"
+msgstr "6/18 Piezo Dual 500"
+
+msgid "spk_7"
+msgstr "7/18 Retro 1989"
+
+msgid "spk_8"
+msgstr "8/18 Retro Rask"
+
+msgid "spk_9"
+msgstr "9/18 Retro Stål"
+
+msgid "spk_10"
+msgstr "10/18 Vintage 2k+4k"
+
+msgid "spk_11"
+msgstr "11/18 Enkelt Pip"
+
+msgid "spk_12"
+msgstr "12/18 Trippel 3x"
+
+msgid "spk_13"
+msgstr "13/18 Dobbel 2x2"
+
+msgid "spk_14"
+msgstr "14/18 Totoner Opp"
+
+msgid "spk_15"
+msgstr "15/18 Totoner Ned"
+
+msgid "spk_16"
+msgstr "16/18 Treklang"
+
+msgid "spk_17"
+msgstr "17/18 Myk Klokke"
+
+msgid "spk_18"
+msgstr "18/18 Sonar Ping"
+
+msgid "secSilentModes"
+msgstr "DND / SØVN / KINO"
+
+msgid "dndSound"
+msgstr "Demp lyd"
+
+msgid "dndVibrate"
+msgstr "Demp vibr."
+
+msgid "warnSysBuzzer"
+msgstr "Slå på summer i Innstill."
+
+msgid "statusAlarmErr"
+msgstr "Feil ved alarmplan!"
+
+msgid "btnTestBg15s"
+msgstr "BG-TEST (15s)"
+
+msgid "statusBgTestSet"
+msgstr "BG-test om 15s..."

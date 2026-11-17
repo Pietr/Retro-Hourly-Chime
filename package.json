@@ -1,0 +1,25 @@
+{
+  "name": "retro-hourly-chime",
+  "version": "2.3.0",
+  "description": "Classic retro hourly chime for Amazfit (Zepp OS 3.0+) smartwatches with native buzzer, 18 speaker tones, haptics, and DND controls",
+  "main": "app.js",
+  "scripts": {
+    "dev": "npx --yes @zeppos/zeus-cli dev",
+    "build": "npx --yes @zeppos/zeus-cli build",
+    "preview": "npx --yes @zeppos/zeus-cli preview",
+    "preview:local": "npx --yes @zeppos/zeus-cli preview --local"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pietr/Retro-Hourly-Chime.git"
+  },
+  "homepage": "https://github.com/Pietr/Retro-Hourly-Chime#readme",
+  "bugs": {
+    "url": "https://github.com/Pietr/Retro-Hourly-Chime/issues"
+  },
+  "author": "Pietr",
+  "license": "MIT",
+  "devDependencies": {
+    "@zeppos/device-types": "^3.0.0"
+  }
+}

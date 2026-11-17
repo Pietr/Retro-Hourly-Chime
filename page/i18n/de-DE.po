@@ -1,0 +1,200 @@
+msgid "appName"
+msgstr "Stundensignal"
+
+msgid "title"
+msgstr "STUNDENSIGNAL"
+
+msgid "statusOff"
+msgstr "Signal aus"
+
+msgid "statusPickChannel"
+msgstr "Mind. 1 Kanal aktivieren!"
+
+msgid "statusNext"
+msgstr "Nächster:"
+
+msgid "shortBuz"
+msgstr "Sum"
+
+msgid "shortSpk"
+msgstr "Ton"
+
+msgid "shortVib"
+msgstr "Vib"
+
+msgid "masterOn"
+msgstr "●  AKTIV (EIN)"
+
+msgid "masterOff"
+msgstr "○  AUS"
+
+msgid "channelsHeader"
+msgstr "AKTIVE KANÄLE"
+
+msgid "chBuzzer"
+msgstr "SUMMER"
+
+msgid "chSpeaker"
+msgstr "LAUTSP."
+
+msgid "chVibrate"
+msgstr "VIBR."
+
+msgid "secBuzzer"
+msgstr "SUMMER: TON & WIEDERH."
+
+msgid "secSpeaker"
+msgstr "LAUTSPRECHER & LAUTSTÄRKE"
+
+msgid "secVibrate"
+msgstr "VIBRATION: MODUS & STÄRKE"
+
+msgid "secHours"
+msgstr "AKTIVE STUNDEN"
+
+msgid "volumePrefix"
+msgstr "Lautstärke:"
+
+msgid "powerPrefix"
+msgstr "Stärke:"
+
+msgid "modeAllDay"
+msgstr "Modus: GANZTAGS (24H)"
+
+msgid "modeRange"
+msgstr "Modus: ZEITRAUM"
+
+msgid "labelFrom"
+msgstr "VON"
+
+msgid "labelTo"
+msgstr "BIS"
+
+msgid "btnTest"
+msgstr "SIGNAL TESTEN"
+
+msgid "strWeak"
+msgstr "Leicht"
+
+msgid "strMedium"
+msgstr "Mittel"
+
+msgid "strStrong"
+msgstr "Stark"
+
+msgid "vib_1"
+msgstr "1/7 2x Kurz"
+
+msgid "vib_2"
+msgstr "2/7 2x Krone"
+
+msgid "vib_3"
+msgstr "3/7 3x Schnell"
+
+msgid "vib_4"
+msgstr "4/7 Kurz+Lang"
+
+msgid "vib_5"
+msgstr "5/7 Lang+Kurz"
+
+msgid "vib_6"
+msgstr "6/7 1x Einfach"
+
+msgid "vib_7"
+msgstr "7/7 System 2x"
+
+msgid "repeatsPrefix"
+msgstr "Wiederh.:"
+
+msgid "hw_1"
+msgstr "1/6 Klick"
+
+msgid "hw_2"
+msgstr "2/6 Hinweis 1"
+
+msgid "hw_3"
+msgstr "3/6 Hinweis 2"
+
+msgid "hw_4"
+msgstr "4/6 Alarm"
+
+msgid "hw_5"
+msgstr "5/6 Erfolg"
+
+msgid "hw_6"
+msgstr "6/6 Warnung"
+
+msgid "spk_1"
+msgstr "1/18 Piezo 4k 500ms"
+
+msgid "spk_2"
+msgstr "2/18 Piezo 2k 500ms"
+
+msgid "spk_3"
+msgstr "3/18 Piezo 3.2k 500"
+
+msgid "spk_4"
+msgstr "4/18 Piezo 2.7k 500"
+
+msgid "spk_5"
+msgstr "5/18 Piezo 4k Kurz"
+
+msgid "spk_6"
+msgstr "6/18 Piezo Dual 500"
+
+msgid "spk_7"
+msgstr "7/18 Retro 1989"
+
+msgid "spk_8"
+msgstr "8/18 Retro Schnell"
+
+msgid "spk_9"
+msgstr "9/18 Retro Stahl"
+
+msgid "spk_10"
+msgstr "10/18 Vintage 2k+4k"
+
+msgid "spk_11"
+msgstr "11/18 Einzelton"
+
+msgid "spk_12"
+msgstr "12/18 Dreifach 3x"
+
+msgid "spk_13"
+msgstr "13/18 Doppel 2x2"
+
+msgid "spk_14"
+msgstr "14/18 Zweiton Hoch"
+
+msgid "spk_15"
+msgstr "15/18 Zweiton Tief"
+
+msgid "spk_16"
+msgstr "16/18 Dreiklang"
+
+msgid "spk_17"
+msgstr "17/18 Sanfte Glocke"
+
+msgid "spk_18"
+msgstr "18/18 Sonar Ping"
+
+msgid "secSilentModes"
+msgstr "DND / SCHLAF / THEATER"
+
+msgid "dndSound"
+msgstr "Ton stumm"
+
+msgid "dndVibrate"
+msgstr "Vibr. stumm"
+
+msgid "warnSysBuzzer"
+msgstr "Buzzer in Einstellungen an"
+
+msgid "statusAlarmErr"
+msgstr "Alarm-Planungsfehler!"
+
+msgid "btnTestBg15s"
+msgstr "HG-TEST (15s)"
+
+msgid "statusBgTestSet"
+msgstr "HG-Test in 15s..."

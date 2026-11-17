@@ -1,0 +1,200 @@
+msgid "appName"
+msgstr "Satni Signal"
+
+msgid "title"
+msgstr "SATNI SIGNAL"
+
+msgid "statusOff"
+msgstr "Signal isključen"
+
+msgid "statusPickChannel"
+msgstr "Uključite bar 1 kanal!"
+
+msgid "statusNext"
+msgstr "Sledeći:"
+
+msgid "shortBuz"
+msgstr "Zuj"
+
+msgid "shortSpk"
+msgstr "Zvu"
+
+msgid "shortVib"
+msgstr "Vib"
+
+msgid "masterOn"
+msgstr "●  AKTIVAN (UKLJ)"
+
+msgid "masterOff"
+msgstr "○  ISKLJUČEN"
+
+msgid "channelsHeader"
+msgstr "AKTIVNI KANALI"
+
+msgid "chBuzzer"
+msgstr "ZUJAL."
+
+msgid "chSpeaker"
+msgstr "ZVUČNIK"
+
+msgid "chVibrate"
+msgstr "VIBR."
+
+msgid "secBuzzer"
+msgstr "ZUJALICA: TON I PONAVLJ."
+
+msgid "secSpeaker"
+msgstr "ZVUČNIK: TON I JAČINA"
+
+msgid "secVibrate"
+msgstr "VIBRACIJA: REŽIM I SNAGA"
+
+msgid "secHours"
+msgstr "AKTIVNI SATI"
+
+msgid "volumePrefix"
+msgstr "Jačina:"
+
+msgid "powerPrefix"
+msgstr "Snaga:"
+
+msgid "modeAllDay"
+msgstr "Režim: CEO DAN (24H)"
+
+msgid "modeRange"
+msgstr "Režim: OPSEG SATI"
+
+msgid "labelFrom"
+msgstr "OD"
+
+msgid "labelTo"
+msgstr "DO"
+
+msgid "btnTest"
+msgstr "TEST SIGNALA"
+
+msgid "strWeak"
+msgstr "Slaba"
+
+msgid "strMedium"
+msgstr "Srednja"
+
+msgid "strStrong"
+msgstr "Jaka"
+
+msgid "vib_1"
+msgstr "1/7 2x Kratka"
+
+msgid "vib_2"
+msgstr "2/7 2x Kruna"
+
+msgid "vib_3"
+msgstr "3/7 3x Brza"
+
+msgid "vib_4"
+msgstr "4/7 Kratka+Duga"
+
+msgid "vib_5"
+msgstr "5/7 Duga+Kratka"
+
+msgid "vib_6"
+msgstr "6/7 1x Jedna"
+
+msgid "vib_7"
+msgstr "7/7 Sistemska 2x"
+
+msgid "repeatsPrefix"
+msgstr "Ponovi:"
+
+msgid "hw_1"
+msgstr "1/6 Klik"
+
+msgid "hw_2"
+msgstr "2/6 Podset. 1"
+
+msgid "hw_3"
+msgstr "3/6 Podset. 2"
+
+msgid "hw_4"
+msgstr "4/6 Alarm"
+
+msgid "hw_5"
+msgstr "5/6 Uspeh"
+
+msgid "hw_6"
+msgstr "6/6 Upozor."
+
+msgid "spk_1"
+msgstr "1/18 Piezo 4k 500ms"
+
+msgid "spk_2"
+msgstr "2/18 Piezo 2k 500ms"
+
+msgid "spk_3"
+msgstr "3/18 Piezo 3.2k 500"
+
+msgid "spk_4"
+msgstr "4/18 Piezo 2.7k 500"
+
+msgid "spk_5"
+msgstr "5/18 Piezo 4k Oštar"
+
+msgid "spk_6"
+msgstr "6/18 Piezo Dual 500"
+
+msgid "spk_7"
+msgstr "7/18 Retro 1989"
+
+msgid "spk_8"
+msgstr "8/18 Retro Brzi"
+
+msgid "spk_9"
+msgstr "9/18 Retro Čelik"
+
+msgid "spk_10"
+msgstr "10/18 Vintage 2k+4k"
+
+msgid "spk_11"
+msgstr "11/18 Jedan Bip"
+
+msgid "spk_12"
+msgstr "12/18 Trostruki 3x"
+
+msgid "spk_13"
+msgstr "13/18 Dupli 2x2"
+
+msgid "spk_14"
+msgstr "14/18 Dvotonski Gore"
+
+msgid "spk_15"
+msgstr "15/18 Dvotonski Dole"
+
+msgid "spk_16"
+msgstr "16/18 Trozvuk"
+
+msgid "spk_17"
+msgstr "17/18 Blago Zvono"
+
+msgid "spk_18"
+msgstr "18/18 Sonar Ping"
+
+msgid "secSilentModes"
+msgstr "DND / SAN / BIOSKOP"
+
+msgid "dndSound"
+msgstr "Utišaj zvuk"
+
+msgid "dndVibrate"
+msgstr "Utišaj vibr."
+
+msgid "warnSysBuzzer"
+msgstr "Uključi zujalicu u Podeš."
+
+msgid "statusAlarmErr"
+msgstr "Greška zakazivanja alarma!"
+
+msgid "btnTestBg15s"
+msgstr "BG TEST (15s)"
+
+msgid "statusBgTestSet"
+msgstr "BG test za 15s..."

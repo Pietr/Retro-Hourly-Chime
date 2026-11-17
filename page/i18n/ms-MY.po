@@ -1,0 +1,200 @@
+msgid "appName"
+msgstr "Isyarat Setiap Jam"
+
+msgid "title"
+msgstr "ISYARAT SETIAP JAM"
+
+msgid "statusOff"
+msgstr "Isyarat dimatikan"
+
+msgid "statusPickChannel"
+msgstr "Aktifkan sekurang 1 saluran!"
+
+msgid "statusNext"
+msgstr "Seterus:"
+
+msgid "shortBuz"
+msgstr "Buz"
+
+msgid "shortSpk"
+msgstr "Spk"
+
+msgid "shortVib"
+msgstr "Get"
+
+msgid "masterOn"
+msgstr "●  AKTIF (ON)"
+
+msgid "masterOff"
+msgstr "○  MATI"
+
+msgid "channelsHeader"
+msgstr "SALURAN AKTIF"
+
+msgid "chBuzzer"
+msgstr "BUZZER"
+
+msgid "chSpeaker"
+msgstr "SPEAKER"
+
+msgid "chVibrate"
+msgstr "GETAR"
+
+msgid "secBuzzer"
+msgstr "BUZZER: NADA & ULANG"
+
+msgid "secSpeaker"
+msgstr "SPEAKER: NADA & KELANTANGAN"
+
+msgid "secVibrate"
+msgstr "GETAR: MOD & KUASA"
+
+msgid "secHours"
+msgstr "JAM AKTIF"
+
+msgid "volumePrefix"
+msgstr "Kelant.:"
+
+msgid "powerPrefix"
+msgstr "Kuasa:"
+
+msgid "modeAllDay"
+msgstr "Mod: SEPANJANG HARI"
+
+msgid "modeRange"
+msgstr "Mod: JULAT JAM"
+
+msgid "labelFrom"
+msgstr "DARI"
+
+msgid "labelTo"
+msgstr "HING"
+
+msgid "btnTest"
+msgstr "UJI ISYARAT"
+
+msgid "strWeak"
+msgstr "Lemah"
+
+msgid "strMedium"
+msgstr "Sederh."
+
+msgid "strStrong"
+msgstr "Kuat"
+
+msgid "vib_1"
+msgstr "1/7 2x Pendek"
+
+msgid "vib_2"
+msgstr "2/7 2x Mahkota"
+
+msgid "vib_3"
+msgstr "3/7 3x Pantas"
+
+msgid "vib_4"
+msgstr "4/7 Pendek+Panj."
+
+msgid "vib_5"
+msgstr "5/7 Panj.+Pendek"
+
+msgid "vib_6"
+msgstr "6/7 1x Tunggal"
+
+msgid "vib_7"
+msgstr "7/7 Sistem 2x"
+
+msgid "repeatsPrefix"
+msgstr "Ulang:"
+
+msgid "hw_1"
+msgstr "1/6 Klik"
+
+msgid "hw_2"
+msgstr "2/6 Pering. 1"
+
+msgid "hw_3"
+msgstr "3/6 Pering. 2"
+
+msgid "hw_4"
+msgstr "4/6 Penggera"
+
+msgid "hw_5"
+msgstr "5/6 Berjaya"
+
+msgid "hw_6"
+msgstr "6/6 Amaran"
+
+msgid "spk_1"
+msgstr "1/18 Piezo 4k 500ms"
+
+msgid "spk_2"
+msgstr "2/18 Piezo 2k 500ms"
+
+msgid "spk_3"
+msgstr "3/18 Piezo 3.2k 500"
+
+msgid "spk_4"
+msgstr "4/18 Piezo 2.7k 500"
+
+msgid "spk_5"
+msgstr "5/18 Piezo 4k Tajam"
+
+msgid "spk_6"
+msgstr "6/18 Piezo Dual 500"
+
+msgid "spk_7"
+msgstr "7/18 Retro 1989"
+
+msgid "spk_8"
+msgstr "8/18 Retro Pantas"
+
+msgid "spk_9"
+msgstr "9/18 Retro Keluli"
+
+msgid "spk_10"
+msgstr "10/18 Vintage 2k+4k"
+
+msgid "spk_11"
+msgstr "11/18 Bip Tunggal"
+
+msgid "spk_12"
+msgstr "12/18 Tiga Kali 3x"
+
+msgid "spk_13"
+msgstr "13/18 Berganda 2x2"
+
+msgid "spk_14"
+msgstr "14/18 Dwi Naik"
+
+msgid "spk_15"
+msgstr "15/18 Dwi Turun"
+
+msgid "spk_16"
+msgstr "16/18 3 Nada"
+
+msgid "spk_17"
+msgstr "17/18 Loceng Lembut"
+
+msgid "spk_18"
+msgstr "18/18 Sonar Ping"
+
+msgid "secSilentModes"
+msgstr "DND / TIDUR / TEATER"
+
+msgid "dndSound"
+msgstr "Senyap Audio"
+
+msgid "dndVibrate"
+msgstr "Senyap Getar"
+
+msgid "warnSysBuzzer"
+msgstr "Hidupkan Buzzer di Tetapan"
+
+msgid "statusAlarmErr"
+msgstr "Ralat jadual penggera!"
+
+msgid "btnTestBg15s"
+msgstr "UJI BG (15s)"
+
+msgid "statusBgTestSet"
+msgstr "Uji BG dlm 15s..."

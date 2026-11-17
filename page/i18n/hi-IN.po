@@ -1,0 +1,200 @@
+msgid "appName"
+msgstr "प्रति घंटा संकेत"
+
+msgid "title"
+msgstr "प्रति घंटा संकेत"
+
+msgid "statusOff"
+msgstr "संकेत बंद है"
+
+msgid "statusPickChannel"
+msgstr "कम से कम 1 चैनल चालू करें!"
+
+msgid "statusNext"
+msgstr "अगला:"
+
+msgid "shortBuz"
+msgstr "बज़र"
+
+msgid "shortSpk"
+msgstr "स्पी"
+
+msgid "shortVib"
+msgstr "कंप"
+
+msgid "masterOn"
+msgstr "●  सक्रिय (ON)"
+
+msgid "masterOff"
+msgstr "○  बंद"
+
+msgid "channelsHeader"
+msgstr "सक्रिय चैनल"
+
+msgid "chBuzzer"
+msgstr "बज़र"
+
+msgid "chSpeaker"
+msgstr "स्पीकर"
+
+msgid "chVibrate"
+msgstr "कंपन"
+
+msgid "secBuzzer"
+msgstr "बज़र: टोन और दोहराव"
+
+msgid "secSpeaker"
+msgstr "स्पीकर: ध्वनि व वॉल्यूम"
+
+msgid "secVibrate"
+msgstr "कंपन: मोड व शक्ति"
+
+msgid "secHours"
+msgstr "सक्रिय समय"
+
+msgid "volumePrefix"
+msgstr "वॉल्यूम:"
+
+msgid "powerPrefix"
+msgstr "शक्ति:"
+
+msgid "modeAllDay"
+msgstr "मोड: पूरा दिन (24H)"
+
+msgid "modeRange"
+msgstr "मोड: समय सीमा"
+
+msgid "labelFrom"
+msgstr "से"
+
+msgid "labelTo"
+msgstr "तक"
+
+msgid "btnTest"
+msgstr "परीक्षण करें"
+
+msgid "strWeak"
+msgstr "हल्का"
+
+msgid "strMedium"
+msgstr "मध्यम"
+
+msgid "strStrong"
+msgstr "तेज़"
+
+msgid "vib_1"
+msgstr "1/7 2x छोटा"
+
+msgid "vib_2"
+msgstr "2/7 2x क्राउन"
+
+msgid "vib_3"
+msgstr "3/7 3x तेज़"
+
+msgid "vib_4"
+msgstr "4/7 छोटा+लंबा"
+
+msgid "vib_5"
+msgstr "5/7 लंबा+छोटा"
+
+msgid "vib_6"
+msgstr "6/7 1x एकल"
+
+msgid "vib_7"
+msgstr "7/7 सिस्टम 2x"
+
+msgid "repeatsPrefix"
+msgstr "दोहराव:"
+
+msgid "hw_1"
+msgstr "1/6 क्लिक"
+
+msgid "hw_2"
+msgstr "2/6 रिमाइंड 1"
+
+msgid "hw_3"
+msgstr "3/6 रिमाइंड 2"
+
+msgid "hw_4"
+msgstr "4/6 अलार्म"
+
+msgid "hw_5"
+msgstr "5/6 सफल"
+
+msgid "hw_6"
+msgstr "6/6 अलर्ट"
+
+msgid "spk_1"
+msgstr "1/18 पीज़ो 4k 500ms"
+
+msgid "spk_2"
+msgstr "2/18 पीज़ो 2k 500ms"
+
+msgid "spk_3"
+msgstr "3/18 पीज़ो 3.2k 500"
+
+msgid "spk_4"
+msgstr "4/18 पीज़ो 2.7k 500"
+
+msgid "spk_5"
+msgstr "5/18 पीज़ो 4k शार्प"
+
+msgid "spk_6"
+msgstr "6/18 पीज़ो डुअल 500"
+
+msgid "spk_7"
+msgstr "7/18 रेट्रो 1989"
+
+msgid "spk_8"
+msgstr "8/18 रेट्रो फास्ट"
+
+msgid "spk_9"
+msgstr "9/18 रेट्रो स्टील"
+
+msgid "spk_10"
+msgstr "10/18 विंटेज 2k+4k"
+
+msgid "spk_11"
+msgstr "11/18 सिंगल बीप"
+
+msgid "spk_12"
+msgstr "12/18 ट्रिपल 3x"
+
+msgid "spk_13"
+msgstr "13/18 डबल 2x2"
+
+msgid "spk_14"
+msgstr "14/18 डुअल अप"
+
+msgid "spk_15"
+msgstr "15/18 डुअल डाउन"
+
+msgid "spk_16"
+msgstr "16/18 3-नोट चाइम"
+
+msgid "spk_17"
+msgstr "17/18 सॉफ्ट बेल"
+
+msgid "spk_18"
+msgstr "18/18 सोनार पिंग"
+
+msgid "secSilentModes"
+msgstr "DND / नींद / थिएटर"
+
+msgid "dndSound"
+msgstr "ध्वनि म्यूट"
+
+msgid "dndVibrate"
+msgstr "कंपन म्यूट"
+
+msgid "warnSysBuzzer"
+msgstr "सेटिंग्स में बज़र चालू करें"
+
+msgid "statusAlarmErr"
+msgstr "अलार्म शेड्यूल त्रुटि!"
+
+msgid "btnTestBg15s"
+msgstr "BG टेस्ट (15s)"
+
+msgid "statusBgTestSet"
+msgstr "15s में BG टेस्ट..."

@@ -1,0 +1,200 @@
+msgid "appName"
+msgstr "Retro Hourly Chime"
+
+msgid "title"
+msgstr "RETRO HOURLY CHIME"
+
+msgid "statusOff"
+msgstr "Chime disabled"
+
+msgid "statusPickChannel"
+msgstr "Enable at least 1 channel!"
+
+msgid "statusNext"
+msgstr "Next:"
+
+msgid "shortBuz"
+msgstr "Buz"
+
+msgid "shortSpk"
+msgstr "Spk"
+
+msgid "shortVib"
+msgstr "Vib"
+
+msgid "masterOn"
+msgstr "●  ACTIVE (ON)"
+
+msgid "masterOff"
+msgstr "○  DISABLED"
+
+msgid "channelsHeader"
+msgstr "ACTIVE CHANNELS"
+
+msgid "chBuzzer"
+msgstr "BUZZER"
+
+msgid "chSpeaker"
+msgstr "SPEAKER"
+
+msgid "chVibrate"
+msgstr "VIBR."
+
+msgid "secBuzzer"
+msgstr "BUZZER: TONE & REPEATS"
+
+msgid "secSpeaker"
+msgstr "SPEAKER: TONE & VOLUME"
+
+msgid "secVibrate"
+msgstr "VIBRATION: MODE & POWER"
+
+msgid "secHours"
+msgstr "ACTIVE HOURS"
+
+msgid "volumePrefix"
+msgstr "Volume:"
+
+msgid "powerPrefix"
+msgstr "Power:"
+
+msgid "modeAllDay"
+msgstr "Mode: ALL DAY (24H)"
+
+msgid "modeRange"
+msgstr "Mode: HOUR RANGE"
+
+msgid "labelFrom"
+msgstr "FROM"
+
+msgid "labelTo"
+msgstr "TO"
+
+msgid "btnTest"
+msgstr "TEST CHIME"
+
+msgid "strWeak"
+msgstr "Light"
+
+msgid "strMedium"
+msgstr "Medium"
+
+msgid "strStrong"
+msgstr "Strong"
+
+msgid "vib_1"
+msgstr "1/7 2x Short"
+
+msgid "vib_2"
+msgstr "2/7 2x Crown"
+
+msgid "vib_3"
+msgstr "3/7 3x Fast"
+
+msgid "vib_4"
+msgstr "4/7 Short+Long"
+
+msgid "vib_5"
+msgstr "5/7 Long+Short"
+
+msgid "vib_6"
+msgstr "6/7 1x Single"
+
+msgid "vib_7"
+msgstr "7/7 System 2x"
+
+msgid "repeatsPrefix"
+msgstr "Repeats:"
+
+msgid "hw_1"
+msgstr "1/6 Click"
+
+msgid "hw_2"
+msgstr "2/6 Remind 1"
+
+msgid "hw_3"
+msgstr "3/6 Remind 2"
+
+msgid "hw_4"
+msgstr "4/6 Alarm"
+
+msgid "hw_5"
+msgstr "5/6 Success"
+
+msgid "hw_6"
+msgstr "6/6 Alert"
+
+msgid "spk_1"
+msgstr "1/18 Piezo 4k 500ms"
+
+msgid "spk_2"
+msgstr "2/18 Piezo 2k 500ms"
+
+msgid "spk_3"
+msgstr "3/18 Piezo 3.2k 500"
+
+msgid "spk_4"
+msgstr "4/18 Piezo 2.7k 500"
+
+msgid "spk_5"
+msgstr "5/18 Piezo 4k Sharp"
+
+msgid "spk_6"
+msgstr "6/18 Piezo Dual 500"
+
+msgid "spk_7"
+msgstr "7/18 Retro 1989"
+
+msgid "spk_8"
+msgstr "8/18 Retro Quick"
+
+msgid "spk_9"
+msgstr "9/18 Retro Steel"
+
+msgid "spk_10"
+msgstr "10/18 Vintage 2k+4k"
+
+msgid "spk_11"
+msgstr "11/18 Single Crisp"
+
+msgid "spk_12"
+msgstr "12/18 Triple 3x"
+
+msgid "spk_13"
+msgstr "13/18 Double 2x2"
+
+msgid "spk_14"
+msgstr "14/18 Dual Up"
+
+msgid "spk_15"
+msgstr "15/18 Dual Down"
+
+msgid "spk_16"
+msgstr "16/18 3-Note Chime"
+
+msgid "spk_17"
+msgstr "17/18 Soft Bell"
+
+msgid "spk_18"
+msgstr "18/18 Tactical Ping"
+
+msgid "secSilentModes"
+msgstr "DND / SLEEP / THEATER"
+
+msgid "dndSound"
+msgstr "Mute Audio"
+
+msgid "dndVibrate"
+msgstr "Mute Vibr."
+
+msgid "warnSysBuzzer"
+msgstr "Enable Buzzer in Settings"
+
+msgid "statusAlarmErr"
+msgstr "Alarm schedule error!"
+
+msgid "btnTestBg15s"
+msgstr "BG TEST (15s)"
+
+msgid "statusBgTestSet"
+msgstr "BG test in 15s..."

@@ -1,0 +1,200 @@
+msgid "appName"
+msgstr "レトロ時報"
+
+msgid "title"
+msgstr "レトロ時報"
+
+msgid "statusOff"
+msgstr "時報オフ"
+
+msgid "statusPickChannel"
+msgstr "1つ以上オンにしてください"
+
+msgid "statusNext"
+msgstr "次回:"
+
+msgid "shortBuz"
+msgstr "ブザ"
+
+msgid "shortSpk"
+msgstr "スピ"
+
+msgid "shortVib"
+msgstr "振動"
+
+msgid "masterOn"
+msgstr "●  オン (稼働中)"
+
+msgid "masterOff"
+msgstr "○  オフ"
+
+msgid "channelsHeader"
+msgstr "出力チャンネル"
+
+msgid "chBuzzer"
+msgstr "ブザー"
+
+msgid "chSpeaker"
+msgstr "スピカ"
+
+msgid "chVibrate"
+msgstr "振動"
+
+msgid "secBuzzer"
+msgstr "ブザー：音色と回数"
+
+msgid "secSpeaker"
+msgstr "スピーカー：音色と音量"
+
+msgid "secVibrate"
+msgstr "振動：パターンと強さ"
+
+msgid "secHours"
+msgstr "鳴動時間帯"
+
+msgid "volumePrefix"
+msgstr "音量:"
+
+msgid "powerPrefix"
+msgstr "強さ:"
+
+msgid "modeAllDay"
+msgstr "モード：終日 (24時間)"
+
+msgid "modeRange"
+msgstr "モード：時間指定"
+
+msgid "labelFrom"
+msgstr "開始"
+
+msgid "labelTo"
+msgstr "終了"
+
+msgid "btnTest"
+msgstr "時報テスト"
+
+msgid "strWeak"
+msgstr "弱"
+
+msgid "strMedium"
+msgstr "中"
+
+msgid "strStrong"
+msgstr "強"
+
+msgid "vib_1"
+msgstr "1/7 2回短振動"
+
+msgid "vib_2"
+msgstr "2/7 2回クラウン"
+
+msgid "vib_3"
+msgstr "3/7 3回高速"
+
+msgid "vib_4"
+msgstr "4/7 短+長振動"
+
+msgid "vib_5"
+msgstr "5/7 長+短振動"
+
+msgid "vib_6"
+msgstr "6/7 1回単発"
+
+msgid "vib_7"
+msgstr "7/7 システム 2x"
+
+msgid "repeatsPrefix"
+msgstr "回数："
+
+msgid "hw_1"
+msgstr "1/6 クリック"
+
+msgid "hw_2"
+msgstr "2/6 通知 1"
+
+msgid "hw_3"
+msgstr "3/6 通知 2"
+
+msgid "hw_4"
+msgstr "4/6 アラーム"
+
+msgid "hw_5"
+msgstr "5/6 成功"
+
+msgid "hw_6"
+msgstr "6/6 警告"
+
+msgid "spk_1"
+msgstr "1/18 ピエゾ4k 500ms"
+
+msgid "spk_2"
+msgstr "2/18 ピエゾ2k 500ms"
+
+msgid "spk_3"
+msgstr "3/18 ピエゾ3.2k 500"
+
+msgid "spk_4"
+msgstr "4/18 ピエゾ2.7k 500"
+
+msgid "spk_5"
+msgstr "5/18 ピエゾ4k 短音"
+
+msgid "spk_6"
+msgstr "6/18 ピエゾ2音 500"
+
+msgid "spk_7"
+msgstr "7/18 レトロ 1989"
+
+msgid "spk_8"
+msgstr "8/18 クイック"
+
+msgid "spk_9"
+msgstr "9/18 スチール"
+
+msgid "spk_10"
+msgstr "10/18 ビンテージ"
+
+msgid "spk_11"
+msgstr "11/18 単音ビープ"
+
+msgid "spk_12"
+msgstr "12/18 トリプル 3x"
+
+msgid "spk_13"
+msgstr "13/18 ダブル 2x2"
+
+msgid "spk_14"
+msgstr "14/18 上昇2音"
+
+msgid "spk_15"
+msgstr "15/18 下降2音"
+
+msgid "spk_16"
+msgstr "16/18 3音チャイム"
+
+msgid "spk_17"
+msgstr "17/18 ソフトベル"
+
+msgid "spk_18"
+msgstr "18/18 ソナーピング"
+
+msgid "secSilentModes"
+msgstr "DND / 睡眠 / シアター"
+
+msgid "dndSound"
+msgstr "音声ミュート"
+
+msgid "dndVibrate"
+msgstr "振動ミュート"
+
+msgid "warnSysBuzzer"
+msgstr "設定でブザーを有効化"
+
+msgid "statusAlarmErr"
+msgstr "アラーム設定エラー!"
+
+msgid "btnTestBg15s"
+msgstr "BGテスト (15秒)"
+
+msgid "statusBgTestSet"
+msgstr "15秒後にBGテスト..."

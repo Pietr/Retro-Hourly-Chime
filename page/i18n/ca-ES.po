@@ -1,0 +1,200 @@
+msgid "appName"
+msgstr "Senyal Horari"
+
+msgid "title"
+msgstr "SENYAL HORARI"
+
+msgid "statusOff"
+msgstr "Senyal desactivat"
+
+msgid "statusPickChannel"
+msgstr "Activa almenys 1 canal!"
+
+msgid "statusNext"
+msgstr "Següent:"
+
+msgid "shortBuz"
+msgstr "Brun"
+
+msgid "shortSpk"
+msgstr "Alt"
+
+msgid "shortVib"
+msgstr "Vib"
+
+msgid "masterOn"
+msgstr "●  ACTIU (ON)"
+
+msgid "masterOff"
+msgstr "○  APAGAT"
+
+msgid "channelsHeader"
+msgstr "CANALS ACTIUS"
+
+msgid "chBuzzer"
+msgstr "BRUNZ."
+
+msgid "chSpeaker"
+msgstr "ALTAVEU"
+
+msgid "chVibrate"
+msgstr "VIBR."
+
+msgid "secBuzzer"
+msgstr "BRUNZIDOR: TO I REPET."
+
+msgid "secSpeaker"
+msgstr "ALTAVEU: TO I VOLUM"
+
+msgid "secVibrate"
+msgstr "VIBRACIÓ: MODE I FORÇA"
+
+msgid "secHours"
+msgstr "HORES ACTIVES"
+
+msgid "volumePrefix"
+msgstr "Volum:"
+
+msgid "powerPrefix"
+msgstr "Força:"
+
+msgid "modeAllDay"
+msgstr "Mode: TOT EL DIA (24H)"
+
+msgid "modeRange"
+msgstr "Mode: FRANJA HORÀRIA"
+
+msgid "labelFrom"
+msgstr "DE"
+
+msgid "labelTo"
+msgstr "A"
+
+msgid "btnTest"
+msgstr "PROVA EL SENYAL"
+
+msgid "strWeak"
+msgstr "Suau"
+
+msgid "strMedium"
+msgstr "Mitjana"
+
+msgid "strStrong"
+msgstr "Forta"
+
+msgid "vib_1"
+msgstr "1/7 2x Curta"
+
+msgid "vib_2"
+msgstr "2/7 2x Corona"
+
+msgid "vib_3"
+msgstr "3/7 3x Ràpida"
+
+msgid "vib_4"
+msgstr "4/7 Curta+Llarga"
+
+msgid "vib_5"
+msgstr "5/7 Llarga+Curta"
+
+msgid "vib_6"
+msgstr "6/7 1x Simple"
+
+msgid "vib_7"
+msgstr "7/7 Sistema 2x"
+
+msgid "repeatsPrefix"
+msgstr "Repet.:"
+
+msgid "hw_1"
+msgstr "1/6 Clic"
+
+msgid "hw_2"
+msgstr "2/6 Avís 1"
+
+msgid "hw_3"
+msgstr "3/6 Avís 2"
+
+msgid "hw_4"
+msgstr "4/6 Alarma"
+
+msgid "hw_5"
+msgstr "5/6 Èxit"
+
+msgid "hw_6"
+msgstr "6/6 Alerta"
+
+msgid "spk_1"
+msgstr "1/18 Piezo 4k 500ms"
+
+msgid "spk_2"
+msgstr "2/18 Piezo 2k 500ms"
+
+msgid "spk_3"
+msgstr "3/18 Piezo 3.2k 500"
+
+msgid "spk_4"
+msgstr "4/18 Piezo 2.7k 500"
+
+msgid "spk_5"
+msgstr "5/18 Piezo 4k Sec"
+
+msgid "spk_6"
+msgstr "6/18 Piezo Dual 500"
+
+msgid "spk_7"
+msgstr "7/18 Retro 1989"
+
+msgid "spk_8"
+msgstr "8/18 Retro Ràpid"
+
+msgid "spk_9"
+msgstr "9/18 Retro Acer"
+
+msgid "spk_10"
+msgstr "10/18 Vintage 2k+4k"
+
+msgid "spk_11"
+msgstr "11/18 Pit Simple"
+
+msgid "spk_12"
+msgstr "12/18 Triple 3x"
+
+msgid "spk_13"
+msgstr "13/18 Doble 2x2"
+
+msgid "spk_14"
+msgstr "14/18 Dual Amunt"
+
+msgid "spk_15"
+msgstr "15/18 Dual Avall"
+
+msgid "spk_16"
+msgstr "16/18 Tríada 3 Notes"
+
+msgid "spk_17"
+msgstr "17/18 Campana Suau"
+
+msgid "spk_18"
+msgstr "18/18 Ping Sonar"
+
+msgid "secSilentModes"
+msgstr "DND / SON / TEATRE"
+
+msgid "dndSound"
+msgstr "Silenc. àudio"
+
+msgid "dndVibrate"
+msgstr "Silenc. vibr."
+
+msgid "warnSysBuzzer"
+msgstr "Activa brunzidor a Config."
+
+msgid "statusAlarmErr"
+msgstr "Error en programar alarma!"
+
+msgid "btnTestBg15s"
+msgstr "TEST FONS (15s)"
+
+msgid "statusBgTestSet"
+msgstr "Test fons en 15s..."

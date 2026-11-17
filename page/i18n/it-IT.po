@@ -1,0 +1,200 @@
+msgid "appName"
+msgstr "Segnale Orario"
+
+msgid "title"
+msgstr "SEGNALE ORARIO"
+
+msgid "statusOff"
+msgstr "Segnale spento"
+
+msgid "statusPickChannel"
+msgstr "Attiva almeno 1 canale!"
+
+msgid "statusNext"
+msgstr "Prossimo:"
+
+msgid "shortBuz"
+msgstr "Buz"
+
+msgid "shortSpk"
+msgstr "Alt"
+
+msgid "shortVib"
+msgstr "Vib"
+
+msgid "masterOn"
+msgstr "●  ATTIVO (ON)"
+
+msgid "masterOff"
+msgstr "○  SPENTO"
+
+msgid "channelsHeader"
+msgstr "CANALI ATTIVI"
+
+msgid "chBuzzer"
+msgstr "BUZZER"
+
+msgid "chSpeaker"
+msgstr "ALTOP."
+
+msgid "chVibrate"
+msgstr "VIBR."
+
+msgid "secBuzzer"
+msgstr "BUZZER: TONO E RIPET."
+
+msgid "secSpeaker"
+msgstr "ALTOPARLANTE E VOLUME"
+
+msgid "secVibrate"
+msgstr "VIBRAZIONE: MODO E FORZA"
+
+msgid "secHours"
+msgstr "ORE ATTIVE"
+
+msgid "volumePrefix"
+msgstr "Volume:"
+
+msgid "powerPrefix"
+msgstr "Forza:"
+
+msgid "modeAllDay"
+msgstr "Modo: TUTTO IL GIORNO"
+
+msgid "modeRange"
+msgstr "Modo: FASCIA ORARIA"
+
+msgid "labelFrom"
+msgstr "DA"
+
+msgid "labelTo"
+msgstr "A"
+
+msgid "btnTest"
+msgstr "TEST SEGNALE"
+
+msgid "strWeak"
+msgstr "Leggera"
+
+msgid "strMedium"
+msgstr "Media"
+
+msgid "strStrong"
+msgstr "Forte"
+
+msgid "vib_1"
+msgstr "1/7 2x Breve"
+
+msgid "vib_2"
+msgstr "2/7 2x Corona"
+
+msgid "vib_3"
+msgstr "3/7 3x Veloce"
+
+msgid "vib_4"
+msgstr "4/7 Breve+Lunga"
+
+msgid "vib_5"
+msgstr "5/7 Lunga+Breve"
+
+msgid "vib_6"
+msgstr "6/7 1x Singola"
+
+msgid "vib_7"
+msgstr "7/7 Sistema 2x"
+
+msgid "repeatsPrefix"
+msgstr "Ripet.:"
+
+msgid "hw_1"
+msgstr "1/6 Clic"
+
+msgid "hw_2"
+msgstr "2/6 Avviso 1"
+
+msgid "hw_3"
+msgstr "3/6 Avviso 2"
+
+msgid "hw_4"
+msgstr "4/6 Allarme"
+
+msgid "hw_5"
+msgstr "5/6 Successo"
+
+msgid "hw_6"
+msgstr "6/6 Allerta"
+
+msgid "spk_1"
+msgstr "1/18 Piezo 4k 500ms"
+
+msgid "spk_2"
+msgstr "2/18 Piezo 2k 500ms"
+
+msgid "spk_3"
+msgstr "3/18 Piezo 3.2k 500"
+
+msgid "spk_4"
+msgstr "4/18 Piezo 2.7k 500"
+
+msgid "spk_5"
+msgstr "5/18 Piezo 4k Secco"
+
+msgid "spk_6"
+msgstr "6/18 Piezo Dual 500"
+
+msgid "spk_7"
+msgstr "7/18 Retrò 1989"
+
+msgid "spk_8"
+msgstr "8/18 Retrò Rapido"
+
+msgid "spk_9"
+msgstr "9/18 Retrò Acciaio"
+
+msgid "spk_10"
+msgstr "10/18 Vintage 2k+4k"
+
+msgid "spk_11"
+msgstr "11/18 Bip Singolo"
+
+msgid "spk_12"
+msgstr "12/18 Triplo 3x"
+
+msgid "spk_13"
+msgstr "13/18 Doppio 2x2"
+
+msgid "spk_14"
+msgstr "14/18 Duale Su"
+
+msgid "spk_15"
+msgstr "15/18 Duale Giù"
+
+msgid "spk_16"
+msgstr "16/18 Triade 3 Note"
+
+msgid "spk_17"
+msgstr "17/18 Campana Dolce"
+
+msgid "spk_18"
+msgstr "18/18 Ping Sonar"
+
+msgid "secSilentModes"
+msgstr "DND / SONNO / TEATRO"
+
+msgid "dndSound"
+msgstr "Muto audio"
+
+msgid "dndVibrate"
+msgstr "Muto vibr."
+
+msgid "warnSysBuzzer"
+msgstr "Attiva buzzer in Impostaz."
+
+msgid "statusAlarmErr"
+msgstr "Errore pianificazione!"
+
+msgid "btnTestBg15s"
+msgstr "TEST BG (15s)"
+
+msgid "statusBgTestSet"
+msgstr "Test BG tra 15s..."

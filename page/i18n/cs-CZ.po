@@ -1,0 +1,200 @@
+msgid "appName"
+msgstr "Hodinový signál"
+
+msgid "title"
+msgstr "HODINOVÝ SIGNÁL"
+
+msgid "statusOff"
+msgstr "Signál vypnut"
+
+msgid "statusPickChannel"
+msgstr "Zapněte alespoň 1 kanál!"
+
+msgid "statusNext"
+msgstr "Další:"
+
+msgid "shortBuz"
+msgstr "Bzu"
+
+msgid "shortSpk"
+msgstr "Rep"
+
+msgid "shortVib"
+msgstr "Vib"
+
+msgid "masterOn"
+msgstr "●  AKTIVNÍ (ZAP)"
+
+msgid "masterOff"
+msgstr "○  VYPNUTO"
+
+msgid "channelsHeader"
+msgstr "AKTIVNÍ KANÁLY"
+
+msgid "chBuzzer"
+msgstr "BZUČÁK"
+
+msgid "chSpeaker"
+msgstr "REPRO"
+
+msgid "chVibrate"
+msgstr "VIBR."
+
+msgid "secBuzzer"
+msgstr "BZUČÁK: TÓN A OPAKOV."
+
+msgid "secSpeaker"
+msgstr "REPRO: TÓN A HLASITOST"
+
+msgid "secVibrate"
+msgstr "VIBRACE: REŽIM A SÍLA"
+
+msgid "secHours"
+msgstr "AKTIVNÍ HODINY"
+
+msgid "volumePrefix"
+msgstr "Hlasitost:"
+
+msgid "powerPrefix"
+msgstr "Síla:"
+
+msgid "modeAllDay"
+msgstr "Režim: CELÝ DEN (24H)"
+
+msgid "modeRange"
+msgstr "Režim: ROZSAH HODIN"
+
+msgid "labelFrom"
+msgstr "OD"
+
+msgid "labelTo"
+msgstr "DO"
+
+msgid "btnTest"
+msgstr "TEST SIGNÁLU"
+
+msgid "strWeak"
+msgstr "Slabá"
+
+msgid "strMedium"
+msgstr "Střední"
+
+msgid "strStrong"
+msgstr "Silná"
+
+msgid "vib_1"
+msgstr "1/7 2x Krátká"
+
+msgid "vib_2"
+msgstr "2/7 2x Korunka"
+
+msgid "vib_3"
+msgstr "3/7 3x Rychlá"
+
+msgid "vib_4"
+msgstr "4/7 Krátká+Dlouhá"
+
+msgid "vib_5"
+msgstr "5/7 Dlouhá+Krátká"
+
+msgid "vib_6"
+msgstr "6/7 1x Jednoduchá"
+
+msgid "vib_7"
+msgstr "7/7 Systémová 2x"
+
+msgid "repeatsPrefix"
+msgstr "Opakov.:"
+
+msgid "hw_1"
+msgstr "1/6 Klik"
+
+msgid "hw_2"
+msgstr "2/6 Připom. 1"
+
+msgid "hw_3"
+msgstr "3/6 Připom. 2"
+
+msgid "hw_4"
+msgstr "4/6 Alarm"
+
+msgid "hw_5"
+msgstr "5/6 Úspěch"
+
+msgid "hw_6"
+msgstr "6/6 Výstraha"
+
+msgid "spk_1"
+msgstr "1/18 Piezo 4k 500ms"
+
+msgid "spk_2"
+msgstr "2/18 Piezo 2k 500ms"
+
+msgid "spk_3"
+msgstr "3/18 Piezo 3.2k 500"
+
+msgid "spk_4"
+msgstr "4/18 Piezo 2.7k 500"
+
+msgid "spk_5"
+msgstr "5/18 Piezo 4k Ostrý"
+
+msgid "spk_6"
+msgstr "6/18 Piezo Dual 500"
+
+msgid "spk_7"
+msgstr "7/18 Retro 1989"
+
+msgid "spk_8"
+msgstr "8/18 Retro Rychlý"
+
+msgid "spk_9"
+msgstr "9/18 Retro Ocel"
+
+msgid "spk_10"
+msgstr "10/18 Vintage 2k+4k"
+
+msgid "spk_11"
+msgstr "11/18 Jednoduchý"
+
+msgid "spk_12"
+msgstr "12/18 Trojitý 3x"
+
+msgid "spk_13"
+msgstr "13/18 Dvojitý 2x2"
+
+msgid "spk_14"
+msgstr "14/18 Dvoutón Nahoru"
+
+msgid "spk_15"
+msgstr "15/18 Dvoutón Dolů"
+
+msgid "spk_16"
+msgstr "16/18 Trojzvuk"
+
+msgid "spk_17"
+msgstr "17/18 Jemný Zvon"
+
+msgid "spk_18"
+msgstr "18/18 Sonar Ping"
+
+msgid "secSilentModes"
+msgstr "DND / SPÁNEK / KINO"
+
+msgid "dndSound"
+msgstr "Ztišit zvuk"
+
+msgid "dndVibrate"
+msgstr "Ztišit vibr."
+
+msgid "warnSysBuzzer"
+msgstr "Zapněte bzučák v Nastavení"
+
+msgid "statusAlarmErr"
+msgstr "Chyba plánování alarmu!"
+
+msgid "btnTestBg15s"
+msgstr "TEST POZADÍ 15s"
+
+msgid "statusBgTestSet"
+msgstr "Test pozadí za 15s..."

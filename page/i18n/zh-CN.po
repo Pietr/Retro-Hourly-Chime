@@ -1,0 +1,200 @@
+msgid "appName"
+msgstr "复古整点报时"
+
+msgid "title"
+msgstr "复古整点报时"
+
+msgid "statusOff"
+msgstr "报时已关闭"
+
+msgid "statusPickChannel"
+msgstr "请至少开启1个通道!"
+
+msgid "statusNext"
+msgstr "下次:"
+
+msgid "shortBuz"
+msgstr "蜂鸣"
+
+msgid "shortSpk"
+msgstr "扬声"
+
+msgid "shortVib"
+msgstr "振动"
+
+msgid "masterOn"
+msgstr "●  已开启 (ON)"
+
+msgid "masterOff"
+msgstr "○  已关闭"
+
+msgid "channelsHeader"
+msgstr "启用通道"
+
+msgid "chBuzzer"
+msgstr "蜂鸣器"
+
+msgid "chSpeaker"
+msgstr "扬声器"
+
+msgid "chVibrate"
+msgstr "振动"
+
+msgid "secBuzzer"
+msgstr "蜂鸣器：音调与重复"
+
+msgid "secSpeaker"
+msgstr "扬声器：音效与音量"
+
+msgid "secVibrate"
+msgstr "振动：模式与强度"
+
+msgid "secHours"
+msgstr "生效时段"
+
+msgid "volumePrefix"
+msgstr "音量:"
+
+msgid "powerPrefix"
+msgstr "强度:"
+
+msgid "modeAllDay"
+msgstr "模式：全天 (24小时)"
+
+msgid "modeRange"
+msgstr "模式：自定义时段"
+
+msgid "labelFrom"
+msgstr "开始"
+
+msgid "labelTo"
+msgstr "结束"
+
+msgid "btnTest"
+msgstr "测试报时"
+
+msgid "strWeak"
+msgstr "弱"
+
+msgid "strMedium"
+msgstr "中"
+
+msgid "strStrong"
+msgstr "强"
+
+msgid "vib_1"
+msgstr "1/7 2次短振"
+
+msgid "vib_2"
+msgstr "2/7 2次表冠"
+
+msgid "vib_3"
+msgstr "3/7 3次快振"
+
+msgid "vib_4"
+msgstr "4/7 短+长振"
+
+msgid "vib_5"
+msgstr "5/7 长+短振"
+
+msgid "vib_6"
+msgstr "6/7 单次振动"
+
+msgid "vib_7"
+msgstr "7/7 系统双振"
+
+msgid "repeatsPrefix"
+msgstr "重复："
+
+msgid "hw_1"
+msgstr "1/6 按键音"
+
+msgid "hw_2"
+msgstr "2/6 提醒 1"
+
+msgid "hw_3"
+msgstr "3/6 提醒 2"
+
+msgid "hw_4"
+msgstr "4/6 闹钟"
+
+msgid "hw_5"
+msgstr "5/6 成功"
+
+msgid "hw_6"
+msgstr "6/6 警告"
+
+msgid "spk_1"
+msgstr "1/18 压电 4k 500ms"
+
+msgid "spk_2"
+msgstr "2/18 压电 2k 500ms"
+
+msgid "spk_3"
+msgstr "3/18 压电 3.2k 500"
+
+msgid "spk_4"
+msgstr "4/18 压电 2.7k 500"
+
+msgid "spk_5"
+msgstr "5/18 压电 4k 短促"
+
+msgid "spk_6"
+msgstr "6/18 压电双音 500"
+
+msgid "spk_7"
+msgstr "7/18 经典 1989"
+
+msgid "spk_8"
+msgstr "8/18 复古快音"
+
+msgid "spk_9"
+msgstr "9/18 复古钢壳"
+
+msgid "spk_10"
+msgstr "10/18 复古双谐波"
+
+msgid "spk_11"
+msgstr "11/18 清脆单音"
+
+msgid "spk_12"
+msgstr "12/18 三连音 3x"
+
+msgid "spk_13"
+msgstr "13/18 双组 2x2"
+
+msgid "spk_14"
+msgstr "14/18 上行双音"
+
+msgid "spk_15"
+msgstr "15/18 下行双音"
+
+msgid "spk_16"
+msgstr "16/18 三音和弦"
+
+msgid "spk_17"
+msgstr "17/18 柔和铃声"
+
+msgid "spk_18"
+msgstr "18/18 声纳提示"
+
+msgid "secSilentModes"
+msgstr "勿扰 / 睡眠 / 影院"
+
+msgid "dndSound"
+msgstr "静音声音"
+
+msgid "dndVibrate"
+msgstr "静音震动"
+
+msgid "warnSysBuzzer"
+msgstr "请在手表设置中开启蜂鸣器"
+
+msgid "statusAlarmErr"
+msgstr "定时设置失败!"
+
+msgid "btnTestBg15s"
+msgstr "后台测试 (15秒)"
+
+msgid "statusBgTestSet"
+msgstr "15秒后后台测试..."

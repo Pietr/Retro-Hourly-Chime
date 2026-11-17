@@ -1,0 +1,200 @@
+msgid "appName"
+msgstr "Ωριαίο Σήμα"
+
+msgid "title"
+msgstr "ΩΡΙΑΙΟ ΣΗΜΑ"
+
+msgid "statusOff"
+msgstr "Σήμα ανενεργό"
+
+msgid "statusPickChannel"
+msgstr "Ενεργοποιήστε 1 κανάλι!"
+
+msgid "statusNext"
+msgstr "Επόμ.:"
+
+msgid "shortBuz"
+msgstr "Βομ"
+
+msgid "shortSpk"
+msgstr "Ηχ"
+
+msgid "shortVib"
+msgstr "Δον"
+
+msgid "masterOn"
+msgstr "●  ΕΝΕΡΓΟ (ON)"
+
+msgid "masterOff"
+msgstr "○  ΑΝΕΝΕΡΓΟ"
+
+msgid "channelsHeader"
+msgstr "ΕΝΕΡΓΑ ΚΑΝΑΛΙΑ"
+
+msgid "chBuzzer"
+msgstr "ΒΟΜΒΗΤ."
+
+msgid "chSpeaker"
+msgstr "ΗΧΕΙΟ"
+
+msgid "chVibrate"
+msgstr "ΔΟΝ."
+
+msgid "secBuzzer"
+msgstr "ΒΟΜΒΗΤΗΣ: ΤΟΝΟΣ & ΕΠΑΝ."
+
+msgid "secSpeaker"
+msgstr "ΗΧΕΙΟ: ΤΟΝΟΣ & ΕΝΤΑΣΗ"
+
+msgid "secVibrate"
+msgstr "ΔΟΝΗΣΗ: ΤΡΟΠΟΣ & ΙΣΧΥΣ"
+
+msgid "secHours"
+msgstr "ΕΝΕΡΓΕΣ ΩΡΕΣ"
+
+msgid "volumePrefix"
+msgstr "Ένταση:"
+
+msgid "powerPrefix"
+msgstr "Ισχύς:"
+
+msgid "modeAllDay"
+msgstr "Τρόπος: ΟΛΗ ΜΕΡΑ (24Ω)"
+
+msgid "modeRange"
+msgstr "Τρόπος: ΕΥΡΟΣ ΩΡΩΝ"
+
+msgid "labelFrom"
+msgstr "ΑΠΟ"
+
+msgid "labelTo"
+msgstr "ΕΩΣ"
+
+msgid "btnTest"
+msgstr "ΔΟΚΙΜΗ ΣΗΜΑΤΟΣ"
+
+msgid "strWeak"
+msgstr "Απαλή"
+
+msgid "strMedium"
+msgstr "Μέτρια"
+
+msgid "strStrong"
+msgstr "Δυνατή"
+
+msgid "vib_1"
+msgstr "1/7 2x Μικρή"
+
+msgid "vib_2"
+msgstr "2/7 2x Κορώνα"
+
+msgid "vib_3"
+msgstr "3/7 3x Γρήγορη"
+
+msgid "vib_4"
+msgstr "4/7 Μικρή+Μεγάλη"
+
+msgid "vib_5"
+msgstr "5/7 Μεγάλη+Μικρή"
+
+msgid "vib_6"
+msgstr "6/7 1x Μονή"
+
+msgid "vib_7"
+msgstr "7/7 Σύστημα 2x"
+
+msgid "repeatsPrefix"
+msgstr "Επανάληψη:"
+
+msgid "hw_1"
+msgstr "1/6 Κλικ"
+
+msgid "hw_2"
+msgstr "2/6 Υπενθ. 1"
+
+msgid "hw_3"
+msgstr "3/6 Υπενθ. 2"
+
+msgid "hw_4"
+msgstr "4/6 Ξυπνητ."
+
+msgid "hw_5"
+msgstr "5/6 Επιτυχία"
+
+msgid "hw_6"
+msgstr "6/6 Ειδοπ."
+
+msgid "spk_1"
+msgstr "1/18 Piezo 4k 500ms"
+
+msgid "spk_2"
+msgstr "2/18 Piezo 2k 500ms"
+
+msgid "spk_3"
+msgstr "3/18 Piezo 3.2k 500"
+
+msgid "spk_4"
+msgstr "4/18 Piezo 2.7k 500"
+
+msgid "spk_5"
+msgstr "5/18 Piezo 4k Οξύ"
+
+msgid "spk_6"
+msgstr "6/18 Piezo Dual 500"
+
+msgid "spk_7"
+msgstr "7/18 Ρετρό 1989"
+
+msgid "spk_8"
+msgstr "8/18 Ρετρό Γρήγορο"
+
+msgid "spk_9"
+msgstr "9/18 Ρετρό Ατσάλι"
+
+msgid "spk_10"
+msgstr "10/18 Vintage 2k+4k"
+
+msgid "spk_11"
+msgstr "11/18 Μονό Μπιπ"
+
+msgid "spk_12"
+msgstr "12/18 Τριπλό 3x"
+
+msgid "spk_13"
+msgstr "13/18 Διπλό 2x2"
+
+msgid "spk_14"
+msgstr "14/18 Δίτονο Πάνω"
+
+msgid "spk_15"
+msgstr "15/18 Δίτονο Κάτω"
+
+msgid "spk_16"
+msgstr "16/18 Τρίηχο"
+
+msgid "spk_17"
+msgstr "17/18 Απαλό Καμπανάκι"
+
+msgid "spk_18"
+msgstr "18/18 Σόναρ Πινγκ"
+
+msgid "secSilentModes"
+msgstr "DND / ΥΠΝΟΣ / ΘΕΑΤΡΟ"
+
+msgid "dndSound"
+msgstr "Σίγαση ήχου"
+
+msgid "dndVibrate"
+msgstr "Σίγαση δόν."
+
+msgid "warnSysBuzzer"
+msgstr "Ενεργ. βομβητή (Ρυθμίσεις)"
+
+msgid "statusAlarmErr"
+msgstr "Σφάλμα προγραμματισμού!"
+
+msgid "btnTestBg15s"
+msgstr "ΔΟΚΙΜΗ BG (15s)"
+
+msgid "statusBgTestSet"
+msgstr "Δοκιμή BG σε 15s..."

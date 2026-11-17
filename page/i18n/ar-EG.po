@@ -1,0 +1,200 @@
+msgid "appName"
+msgstr "تنبيه رأس الساعة"
+
+msgid "title"
+msgstr "تنبيه رأس الساعة"
+
+msgid "statusOff"
+msgstr "التنبيه متوقف"
+
+msgid "statusPickChannel"
+msgstr "فعّل قناة واحدة على الأقل!"
+
+msgid "statusNext"
+msgstr "التالي:"
+
+msgid "shortBuz"
+msgstr "جرس"
+
+msgid "shortSpk"
+msgstr "سماع"
+
+msgid "shortVib"
+msgstr "اهتز"
+
+msgid "masterOn"
+msgstr "●  مفعّل (ON)"
+
+msgid "masterOff"
+msgstr "○  متوقف"
+
+msgid "channelsHeader"
+msgstr "القنوات المفعّلة"
+
+msgid "chBuzzer"
+msgstr "الجرس"
+
+msgid "chSpeaker"
+msgstr "السماعة"
+
+msgid "chVibrate"
+msgstr "اهتزاز"
+
+msgid "secBuzzer"
+msgstr "الجرس: النغمة والتكرار"
+
+msgid "secSpeaker"
+msgstr "السماعة: النغمة والصوت"
+
+msgid "secVibrate"
+msgstr "الاهتزاز: النمط والقوة"
+
+msgid "secHours"
+msgstr "ساعات العمل"
+
+msgid "volumePrefix"
+msgstr "الصوت:"
+
+msgid "powerPrefix"
+msgstr "القوة:"
+
+msgid "modeAllDay"
+msgstr "الوضع: طوال اليوم 24س"
+
+msgid "modeRange"
+msgstr "الوضع: نطاق ساعات"
+
+msgid "labelFrom"
+msgstr "من"
+
+msgid "labelTo"
+msgstr "إلى"
+
+msgid "btnTest"
+msgstr "تجربة التنبيه"
+
+msgid "strWeak"
+msgstr "خفيف"
+
+msgid "strMedium"
+msgstr "متوسط"
+
+msgid "strStrong"
+msgstr "قوي"
+
+msgid "vib_1"
+msgstr "1/7 2x قصير"
+
+msgid "vib_2"
+msgstr "2/7 2x تاج"
+
+msgid "vib_3"
+msgstr "3/7 3x سريع"
+
+msgid "vib_4"
+msgstr "4/7 قصير+طويل"
+
+msgid "vib_5"
+msgstr "5/7 طويل+قصير"
+
+msgid "vib_6"
+msgstr "6/7 1x مفرد"
+
+msgid "vib_7"
+msgstr "7/7 نظام 2x"
+
+msgid "repeatsPrefix"
+msgstr "التكرار:"
+
+msgid "hw_1"
+msgstr "1/6 نقرة"
+
+msgid "hw_2"
+msgstr "2/6 تذكير 1"
+
+msgid "hw_3"
+msgstr "3/6 تذكير 2"
+
+msgid "hw_4"
+msgstr "4/6 منبه"
+
+msgid "hw_5"
+msgstr "5/6 نجاح"
+
+msgid "hw_6"
+msgstr "6/6 تنبيه"
+
+msgid "spk_1"
+msgstr "1/18 بيزو 4k 500ms"
+
+msgid "spk_2"
+msgstr "2/18 بيزو 2k 500ms"
+
+msgid "spk_3"
+msgstr "3/18 بيزو 3.2k 500"
+
+msgid "spk_4"
+msgstr "4/18 بيزو 2.7k 500"
+
+msgid "spk_5"
+msgstr "5/18 بيزو 4k حاد"
+
+msgid "spk_6"
+msgstr "6/18 بيزو ثنائي 500"
+
+msgid "spk_7"
+msgstr "7/18 ريترو 1989"
+
+msgid "spk_8"
+msgstr "8/18 ريترو سريع"
+
+msgid "spk_9"
+msgstr "9/18 ريترو فولاذ"
+
+msgid "spk_10"
+msgstr "10/18 كلاسيك 2k+4k"
+
+msgid "spk_11"
+msgstr "11/18 نقرة واحدة"
+
+msgid "spk_12"
+msgstr "12/18 ثلاثي 3x"
+
+msgid "spk_13"
+msgstr "13/18 مزدوج 2x2"
+
+msgid "spk_14"
+msgstr "14/18 نغمتان صاعد"
+
+msgid "spk_15"
+msgstr "15/18 نغمتان هابط"
+
+msgid "spk_16"
+msgstr "16/18 3 نغمات"
+
+msgid "spk_17"
+msgstr "17/18 جرس ناعم"
+
+msgid "spk_18"
+msgstr "18/18 رنين سونار"
+
+msgid "secSilentModes"
+msgstr "عدم الإزعاج / النوم / المسرح"
+
+msgid "dndSound"
+msgstr "كتم الصوت"
+
+msgid "dndVibrate"
+msgstr "كتم الاهتزاز"
+
+msgid "warnSysBuzzer"
+msgstr "فعّل الجرس في الإعدادات"
+
+msgid "statusAlarmErr"
+msgstr "خطأ في جدولة التنبيه!"
+
+msgid "btnTestBg15s"
+msgstr "اختبار خلفية 15ث"
+
+msgid "statusBgTestSet"
+msgstr "اختبار بعد 15ث..."

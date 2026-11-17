@@ -1,0 +1,91 @@
+{
+  "configVersion": "v3",
+  "app": {
+    "appId": 1136815,
+    "appName": "Retro Hourly Chime",
+    "appType": "app",
+    "version": {
+      "code": 25,
+      "name": "2.3.0"
+    },
+    "icon": "icon.png",
+    "vender": "Pietr",
+    "description": "Classic retro hourly chime for Amazfit watches with buzzer, 18 speaker tones, haptics, and DND controls"
+  },
+  "permissions": [
+    "data:os.device.info",
+    "device:os.local_storage",
+    "device:os.bg_service",
+    "device:os.alarm"
+  ],
+  "runtime": {
+    "apiVersion": {
+      "compatible": "3.0.0",
+      "target": "3.0.0",
+      "minVersion": "3.0"
+    }
+  },
+  "debug": false,
+  "targets": {
+    "gt": {
+      "module": {
+        "page": {
+          "pages": [
+            "page/gt/home/index.page"
+          ]
+        },
+        "app-service": {
+          "services": [
+            "service/hourly_chime"
+          ]
+        }
+      },
+      "platforms": [
+        {
+          "st": "r"
+        },
+        {
+          "st": "s"
+        }
+      ],
+      "designWidth": 480
+    }
+  },
+  "i18n": {
+    "en-US": { "appName": "Retro Hourly Chime" },
+    "pl-PL": { "appName": "Sygnał Godzinowy" },
+    "de-DE": { "appName": "Stundensignal" },
+    "fr-FR": { "appName": "Signal Horaire" },
+    "es-ES": { "appName": "Señal Horaria" },
+    "it-IT": { "appName": "Segnale Orario" },
+    "pt-PT": { "appName": "Sinal Horário" },
+    "pt-BR": { "appName": "Sinal Horário" },
+    "nl-NL": { "appName": "Uursignaal" },
+    "ru-RU": { "appName": "Сигнал часа" },
+    "uk-UA": { "appName": "Сигнал години" },
+    "cs-CZ": { "appName": "Hodinový signál" },
+    "sk-SK": { "appName": "Hodinový signál" },
+    "hu-HU": { "appName": "Órajelzés" },
+    "ro-RO": { "appName": "Semnal Orar" },
+    "tr-TR": { "appName": "Saatlik Sinyal" },
+    "el-GR": { "appName": "Ωριαίο Σήμα" },
+    "sv-SE": { "appName": "Timsignal" },
+    "nb-NO": { "appName": "Timesignal" },
+    "da-DK": { "appName": "Timesignal" },
+    "fi-FI": { "appName": "Tuntimerkki" },
+    "sr-RS": { "appName": "Satni Signal" },
+    "ca-ES": { "appName": "Senyal Horari" },
+    "zh-CN": { "appName": "复古整点报时" },
+    "zh-TW": { "appName": "復古整點報時" },
+    "ja-JP": { "appName": "レトロ時報" },
+    "ko-KR": { "appName": "레트로 정각 알림" },
+    "id-ID": { "appName": "Sinyal Per Jam" },
+    "ms-MY": { "appName": "Isyarat Setiap Jam" },
+    "vi-VN": { "appName": "Báo Giờ Retro" },
+    "th-TH": { "appName": "เสียงเตือนรายชั่วโมง" },
+    "ar-EG": { "appName": "تنبيه رأس الساعة" },
+    "iw-IL": { "appName": "צפצוף שעתי" },
+    "hi-IN": { "appName": "प्रति घंटा संकेत" }
+  },
+  "defaultLanguage": "en-US"
+}

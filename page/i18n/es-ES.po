@@ -1,0 +1,200 @@
+msgid "appName"
+msgstr "Señal Horaria"
+
+msgid "title"
+msgstr "SEÑAL HORARIA"
+
+msgid "statusOff"
+msgstr "Señal desactivada"
+
+msgid "statusPickChannel"
+msgstr "¡Activa al menos 1 canal!"
+
+msgid "statusNext"
+msgstr "Siguiente:"
+
+msgid "shortBuz"
+msgstr "Zumb"
+
+msgid "shortSpk"
+msgstr "Alt"
+
+msgid "shortVib"
+msgstr "Vib"
+
+msgid "masterOn"
+msgstr "●  ACTIVO (ON)"
+
+msgid "masterOff"
+msgstr "○  APAGADO"
+
+msgid "channelsHeader"
+msgstr "CANALES ACTIVOS"
+
+msgid "chBuzzer"
+msgstr "ZUMB."
+
+msgid "chSpeaker"
+msgstr "ALTAVOZ"
+
+msgid "chVibrate"
+msgstr "VIBR."
+
+msgid "secBuzzer"
+msgstr "ZUMBADOR: TONO Y REP."
+
+msgid "secSpeaker"
+msgstr "ALTAVOZ: TONO Y VOLUMEN"
+
+msgid "secVibrate"
+msgstr "VIBRACIÓN: MODO Y FUERZA"
+
+msgid "secHours"
+msgstr "HORAS ACTIVAS"
+
+msgid "volumePrefix"
+msgstr "Volumen:"
+
+msgid "powerPrefix"
+msgstr "Fuerza:"
+
+msgid "modeAllDay"
+msgstr "Modo: TODO EL DÍA (24H)"
+
+msgid "modeRange"
+msgstr "Modo: RANGO HORARIO"
+
+msgid "labelFrom"
+msgstr "DE"
+
+msgid "labelTo"
+msgstr "A"
+
+msgid "btnTest"
+msgstr "PROBAR SEÑAL"
+
+msgid "strWeak"
+msgstr "Suave"
+
+msgid "strMedium"
+msgstr "Media"
+
+msgid "strStrong"
+msgstr "Fuerte"
+
+msgid "vib_1"
+msgstr "1/7 2x Corta"
+
+msgid "vib_2"
+msgstr "2/7 2x Corona"
+
+msgid "vib_3"
+msgstr "3/7 3x Rápida"
+
+msgid "vib_4"
+msgstr "4/7 Corta+Larga"
+
+msgid "vib_5"
+msgstr "5/7 Larga+Corta"
+
+msgid "vib_6"
+msgstr "6/7 1x Simple"
+
+msgid "vib_7"
+msgstr "7/7 Sistema 2x"
+
+msgid "repeatsPrefix"
+msgstr "Repet.:"
+
+msgid "hw_1"
+msgstr "1/6 Clic"
+
+msgid "hw_2"
+msgstr "2/6 Aviso 1"
+
+msgid "hw_3"
+msgstr "3/6 Aviso 2"
+
+msgid "hw_4"
+msgstr "4/6 Alarma"
+
+msgid "hw_5"
+msgstr "5/6 Éxito"
+
+msgid "hw_6"
+msgstr "6/6 Alerta"
+
+msgid "spk_1"
+msgstr "1/18 Piezo 4k 500ms"
+
+msgid "spk_2"
+msgstr "2/18 Piezo 2k 500ms"
+
+msgid "spk_3"
+msgstr "3/18 Piezo 3.2k 500"
+
+msgid "spk_4"
+msgstr "4/18 Piezo 2.7k 500"
+
+msgid "spk_5"
+msgstr "5/18 Piezo 4k Seco"
+
+msgid "spk_6"
+msgstr "6/18 Piezo Dual 500"
+
+msgid "spk_7"
+msgstr "7/18 Retro 1989"
+
+msgid "spk_8"
+msgstr "8/18 Retro Rápido"
+
+msgid "spk_9"
+msgstr "9/18 Retro Acero"
+
+msgid "spk_10"
+msgstr "10/18 Vintage 2k+4k"
+
+msgid "spk_11"
+msgstr "11/18 Pitido Simple"
+
+msgid "spk_12"
+msgstr "12/18 Triple 3x"
+
+msgid "spk_13"
+msgstr "13/18 Doble 2x2"
+
+msgid "spk_14"
+msgstr "14/18 Dual Sube"
+
+msgid "spk_15"
+msgstr "15/18 Dual Baja"
+
+msgid "spk_16"
+msgstr "16/18 Tríada 3 Notas"
+
+msgid "spk_17"
+msgstr "17/18 Campana Suave"
+
+msgid "spk_18"
+msgstr "18/18 Ping Sonar"
+
+msgid "secSilentModes"
+msgstr "DND / SUEÑO / TEATRO"
+
+msgid "dndSound"
+msgstr "Silenc. audio"
+
+msgid "dndVibrate"
+msgstr "Silenc. vibr."
+
+msgid "warnSysBuzzer"
+msgstr "Activa zumbador en Ajustes"
+
+msgid "statusAlarmErr"
+msgstr "¡Error al programar alarma!"
+
+msgid "btnTestBg15s"
+msgstr "TEST FONDO (15s)"
+
+msgid "statusBgTestSet"
+msgstr "Test fondo en 15s..."

@@ -1,0 +1,200 @@
+msgid "appName"
+msgstr "Semnal Orar"
+
+msgid "title"
+msgstr "SEMNAL ORAR"
+
+msgid "statusOff"
+msgstr "Semnal oprit"
+
+msgid "statusPickChannel"
+msgstr "Activează cel puțin 1 canal!"
+
+msgid "statusNext"
+msgstr "Următor:"
+
+msgid "shortBuz"
+msgstr "Buz"
+
+msgid "shortSpk"
+msgstr "Dif"
+
+msgid "shortVib"
+msgstr "Vib"
+
+msgid "masterOn"
+msgstr "●  ACTIV (PORNIT)"
+
+msgid "masterOff"
+msgstr "○  OPRIT"
+
+msgid "channelsHeader"
+msgstr "CANALE ACTIVE"
+
+msgid "chBuzzer"
+msgstr "BUZZER"
+
+msgid "chSpeaker"
+msgstr "DIFUZOR"
+
+msgid "chVibrate"
+msgstr "VIBR."
+
+msgid "secBuzzer"
+msgstr "BUZZER: TON ȘI REPET."
+
+msgid "secSpeaker"
+msgstr "DIFUZOR: TON ȘI VOLUM"
+
+msgid "secVibrate"
+msgstr "VIBRAȚIE: MOD ȘI PUTERE"
+
+msgid "secHours"
+msgstr "ORE ACTIVE"
+
+msgid "volumePrefix"
+msgstr "Volum:"
+
+msgid "powerPrefix"
+msgstr "Putere:"
+
+msgid "modeAllDay"
+msgstr "Mod: TOATĂ ZIUA (24H)"
+
+msgid "modeRange"
+msgstr "Mod: INTERVAL ORAR"
+
+msgid "labelFrom"
+msgstr "DE LA"
+
+msgid "labelTo"
+msgstr "PÂNĂ"
+
+msgid "btnTest"
+msgstr "TEST SEMNAL"
+
+msgid "strWeak"
+msgstr "Slabă"
+
+msgid "strMedium"
+msgstr "Medie"
+
+msgid "strStrong"
+msgstr "Putern."
+
+msgid "vib_1"
+msgstr "1/7 2x Scurtă"
+
+msgid "vib_2"
+msgstr "2/7 2x Coroană"
+
+msgid "vib_3"
+msgstr "3/7 3x Rapidă"
+
+msgid "vib_4"
+msgstr "4/7 Scurtă+Lungă"
+
+msgid "vib_5"
+msgstr "5/7 Lungă+Scurtă"
+
+msgid "vib_6"
+msgstr "6/7 1x Simplă"
+
+msgid "vib_7"
+msgstr "7/7 Sistem 2x"
+
+msgid "repeatsPrefix"
+msgstr "Repet.:"
+
+msgid "hw_1"
+msgstr "1/6 Clic"
+
+msgid "hw_2"
+msgstr "2/6 Memento 1"
+
+msgid "hw_3"
+msgstr "3/6 Memento 2"
+
+msgid "hw_4"
+msgstr "4/6 Alarmă"
+
+msgid "hw_5"
+msgstr "5/6 Succes"
+
+msgid "hw_6"
+msgstr "6/6 Alertă"
+
+msgid "spk_1"
+msgstr "1/18 Piezo 4k 500ms"
+
+msgid "spk_2"
+msgstr "2/18 Piezo 2k 500ms"
+
+msgid "spk_3"
+msgstr "3/18 Piezo 3.2k 500"
+
+msgid "spk_4"
+msgstr "4/18 Piezo 2.7k 500"
+
+msgid "spk_5"
+msgstr "5/18 Piezo 4k Scurt"
+
+msgid "spk_6"
+msgstr "6/18 Piezo Dual 500"
+
+msgid "spk_7"
+msgstr "7/18 Retro 1989"
+
+msgid "spk_8"
+msgstr "8/18 Retro Rapid"
+
+msgid "spk_9"
+msgstr "9/18 Retro Oțel"
+
+msgid "spk_10"
+msgstr "10/18 Vintage 2k+4k"
+
+msgid "spk_11"
+msgstr "11/18 Bip Simplu"
+
+msgid "spk_12"
+msgstr "12/18 Triplu 3x"
+
+msgid "spk_13"
+msgstr "13/18 Dublu 2x2"
+
+msgid "spk_14"
+msgstr "14/18 Dual Sus"
+
+msgid "spk_15"
+msgstr "15/18 Dual Jos"
+
+msgid "spk_16"
+msgstr "16/18 Triadă 3 Note"
+
+msgid "spk_17"
+msgstr "17/18 Clopot Fin"
+
+msgid "spk_18"
+msgstr "18/18 Sonar Ping"
+
+msgid "secSilentModes"
+msgstr "DND / SOMN / TEATRU"
+
+msgid "dndSound"
+msgstr "Fără sunet"
+
+msgid "dndVibrate"
+msgstr "Fără vibr."
+
+msgid "warnSysBuzzer"
+msgstr "Activ. buzzer în Setări"
+
+msgid "statusAlarmErr"
+msgstr "Eroare programare alarmă!"
+
+msgid "btnTestBg15s"
+msgstr "TEST FUNDAL 15s"
+
+msgid "statusBgTestSet"
+msgstr "Test fundal în 15s..."

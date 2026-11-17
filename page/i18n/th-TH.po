@@ -1,0 +1,200 @@
+msgid "appName"
+msgstr "เสียงเตือนรายชั่วโมง"
+
+msgid "title"
+msgstr "เสียงเตือนรายชั่วโมง"
+
+msgid "statusOff"
+msgstr "ปิดการแจ้งเตือน"
+
+msgid "statusPickChannel"
+msgstr "เปิดอย่างน้อย 1 ช่องทาง!"
+
+msgid "statusNext"
+msgstr "ถัดไป:"
+
+msgid "shortBuz"
+msgstr "บัซ"
+
+msgid "shortSpk"
+msgstr "ลำโพง"
+
+msgid "shortVib"
+msgstr "สั่น"
+
+msgid "masterOn"
+msgstr "●  เปิดใช้งาน (ON)"
+
+msgid "masterOff"
+msgstr "○  ปิดอยู่"
+
+msgid "channelsHeader"
+msgstr "ช่องทางที่เปิด"
+
+msgid "chBuzzer"
+msgstr "บัซเซอร์"
+
+msgid "chSpeaker"
+msgstr "ลำโพง"
+
+msgid "chVibrate"
+msgstr "สั่น"
+
+msgid "secBuzzer"
+msgstr "บัซเซอร์: เสียงและซ้ำ"
+
+msgid "secSpeaker"
+msgstr "ลำโพง: เสียงและความดัง"
+
+msgid "secVibrate"
+msgstr "การสั่น: โหมดและความแรง"
+
+msgid "secHours"
+msgstr "ช่วงเวลาทำงาน"
+
+msgid "volumePrefix"
+msgstr "ระดับเสียง:"
+
+msgid "powerPrefix"
+msgstr "ความแรง:"
+
+msgid "modeAllDay"
+msgstr "โหมด: ตลอดวัน (24 ชม.)"
+
+msgid "modeRange"
+msgstr "โหมด: กำหนดช่วงเวลา"
+
+msgid "labelFrom"
+msgstr "เริ่ม"
+
+msgid "labelTo"
+msgstr "ถึง"
+
+msgid "btnTest"
+msgstr "ทดสอบเสียง"
+
+msgid "strWeak"
+msgstr "เบา"
+
+msgid "strMedium"
+msgstr "กลาง"
+
+msgid "strStrong"
+msgstr "แรง"
+
+msgid "vib_1"
+msgstr "1/7 สั้น 2x"
+
+msgid "vib_2"
+msgstr "2/7 เม็ดมะยม 2x"
+
+msgid "vib_3"
+msgstr "3/7 เร็ว 3x"
+
+msgid "vib_4"
+msgstr "4/7 สั้น+ยาว"
+
+msgid "vib_5"
+msgstr "5/7 ยาว+สั้น"
+
+msgid "vib_6"
+msgstr "6/7 สั่น 1x"
+
+msgid "vib_7"
+msgstr "7/7 ระบบ 2x"
+
+msgid "repeatsPrefix"
+msgstr "ซ้ำ:"
+
+msgid "hw_1"
+msgstr "1/6 คลิก"
+
+msgid "hw_2"
+msgstr "2/6 เตือน 1"
+
+msgid "hw_3"
+msgstr "3/6 เตือน 2"
+
+msgid "hw_4"
+msgstr "4/6 ปลุก"
+
+msgid "hw_5"
+msgstr "5/6 สำเร็จ"
+
+msgid "hw_6"
+msgstr "6/6 แจ้งเตือน"
+
+msgid "spk_1"
+msgstr "1/18 พีโซ 4k 500ms"
+
+msgid "spk_2"
+msgstr "2/18 พีโซ 2k 500ms"
+
+msgid "spk_3"
+msgstr "3/18 พีโซ 3.2k 500"
+
+msgid "spk_4"
+msgstr "4/18 พีโซ 2.7k 500"
+
+msgid "spk_5"
+msgstr "5/18 พีโซ 4k สั้น"
+
+msgid "spk_6"
+msgstr "6/18 พีโซคู่ 500"
+
+msgid "spk_7"
+msgstr "7/18 เรโทร 1989"
+
+msgid "spk_8"
+msgstr "8/18 เรโทรเร็ว"
+
+msgid "spk_9"
+msgstr "9/18 เรโทรสตีล"
+
+msgid "spk_10"
+msgstr "10/18 วินเทจ 2k+4k"
+
+msgid "spk_11"
+msgstr "11/18 บี๊บเดี่ยว"
+
+msgid "spk_12"
+msgstr "12/18 สามครั้ง 3x"
+
+msgid "spk_13"
+msgstr "13/18 สองคู่ 2x2"
+
+msgid "spk_14"
+msgstr "14/18 สองเสียงขึ้น"
+
+msgid "spk_15"
+msgstr "15/18 สองเสียงลง"
+
+msgid "spk_16"
+msgstr "16/18 สามโน้ต"
+
+msgid "spk_17"
+msgstr "17/18 กระดิ่งนุ่ม"
+
+msgid "spk_18"
+msgstr "18/18 โซนาร์ปิง"
+
+msgid "secSilentModes"
+msgstr "ห้ามรบกวน / นอน / โรงหนัง"
+
+msgid "dndSound"
+msgstr "ปิดเสียง"
+
+msgid "dndVibrate"
+msgstr "ปิดสั่น"
+
+msgid "warnSysBuzzer"
+msgstr "เปิดบัซเซอร์ในการตั้งค่า"
+
+msgid "statusAlarmErr"
+msgstr "ตั้งเวลาปลุกผิดพลาด!"
+
+msgid "btnTestBg15s"
+msgstr "ทดสอบ BG (15วิ)"
+
+msgid "statusBgTestSet"
+msgstr "ทดสอบ BG ใน 15วิ..."

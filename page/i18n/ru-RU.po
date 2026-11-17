@@ -1,0 +1,200 @@
+msgid "appName"
+msgstr "Сигнал часа"
+
+msgid "title"
+msgstr "СИГНАЛ ЧАСА"
+
+msgid "statusOff"
+msgstr "Сигнал выключен"
+
+msgid "statusPickChannel"
+msgstr "Включите хотя бы 1 канал!"
+
+msgid "statusNext"
+msgstr "След.:"
+
+msgid "shortBuz"
+msgstr "Зум"
+
+msgid "shortSpk"
+msgstr "Дин"
+
+msgid "shortVib"
+msgstr "Виб"
+
+msgid "masterOn"
+msgstr "●  АКТИВЕН (ВКЛ)"
+
+msgid "masterOff"
+msgstr "○  ВЫКЛЮЧЕН"
+
+msgid "channelsHeader"
+msgstr "АКТИВНЫЕ КАНАЛЫ"
+
+msgid "chBuzzer"
+msgstr "ЗУММЕР"
+
+msgid "chSpeaker"
+msgstr "ДИНАМИК"
+
+msgid "chVibrate"
+msgstr "ВИБРО"
+
+msgid "secBuzzer"
+msgstr "ЗУММЕР: ТОН И ПОВТОРЫ"
+
+msgid "secSpeaker"
+msgstr "ДИНАМИК: ЗВУК И ГРОМКОСТЬ"
+
+msgid "secVibrate"
+msgstr "ВИБРО: РЕЖИМ И СИЛА"
+
+msgid "secHours"
+msgstr "АКТИВНЫЕ ЧАСЫ"
+
+msgid "volumePrefix"
+msgstr "Громкость:"
+
+msgid "powerPrefix"
+msgstr "Сила:"
+
+msgid "modeAllDay"
+msgstr "Режим: КРУГЛОСУТОЧНО"
+
+msgid "modeRange"
+msgstr "Режим: ИНТЕРВАЛ ЧАСОВ"
+
+msgid "labelFrom"
+msgstr "С"
+
+msgid "labelTo"
+msgstr "ДО"
+
+msgid "btnTest"
+msgstr "ТЕСТ СИГНАЛА"
+
+msgid "strWeak"
+msgstr "Слабая"
+
+msgid "strMedium"
+msgstr "Средняя"
+
+msgid "strStrong"
+msgstr "Сильная"
+
+msgid "vib_1"
+msgstr "1/7 2x Короткая"
+
+msgid "vib_2"
+msgstr "2/7 2x Коронка"
+
+msgid "vib_3"
+msgstr "3/7 3x Быстрая"
+
+msgid "vib_4"
+msgstr "4/7 Коротк.+Длин."
+
+msgid "vib_5"
+msgstr "5/7 Длин.+Коротк."
+
+msgid "vib_6"
+msgstr "6/7 1x Одиночная"
+
+msgid "vib_7"
+msgstr "7/7 Системная 2x"
+
+msgid "repeatsPrefix"
+msgstr "Повтор:"
+
+msgid "hw_1"
+msgstr "1/6 Клик"
+
+msgid "hw_2"
+msgstr "2/6 Напом. 1"
+
+msgid "hw_3"
+msgstr "3/6 Напом. 2"
+
+msgid "hw_4"
+msgstr "4/6 Будильник"
+
+msgid "hw_5"
+msgstr "5/6 Успех"
+
+msgid "hw_6"
+msgstr "6/6 Тревога"
+
+msgid "spk_1"
+msgstr "1/18 Пьезо 4к 500мс"
+
+msgid "spk_2"
+msgstr "2/18 Пьезо 2к 500мс"
+
+msgid "spk_3"
+msgstr "3/18 Пьезо 3.2к 500"
+
+msgid "spk_4"
+msgstr "4/18 Пьезо 2.7к 500"
+
+msgid "spk_5"
+msgstr "5/18 Пьезо 4к Резк."
+
+msgid "spk_6"
+msgstr "6/18 Пьезо Дуал 500"
+
+msgid "spk_7"
+msgstr "7/18 Ретро 1989"
+
+msgid "spk_8"
+msgstr "8/18 Ретро Быстрый"
+
+msgid "spk_9"
+msgstr "9/18 Ретро Сталь"
+
+msgid "spk_10"
+msgstr "10/18 Винтаж 2к+4к"
+
+msgid "spk_11"
+msgstr "11/18 Одиночный"
+
+msgid "spk_12"
+msgstr "12/18 Тройной 3x"
+
+msgid "spk_13"
+msgstr "13/18 Двойной 2x2"
+
+msgid "spk_14"
+msgstr "14/18 Двутон Вверх"
+
+msgid "spk_15"
+msgstr "15/18 Двутон Вниз"
+
+msgid "spk_16"
+msgstr "16/18 Трезвучие"
+
+msgid "spk_17"
+msgstr "17/18 Мягкий Звон"
+
+msgid "spk_18"
+msgstr "18/18 Сонар Пинг"
+
+msgid "secSilentModes"
+msgstr "DND / СОН / ТЕАТР"
+
+msgid "dndSound"
+msgstr "Без звука"
+
+msgid "dndVibrate"
+msgstr "Без вибро"
+
+msgid "warnSysBuzzer"
+msgstr "Вкл. зуммер в настройках"
+
+msgid "statusAlarmErr"
+msgstr "Ошибка расписания!"
+
+msgid "btnTestBg15s"
+msgstr "ФОН ТЕСТ (15с)"
+
+msgid "statusBgTestSet"
+msgstr "Фон. тест через 15с..."

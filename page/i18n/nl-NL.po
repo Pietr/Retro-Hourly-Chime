@@ -1,0 +1,200 @@
+msgid "appName"
+msgstr "Uursignaal"
+
+msgid "title"
+msgstr "UURSIGNAAL"
+
+msgid "statusOff"
+msgstr "Signaal uit"
+
+msgid "statusPickChannel"
+msgstr "Schakel min. 1 kanaal in!"
+
+msgid "statusNext"
+msgstr "Volgende:"
+
+msgid "shortBuz"
+msgstr "Zoe"
+
+msgid "shortSpk"
+msgstr "Spr"
+
+msgid "shortVib"
+msgstr "Tril"
+
+msgid "masterOn"
+msgstr "●  ACTIEF (AAN)"
+
+msgid "masterOff"
+msgstr "○  UIT"
+
+msgid "channelsHeader"
+msgstr "ACTIEVE KANALEN"
+
+msgid "chBuzzer"
+msgstr "ZOEMER"
+
+msgid "chSpeaker"
+msgstr "SPEAKER"
+
+msgid "chVibrate"
+msgstr "TRIL."
+
+msgid "secBuzzer"
+msgstr "ZOEMER: TOON & HERH."
+
+msgid "secSpeaker"
+msgstr "SPEAKER: TOON & VOLUME"
+
+msgid "secVibrate"
+msgstr "TRILLEN: MODUS & KRACHT"
+
+msgid "secHours"
+msgstr "ACTIEVE UREN"
+
+msgid "volumePrefix"
+msgstr "Volume:"
+
+msgid "powerPrefix"
+msgstr "Kracht:"
+
+msgid "modeAllDay"
+msgstr "Modus: HELE DAG (24U)"
+
+msgid "modeRange"
+msgstr "Modus: TIJDVAK"
+
+msgid "labelFrom"
+msgstr "VAN"
+
+msgid "labelTo"
+msgstr "TOT"
+
+msgid "btnTest"
+msgstr "TEST SIGNAAL"
+
+msgid "strWeak"
+msgstr "Licht"
+
+msgid "strMedium"
+msgstr "Normaal"
+
+msgid "strStrong"
+msgstr "Sterk"
+
+msgid "vib_1"
+msgstr "1/7 2x Kort"
+
+msgid "vib_2"
+msgstr "2/7 2x Kroon"
+
+msgid "vib_3"
+msgstr "3/7 3x Snel"
+
+msgid "vib_4"
+msgstr "4/7 Kort+Lang"
+
+msgid "vib_5"
+msgstr "5/7 Lang+Kort"
+
+msgid "vib_6"
+msgstr "6/7 1x Enkel"
+
+msgid "vib_7"
+msgstr "7/7 Systeem 2x"
+
+msgid "repeatsPrefix"
+msgstr "Herhaal:"
+
+msgid "hw_1"
+msgstr "1/6 Klik"
+
+msgid "hw_2"
+msgstr "2/6 Melding 1"
+
+msgid "hw_3"
+msgstr "3/6 Melding 2"
+
+msgid "hw_4"
+msgstr "4/6 Alarm"
+
+msgid "hw_5"
+msgstr "5/6 Succes"
+
+msgid "hw_6"
+msgstr "6/6 Alert"
+
+msgid "spk_1"
+msgstr "1/18 Piëzo 4k 500ms"
+
+msgid "spk_2"
+msgstr "2/18 Piëzo 2k 500ms"
+
+msgid "spk_3"
+msgstr "3/18 Piëzo 3.2k 500"
+
+msgid "spk_4"
+msgstr "4/18 Piëzo 2.7k 500"
+
+msgid "spk_5"
+msgstr "5/18 Piëzo 4k Kort"
+
+msgid "spk_6"
+msgstr "6/18 Piëzo Dual 500"
+
+msgid "spk_7"
+msgstr "7/18 Retro 1989"
+
+msgid "spk_8"
+msgstr "8/18 Retro Snel"
+
+msgid "spk_9"
+msgstr "9/18 Retro Staal"
+
+msgid "spk_10"
+msgstr "10/18 Vintage 2k+4k"
+
+msgid "spk_11"
+msgstr "11/18 Enkele Piep"
+
+msgid "spk_12"
+msgstr "12/18 Drievoudig 3x"
+
+msgid "spk_13"
+msgstr "13/18 Dubbel 2x2"
+
+msgid "spk_14"
+msgstr "14/18 Twee Omhoog"
+
+msgid "spk_15"
+msgstr "15/18 Twee Omlaag"
+
+msgid "spk_16"
+msgstr "16/18 Drieklank"
+
+msgid "spk_17"
+msgstr "17/18 Zachte Bel"
+
+msgid "spk_18"
+msgstr "18/18 Sonar Ping"
+
+msgid "secSilentModes"
+msgstr "DND / SLAAP / THEATER"
+
+msgid "dndSound"
+msgstr "Geluid uit"
+
+msgid "dndVibrate"
+msgstr "Tril uit"
+
+msgid "warnSysBuzzer"
+msgstr "Zet zoemer aan in Instell."
+
+msgid "statusAlarmErr"
+msgstr "Fout bij alarm plannen!"
+
+msgid "btnTestBg15s"
+msgstr "BG TEST (15s)"
+
+msgid "statusBgTestSet"
+msgstr "BG-test over 15s..."

@@ -1,0 +1,200 @@
+msgid "appName"
+msgstr "Órajelzés"
+
+msgid "title"
+msgstr "ÓRAJELZÉS"
+
+msgid "statusOff"
+msgstr "Jelzés kikapcsolva"
+
+msgid "statusPickChannel"
+msgstr "Kapcsolj be min. 1 csatornát!"
+
+msgid "statusNext"
+msgstr "Következő:"
+
+msgid "shortBuz"
+msgstr "Züm"
+
+msgid "shortSpk"
+msgstr "Han"
+
+msgid "shortVib"
+msgstr "Rez"
+
+msgid "masterOn"
+msgstr "●  AKTÍV (BE)"
+
+msgid "masterOff"
+msgstr "○  KIKAPCSOLVA"
+
+msgid "channelsHeader"
+msgstr "AKTÍV CSATORNÁK"
+
+msgid "chBuzzer"
+msgstr "ZÜMM."
+
+msgid "chSpeaker"
+msgstr "HANGSZ."
+
+msgid "chVibrate"
+msgstr "REZG."
+
+msgid "secBuzzer"
+msgstr "CSIPOGÓ: HANG ÉS ISM."
+
+msgid "secSpeaker"
+msgstr "HANGSZÓRÓ & HANGERŐ"
+
+msgid "secVibrate"
+msgstr "REZGÉS: MÓD & ERŐSSÉG"
+
+msgid "secHours"
+msgstr "AKTÍV ÓRÁK"
+
+msgid "volumePrefix"
+msgstr "Hangerő:"
+
+msgid "powerPrefix"
+msgstr "Erő:"
+
+msgid "modeAllDay"
+msgstr "Mód: EGÉSZ NAP (24Ó)"
+
+msgid "modeRange"
+msgstr "Mód: IDŐINTERVALLUM"
+
+msgid "labelFrom"
+msgstr "TÓL"
+
+msgid "labelTo"
+msgstr "IG"
+
+msgid "btnTest"
+msgstr "JELZÉS TESZT"
+
+msgid "strWeak"
+msgstr "Gyenge"
+
+msgid "strMedium"
+msgstr "Közepes"
+
+msgid "strStrong"
+msgstr "Erős"
+
+msgid "vib_1"
+msgstr "1/7 2x Rövid"
+
+msgid "vib_2"
+msgstr "2/7 2x Korona"
+
+msgid "vib_3"
+msgstr "3/7 3x Gyors"
+
+msgid "vib_4"
+msgstr "4/7 Rövid+Hosszú"
+
+msgid "vib_5"
+msgstr "5/7 Hosszú+Rövid"
+
+msgid "vib_6"
+msgstr "6/7 1x Egyszeri"
+
+msgid "vib_7"
+msgstr "7/7 Rendszer 2x"
+
+msgid "repeatsPrefix"
+msgstr "Ismétlés:"
+
+msgid "hw_1"
+msgstr "1/6 Katt"
+
+msgid "hw_2"
+msgstr "2/6 Emlék. 1"
+
+msgid "hw_3"
+msgstr "3/6 Emlék. 2"
+
+msgid "hw_4"
+msgstr "4/6 Riasztás"
+
+msgid "hw_5"
+msgstr "5/6 Siker"
+
+msgid "hw_6"
+msgstr "6/6 Jelzés"
+
+msgid "spk_1"
+msgstr "1/18 Piezo 4k 500ms"
+
+msgid "spk_2"
+msgstr "2/18 Piezo 2k 500ms"
+
+msgid "spk_3"
+msgstr "3/18 Piezo 3.2k 500"
+
+msgid "spk_4"
+msgstr "4/18 Piezo 2.7k 500"
+
+msgid "spk_5"
+msgstr "5/18 Piezo 4k Éles"
+
+msgid "spk_6"
+msgstr "6/18 Piezo Dual 500"
+
+msgid "spk_7"
+msgstr "7/18 Retro 1989"
+
+msgid "spk_8"
+msgstr "8/18 Retro Gyors"
+
+msgid "spk_9"
+msgstr "9/18 Retro Acél"
+
+msgid "spk_10"
+msgstr "10/18 Vintage 2k+4k"
+
+msgid "spk_11"
+msgstr "11/18 Egyetlen Bip"
+
+msgid "spk_12"
+msgstr "12/18 Hármas 3x"
+
+msgid "spk_13"
+msgstr "13/18 Dupla 2x2"
+
+msgid "spk_14"
+msgstr "14/18 Kettős Fel"
+
+msgid "spk_15"
+msgstr "15/18 Kettős Le"
+
+msgid "spk_16"
+msgstr "16/18 Hármashangzat"
+
+msgid "spk_17"
+msgstr "17/18 Lágy Harang"
+
+msgid "spk_18"
+msgstr "18/18 Szonár Ping"
+
+msgid "secSilentModes"
+msgstr "DND / ALVÁS / MOZI"
+
+msgid "dndSound"
+msgstr "Hang némít."
+
+msgid "dndVibrate"
+msgstr "Rezgés ném."
+
+msgid "warnSysBuzzer"
+msgstr "Kapcsold be a csipogót!"
+
+msgid "statusAlarmErr"
+msgstr "Riasztás ütemezési hiba!"
+
+msgid "btnTestBg15s"
+msgstr "HÁTTÉR TESZT 15s"
+
+msgid "statusBgTestSet"
+msgstr "Háttérteszt 15 mp..."

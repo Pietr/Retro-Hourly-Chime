@@ -1,0 +1,200 @@
+msgid "appName"
+msgstr "Sygnał Godzinowy"
+
+msgid "title"
+msgstr "SYGNAŁ GODZINOWY"
+
+msgid "statusOff"
+msgstr "Sygnał wyłączony"
+
+msgid "statusPickChannel"
+msgstr "Włącz co najmniej 1 kanał!"
+
+msgid "statusNext"
+msgstr "Następny:"
+
+msgid "shortBuz"
+msgstr "Buz"
+
+msgid "shortSpk"
+msgstr "Głoś"
+
+msgid "shortVib"
+msgstr "Wibr"
+
+msgid "masterOn"
+msgstr "●  AKTYWNY (WŁ)"
+
+msgid "masterOff"
+msgstr "○  WYŁĄCZONY"
+
+msgid "channelsHeader"
+msgstr "AKTYWNE KANAŁY"
+
+msgid "chBuzzer"
+msgstr "BUZZER"
+
+msgid "chSpeaker"
+msgstr "GŁOŚNIK"
+
+msgid "chVibrate"
+msgstr "WIBR."
+
+msgid "secBuzzer"
+msgstr "BUZZER: TON I POWTÓRZENIA"
+
+msgid "secSpeaker"
+msgstr "GŁOŚNIK: WARIANT I GŁOŚNOŚĆ"
+
+msgid "secVibrate"
+msgstr "WIBRACJA: TRYB I MOC"
+
+msgid "secHours"
+msgstr "GODZINY DZIAŁANIA"
+
+msgid "volumePrefix"
+msgstr "Głośność:"
+
+msgid "powerPrefix"
+msgstr "Moc:"
+
+msgid "modeAllDay"
+msgstr "Tryb: CAŁA DOBA (24H)"
+
+msgid "modeRange"
+msgstr "Tryb: ZAKRES GODZIN"
+
+msgid "labelFrom"
+msgstr "OD"
+
+msgid "labelTo"
+msgstr "DO"
+
+msgid "btnTest"
+msgstr "TEST SYGNAŁU"
+
+msgid "strWeak"
+msgstr "Słaba"
+
+msgid "strMedium"
+msgstr "Średnia"
+
+msgid "strStrong"
+msgstr "Mocna"
+
+msgid "vib_1"
+msgstr "1/7 2x Krótka"
+
+msgid "vib_2"
+msgstr "2/7 2x Koronka"
+
+msgid "vib_3"
+msgstr "3/7 3x Szybka"
+
+msgid "vib_4"
+msgstr "4/7 Krótka+Długa"
+
+msgid "vib_5"
+msgstr "5/7 Długa+Krótka"
+
+msgid "vib_6"
+msgstr "6/7 1x Pojedyncza"
+
+msgid "vib_7"
+msgstr "7/7 Systemowa 2x"
+
+msgid "repeatsPrefix"
+msgstr "Powtórz:"
+
+msgid "hw_1"
+msgstr "1/6 Klik"
+
+msgid "hw_2"
+msgstr "2/6 Przypom. 1"
+
+msgid "hw_3"
+msgstr "3/6 Przypom. 2"
+
+msgid "hw_4"
+msgstr "4/6 Alarm"
+
+msgid "hw_5"
+msgstr "5/6 Sukces"
+
+msgid "hw_6"
+msgstr "6/6 Alert"
+
+msgid "spk_1"
+msgstr "1/18 Piezo 4k 500ms"
+
+msgid "spk_2"
+msgstr "2/18 Piezo 2k 500ms"
+
+msgid "spk_3"
+msgstr "3/18 Piezo 3.2k 500"
+
+msgid "spk_4"
+msgstr "4/18 Piezo 2.7k 500"
+
+msgid "spk_5"
+msgstr "5/18 Piezo 4k Ostry"
+
+msgid "spk_6"
+msgstr "6/18 Piezo Dual 500"
+
+msgid "spk_7"
+msgstr "7/18 Retro 1989"
+
+msgid "spk_8"
+msgstr "8/18 Retro Szybki"
+
+msgid "spk_9"
+msgstr "9/18 Retro Stalowy"
+
+msgid "spk_10"
+msgstr "10/18 Vintage 2k+4k"
+
+msgid "spk_11"
+msgstr "11/18 Pojedynczy"
+
+msgid "spk_12"
+msgstr "12/18 Potrójny 3x"
+
+msgid "spk_13"
+msgstr "13/18 Podwójny 2x2"
+
+msgid "spk_14"
+msgstr "14/18 Dwuton W Górę"
+
+msgid "spk_15"
+msgstr "15/18 Dwuton W Dół"
+
+msgid "spk_16"
+msgstr "16/18 Trójdźwięk"
+
+msgid "spk_17"
+msgstr "17/18 Miękki Dzwon"
+
+msgid "spk_18"
+msgstr "18/18 Sonar Ping"
+
+msgid "secSilentModes"
+msgstr "DND / SEN / TEATR"
+
+msgid "dndSound"
+msgstr "Wycisz dźwięk"
+
+msgid "dndVibrate"
+msgstr "Wycisz wibr."
+
+msgid "warnSysBuzzer"
+msgstr "Włącz buzzer w ustawieniach"
+
+msgid "statusAlarmErr"
+msgstr "Błąd harmonogramu alarmu!"
+
+msgid "btnTestBg15s"
+msgstr "TEST TŁA (15s)"
+
+msgid "statusBgTestSet"
+msgstr "Test w tle za 15s..."

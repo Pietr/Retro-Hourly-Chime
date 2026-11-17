@@ -1,0 +1,200 @@
+msgid "appName"
+msgstr "Báo Giờ Retro"
+
+msgid "title"
+msgstr "BÁO GIỜ RETRO"
+
+msgid "statusOff"
+msgstr "Đã tắt báo giờ"
+
+msgid "statusPickChannel"
+msgstr "Hãy bật ít nhất 1 kênh!"
+
+msgid "statusNext"
+msgstr "Tiếp:"
+
+msgid "shortBuz"
+msgstr "Còi"
+
+msgid "shortSpk"
+msgstr "Loa"
+
+msgid "shortVib"
+msgstr "Rung"
+
+msgid "masterOn"
+msgstr "●  ĐANG BẬT (ON)"
+
+msgid "masterOff"
+msgstr "○  ĐÃ TẮT"
+
+msgid "channelsHeader"
+msgstr "KÊNH ĐANG BẬT"
+
+msgid "chBuzzer"
+msgstr "CÒI BÍP"
+
+msgid "chSpeaker"
+msgstr "LOA"
+
+msgid "chVibrate"
+msgstr "RUNG"
+
+msgid "secBuzzer"
+msgstr "CÒI: ÂM & LẶP LẠI"
+
+msgid "secSpeaker"
+msgstr "LOA: ÂM THANH & ÂM LƯỢNG"
+
+msgid "secVibrate"
+msgstr "RUNG: CHẾ ĐỘ & CƯỜNG ĐỘ"
+
+msgid "secHours"
+msgstr "GIỜ HOẠT ĐỘNG"
+
+msgid "volumePrefix"
+msgstr "Âm lượng:"
+
+msgid "powerPrefix"
+msgstr "Mức:"
+
+msgid "modeAllDay"
+msgstr "Chế độ: CẢ NGÀY (24H)"
+
+msgid "modeRange"
+msgstr "Chế độ: KHUNG GIỜ"
+
+msgid "labelFrom"
+msgstr "TỪ"
+
+msgid "labelTo"
+msgstr "ĐẾN"
+
+msgid "btnTest"
+msgstr "THỬ TÍN HIỆU"
+
+msgid "strWeak"
+msgstr "Nhẹ"
+
+msgid "strMedium"
+msgstr "Vừa"
+
+msgid "strStrong"
+msgstr "Mạnh"
+
+msgid "vib_1"
+msgstr "1/7 2x Ngắn"
+
+msgid "vib_2"
+msgstr "2/7 2x Núm xoay"
+
+msgid "vib_3"
+msgstr "3/7 3x Nhanh"
+
+msgid "vib_4"
+msgstr "4/7 Ngắn+Dài"
+
+msgid "vib_5"
+msgstr "5/7 Dài+Ngắn"
+
+msgid "vib_6"
+msgstr "6/7 1x Đơn"
+
+msgid "vib_7"
+msgstr "7/7 Hệ thống 2x"
+
+msgid "repeatsPrefix"
+msgstr "Lặp:"
+
+msgid "hw_1"
+msgstr "1/6 Nhấn"
+
+msgid "hw_2"
+msgstr "2/6 Nhắc 1"
+
+msgid "hw_3"
+msgstr "3/6 Nhắc 2"
+
+msgid "hw_4"
+msgstr "4/6 Báo thức"
+
+msgid "hw_5"
+msgstr "5/6 Xong"
+
+msgid "hw_6"
+msgstr "6/6 Cảnh báo"
+
+msgid "spk_1"
+msgstr "1/18 Piezo 4k 500ms"
+
+msgid "spk_2"
+msgstr "2/18 Piezo 2k 500ms"
+
+msgid "spk_3"
+msgstr "3/18 Piezo 3.2k 500"
+
+msgid "spk_4"
+msgstr "4/18 Piezo 2.7k 500"
+
+msgid "spk_5"
+msgstr "5/18 Piezo 4k Sắc"
+
+msgid "spk_6"
+msgstr "6/18 Piezo Đôi 500"
+
+msgid "spk_7"
+msgstr "7/18 Retro 1989"
+
+msgid "spk_8"
+msgstr "8/18 Retro Nhanh"
+
+msgid "spk_9"
+msgstr "9/18 Retro Thép"
+
+msgid "spk_10"
+msgstr "10/18 Cổ Điển 2k+4k"
+
+msgid "spk_11"
+msgstr "11/18 Bíp Đơn"
+
+msgid "spk_12"
+msgstr "12/18 Ba Tiếng 3x"
+
+msgid "spk_13"
+msgstr "13/18 Kép 2x2"
+
+msgid "spk_14"
+msgstr "14/18 Đôi Tăng"
+
+msgid "spk_15"
+msgstr "15/18 Đôi Giảm"
+
+msgid "spk_16"
+msgstr "16/18 3 Nốt Nhạc"
+
+msgid "spk_17"
+msgstr "17/18 Chuông Êm"
+
+msgid "spk_18"
+msgstr "18/18 Sonar Ping"
+
+msgid "secSilentModes"
+msgstr "DND / NGỦ / RẠP PHIM"
+
+msgid "dndSound"
+msgstr "Tắt âm"
+
+msgid "dndVibrate"
+msgstr "Tắt rung"
+
+msgid "warnSysBuzzer"
+msgstr "Bật còi trong Cài đặt"
+
+msgid "statusAlarmErr"
+msgstr "Lỗi hẹn giờ báo thức!"
+
+msgid "btnTestBg15s"
+msgstr "TEST NỀN (15s)"
+
+msgid "statusBgTestSet"
+msgstr "Test nền sau 15s..."

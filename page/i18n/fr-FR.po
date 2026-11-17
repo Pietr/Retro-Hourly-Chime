@@ -1,0 +1,200 @@
+msgid "appName"
+msgstr "Signal Horaire"
+
+msgid "title"
+msgstr "SIGNAL HORAIRE"
+
+msgid "statusOff"
+msgstr "Signal désactivé"
+
+msgid "statusPickChannel"
+msgstr "Activez au moins 1 canal!"
+
+msgid "statusNext"
+msgstr "Suivant:"
+
+msgid "shortBuz"
+msgstr "Buz"
+
+msgid "shortSpk"
+msgstr "HP"
+
+msgid "shortVib"
+msgstr "Vib"
+
+msgid "masterOn"
+msgstr "●  ACTIF (ON)"
+
+msgid "masterOff"
+msgstr "○  DÉSACTIVÉ"
+
+msgid "channelsHeader"
+msgstr "CANAUX ACTIFS"
+
+msgid "chBuzzer"
+msgstr "BUZZER"
+
+msgid "chSpeaker"
+msgstr "HAUT-P."
+
+msgid "chVibrate"
+msgstr "VIBR."
+
+msgid "secBuzzer"
+msgstr "BUZZER : TON & RÉPÉT."
+
+msgid "secSpeaker"
+msgstr "HAUT-PARLEUR & VOLUME"
+
+msgid "secVibrate"
+msgstr "VIBRATION: MODE & FORCE"
+
+msgid "secHours"
+msgstr "HEURES ACTIVES"
+
+msgid "volumePrefix"
+msgstr "Volume:"
+
+msgid "powerPrefix"
+msgstr "Force:"
+
+msgid "modeAllDay"
+msgstr "Mode: TOUTE LA JOURNÉE"
+
+msgid "modeRange"
+msgstr "Mode: PLAGE HORAIRE"
+
+msgid "labelFrom"
+msgstr "DE"
+
+msgid "labelTo"
+msgstr "À"
+
+msgid "btnTest"
+msgstr "TESTER LE SIGNAL"
+
+msgid "strWeak"
+msgstr "Faible"
+
+msgid "strMedium"
+msgstr "Moyen"
+
+msgid "strStrong"
+msgstr "Fort"
+
+msgid "vib_1"
+msgstr "1/7 2x Court"
+
+msgid "vib_2"
+msgstr "2/7 2x Couronne"
+
+msgid "vib_3"
+msgstr "3/7 3x Rapide"
+
+msgid "vib_4"
+msgstr "4/7 Court+Long"
+
+msgid "vib_5"
+msgstr "5/7 Long+Court"
+
+msgid "vib_6"
+msgstr "6/7 1x Simple"
+
+msgid "vib_7"
+msgstr "7/7 Système 2x"
+
+msgid "repeatsPrefix"
+msgstr "Répét. :"
+
+msgid "hw_1"
+msgstr "1/6 Clic"
+
+msgid "hw_2"
+msgstr "2/6 Rappel 1"
+
+msgid "hw_3"
+msgstr "3/6 Rappel 2"
+
+msgid "hw_4"
+msgstr "4/6 Alarme"
+
+msgid "hw_5"
+msgstr "5/6 Succès"
+
+msgid "hw_6"
+msgstr "6/6 Alerte"
+
+msgid "spk_1"
+msgstr "1/18 Piézo 4k 500ms"
+
+msgid "spk_2"
+msgstr "2/18 Piézo 2k 500ms"
+
+msgid "spk_3"
+msgstr "3/18 Piézo 3.2k 500"
+
+msgid "spk_4"
+msgstr "4/18 Piézo 2.7k 500"
+
+msgid "spk_5"
+msgstr "5/18 Piézo 4k Sec"
+
+msgid "spk_6"
+msgstr "6/18 Piézo Duo 500"
+
+msgid "spk_7"
+msgstr "7/18 Rétro 1989"
+
+msgid "spk_8"
+msgstr "8/18 Rétro Rapide"
+
+msgid "spk_9"
+msgstr "9/18 Rétro Acier"
+
+msgid "spk_10"
+msgstr "10/18 Vintage 2k+4k"
+
+msgid "spk_11"
+msgstr "11/18 Bip Simple"
+
+msgid "spk_12"
+msgstr "12/18 Triple 3x"
+
+msgid "spk_13"
+msgstr "13/18 Double 2x2"
+
+msgid "spk_14"
+msgstr "14/18 Duo Montant"
+
+msgid "spk_15"
+msgstr "15/18 Duo Descend."
+
+msgid "spk_16"
+msgstr "16/18 Arpège 3 Notes"
+
+msgid "spk_17"
+msgstr "17/18 Cloche Douce"
+
+msgid "spk_18"
+msgstr "18/18 Ping Sonar"
+
+msgid "secSilentModes"
+msgstr "NPD / SOMMEIL / CINÉMA"
+
+msgid "dndSound"
+msgstr "Son muet"
+
+msgid "dndVibrate"
+msgstr "Vibr. muet"
+
+msgid "warnSysBuzzer"
+msgstr "Activer buzzer (Paramètres)"
+
+msgid "statusAlarmErr"
+msgstr "Erreur de programmation!"
+
+msgid "btnTestBg15s"
+msgstr "TEST FOND (15s)"
+
+msgid "statusBgTestSet"
+msgstr "Test fond dans 15s..."
