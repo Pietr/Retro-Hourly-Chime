@@ -18,7 +18,7 @@ Classic retro digital watch hourly chime for **Amazfit (Zepp OS 3.0+)** smartwat
 - **Independent Silent Mode Controls (`DND / Sleep / Theater`):**
   - Reads `@zos/settings` (`getSystemMode()`) for Do Not Disturb, Sleep Mode, and Theater Mode.
   - Two separate toggles: **`Mute Audio`** (Buzzer & Speaker) and **`Mute Vibr.`** (Vibration) — allowing you to silence sounds while optionally keeping subtle wrist vibrations.
-- **Flexible Active Hours:** 24/7 mode or custom hourly range (`FROM` / `TO`, including overnight ranges).
+- **Flexible Active Hours & Automatic 12H/24H Time Format:** 24/7 mode or custom hourly range (`FROM` / `TO`, including overnight ranges), automatically displaying `24H` (`08:00`–`22:00`) or `12H AM/PM` (`8:00 AM`–`10:00 PM`) based on your watch system clock setting.
 - **Universal Round & Square UI + 34 Official Zepp OS Languages:**
   - Adapts automatically to round (`360×360`–`480×480`) and square (`320×380`–`432×514`) displays across `NXP`, `ZPS`, and `APOLLO` chipsets.
   - Full UI & launcher localization across all 34 Zepp OS languages (`en-US`, `pl-PL`, `de-DE`, `fr-FR`, `es-ES`, `it-IT`, `pt-PT`, `pt-BR`, `nl-NL`, `ru-RU`, `uk-UA`, `cs-CZ`, `sk-SK`, `hu-HU`, `ro-RO`, `tr-TR`, `el-GR`, `sv-SE`, `nb-NO`, `da-DK`, `fi-FI`, `sr-RS`, `ca-ES`, `zh-CN`, `zh-TW`, `ja-JP`, `ko-KR`, `id-ID`, `ms-MY`, `vi-VN`, `th-TH`, `ar-EG`, `iw-IL`, `hi-IN`).

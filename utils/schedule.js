@@ -1,5 +1,5 @@
-import { Time } from '@zos/sensor'
-import { getSystemMode } from '@zos/settings'
+import { Time, TIME_HOUR_FORMAT_12 } from '@zos/sensor'
+import { getSystemMode, getTimeFormat, TIME_FORMAT_12 } from '@zos/settings'
 import {
   set as setAlarm,
   cancel as cancelAlarm,
@@ -120,10 +120,33 @@ function isHourActive(hour, config) {
   return h >= start || h <= end
 }
 
+/**
+ * Detect whether the watch system clock is currently set to 12-hour (AM/PM) format.
+ */
+export function is12HourFormat() {
+  try {
+    if (typeof getTimeFormat === 'function' && TIME_FORMAT_12 !== undefined) {
+      return getTimeFormat() === TIME_FORMAT_12
+    }
+  } catch (e) {}
+  try {
+    const ts = getTimeSensor()
+    if (ts && typeof ts.getHourFormat === 'function' && TIME_HOUR_FORMAT_12 !== undefined) {
+      return ts.getHourFormat() === TIME_HOUR_FORMAT_12
+    }
+  } catch (e) {}
+  return false
+}
+
 export function formatHour(hour) {
   const num = Number(hour)
   const safe = Number.isFinite(num) ? Math.floor(num) : 0
   const h = ((safe % 24) + 24) % 24
+  if (is12HourFormat()) {
+    const suffix = h < 12 ? 'AM' : 'PM'
+    const h12 = h % 12 === 0 ? 12 : h % 12
+    return `${h12}:00 ${suffix}`
+  }
   return (h < 10 ? '0' : '') + h + ':00'
 }
 

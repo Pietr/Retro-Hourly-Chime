@@ -32,6 +32,7 @@ import {
   getBackgroundDiagnostics,
   getNextChimeLabel,
   getSystemSilentMode,
+  is12HourFormat,
   scheduleTestAlarm15s,
   stopLegacyContinuousService,
   syncBackgroundSchedule
@@ -821,11 +822,13 @@ Page({
     })
     curY += 72
 
-    // Start Hour Row ("FROM") — symmetric 34..446 layout
+    const hourTextSize = is12HourFormat() ? fs(26, 19) : fs(32, 24)
+
+    // Start Hour Row ("FROM") — roomy center column for both "08:00" and "12:00 AM"
     hmUI.createWidget(hmUI.widget.TEXT, {
-      x: px(34),
+      x: px(32),
       y: px(curY),
-      w: px(98),
+      w: px(92),
       h: px(60),
       color: COLORS.GRAY,
       text_size: fs(20, 15),
@@ -835,9 +838,9 @@ Page({
     })
 
     hmUI.createWidget(hmUI.widget.BUTTON, {
-      x: px(138),
+      x: px(128),
       y: px(curY),
-      w: px(68),
+      w: px(66),
       h: px(60),
       radius: px(16),
       text_size: fs(32, 24),
@@ -852,21 +855,21 @@ Page({
     })
 
     w.textStartHour = makeText({
-      x: px(214),
+      x: px(198),
       y: px(curY),
-      w: px(152),
+      w: px(174),
       h: px(60),
       color: COLORS.WHITE,
-      text_size: fs(32, 24),
+      text_size: hourTextSize,
       align_h: hmUI.align.CENTER_H,
       align_v: hmUI.align.CENTER_V,
       text: formatHour(cfg.startHour)
     })
 
     hmUI.createWidget(hmUI.widget.BUTTON, {
-      x: px(374),
+      x: px(376),
       y: px(curY),
-      w: px(72),
+      w: px(70),
       h: px(60),
       radius: px(16),
       text_size: fs(32, 24),
@@ -883,9 +886,9 @@ Page({
 
     // End Hour Row ("TO")
     hmUI.createWidget(hmUI.widget.TEXT, {
-      x: px(34),
+      x: px(32),
       y: px(curY),
-      w: px(98),
+      w: px(92),
       h: px(60),
       color: COLORS.GRAY,
       text_size: fs(20, 15),
@@ -895,9 +898,9 @@ Page({
     })
 
     hmUI.createWidget(hmUI.widget.BUTTON, {
-      x: px(138),
+      x: px(128),
       y: px(curY),
-      w: px(68),
+      w: px(66),
       h: px(60),
       radius: px(16),
       text_size: fs(32, 24),
@@ -912,21 +915,21 @@ Page({
     })
 
     w.textEndHour = makeText({
-      x: px(214),
+      x: px(198),
       y: px(curY),
-      w: px(152),
+      w: px(174),
       h: px(60),
       color: COLORS.WHITE,
-      text_size: fs(32, 24),
+      text_size: hourTextSize,
       align_h: hmUI.align.CENTER_H,
       align_v: hmUI.align.CENTER_V,
       text: formatHour(cfg.endHour)
     })
 
     hmUI.createWidget(hmUI.widget.BUTTON, {
-      x: px(374),
+      x: px(376),
       y: px(curY),
-      w: px(72),
+      w: px(70),
       h: px(60),
       radius: px(16),
       text_size: fs(32, 24),
@@ -1431,15 +1434,18 @@ Page({
       press_color: cfg.allDay ? COLORS.ORANGE_PRESS : COLORS.BTN_PRESS
     })
 
-    // Hours Text
+    // Hours Text (dynamically adapts font size & format for 12H AM/PM vs 24H)
     const hourColor = cfg.allDay ? COLORS.DIM_GRAY : COLORS.WHITE
+    const hourSize = is12HourFormat() ? fs(26, 19) : fs(32, 24)
     w.textStartHour.update({
       text: formatHour(cfg.startHour),
-      color: hourColor
+      color: hourColor,
+      text_size: hourSize
     })
     w.textEndHour.update({
       text: formatHour(cfg.endHour),
-      color: hourColor
+      color: hourColor,
+      text_size: hourSize
     })
 
     // Independent DND / Sleep / Theater Toggle Buttons
