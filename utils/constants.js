@@ -1,4 +1,4 @@
-export const APP_VERSION = '2.3.0'
+export const APP_VERSION = '2.3.1'
 export const SERVICE_FILE = 'service/hourly_chime'
 
 export const BUZZER_VARIANT_IDS = [
@@ -53,7 +53,7 @@ export const DEFAULT_CONFIG = {
   buzzerVariant: 'hw_operate',
   buzzerRepeats: 1,
   speakerVariant: 'retro_500_4k',
-  speakerVolume: 80,
+  speakerVolume: 50,
   vibrateMode: 'double_short',
   vibrateStrength: 1,
   allDay: false,

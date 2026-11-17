@@ -638,7 +638,7 @@ Page({
         press_color: COLORS.BTN_PRESS,
         text: '-',
         click_func: () => {
-          this.stepSpeakerVolume(-10)
+          this.stepSpeakerVolume(-1)
         }
       })
 
@@ -652,7 +652,7 @@ Page({
         color: COLORS.WHITE,
         normal_color: COLORS.BTN_VARIANT,
         press_color: COLORS.BTN_VARIANT_PRESS,
-        text: `${t('volumePrefix', 'Volume:')} 80%`,
+        text: `${t('volumePrefix', 'Volume:')} 50%`,
         click_func: () => {
           previewSpeakerVariant(this.state.config.speakerVariant, this.state.config.speakerVolume)
         }
@@ -670,7 +670,7 @@ Page({
         press_color: COLORS.BTN_PRESS,
         text: '+',
         click_func: () => {
-          this.stepSpeakerVolume(10)
+          this.stepSpeakerVolume(1)
         }
       })
       curY += 74
@@ -1226,10 +1226,27 @@ Page({
     previewSpeakerVariant(nextId, this.state.config.speakerVolume)
   },
 
-  stepSpeakerVolume(delta) {
+  stepSpeakerVolume(direction) {
     if (!this.state.caps.hasSpeaker) return
     const current = Number(this.state.config.speakerVolume)
-    const next = Math.max(10, Math.min(100, current + delta))
+    let next
+    if (direction < 0) {
+      if (current <= 10) {
+        next = Math.max(1, current - 1)
+      } else {
+        const rem = current % 5
+        next = rem === 0 ? current - 5 : current - rem
+        next = Math.max(10, next)
+      }
+    } else {
+      if (current < 10) {
+        next = Math.min(10, current + 1)
+      } else {
+        const rem = current % 5
+        next = rem === 0 ? current + 5 : current + (5 - rem)
+        next = Math.min(100, next)
+      }
+    }
     this.applyConfigChange({ speakerVolume: next }, false, false)
     previewSpeakerVariant(this.state.config.speakerVariant, next)
   },

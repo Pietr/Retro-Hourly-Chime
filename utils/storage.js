@@ -78,7 +78,7 @@ function normalizeConfig(rawObj) {
       DEFAULT_CONFIG.buzzerRepeats
     ),
     speakerVariant,
-    speakerVolume: clampInt(src.speakerVolume, 10, 100, DEFAULT_CONFIG.speakerVolume),
+    speakerVolume: clampInt(src.speakerVolume, 1, 100, DEFAULT_CONFIG.speakerVolume),
     vibrateMode,
     vibrateStrength: clampInt(src.vibrateStrength, 0, 2, DEFAULT_CONFIG.vibrateStrength),
     allDay: toBool(src.allDay, DEFAULT_CONFIG.allDay),
