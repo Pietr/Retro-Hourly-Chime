@@ -265,7 +265,7 @@ function restoreSystemVolume() {
   }
 }
 
-function clearPendingAudio(skipBuzzerStop = false) {
+function clearPendingAudio(skipBuzzerStop = false, skipVibratorStop = false) {
   const toClear = activeTimers.slice()
   activeTimers = []
   for (let i = 0; i < toClear.length; i++) {
@@ -294,7 +294,7 @@ function clearPendingAudio(skipBuzzerStop = false) {
     playerIsPlaying = false
     restoreSystemVolume()
   }
-  if (activeVibrator) {
+  if (activeVibrator && !skipVibratorStop) {
     try {
       activeVibrator.stop()
     } catch (e) {}
@@ -303,9 +303,12 @@ function clearPendingAudio(skipBuzzerStop = false) {
 
 /**
  * Fully stop and release all sensor/media handles cleanly on Page/App/Service destroy.
+ * When keepActiveHardware is true (Single Execution AppService exit), active hardware Buzzer/Vibrator
+ * waveforms are allowed to finish ringing out naturally instead of being clipped by onDestroy().
  */
-export function releaseAllAudioHandles() {
-  clearPendingAudio(false)
+export function releaseAllAudioHandles(options = {}) {
+  const keepHw = Boolean(options && options.keepActiveHardware)
+  clearPendingAudio(keepHw, keepHw)
   if (singletonPlayer) {
     try {
       if (typeof singletonPlayer.release === 'function') {
@@ -339,17 +342,27 @@ export function getBuzzerRepeatCount(repeatLevel) {
   return 0
 }
 
+function busyWaitMs(ms) {
+  const target = Date.now() + ms
+  while (Date.now() < target) {
+    // Short synchronous wait for Single Execution AppService (immune to screen-off setTimeout freeze)
+  }
+}
+
 /**
  * Play hardware-native Buzzer firmware waveform.
  * - gapMs === 0 (Auto) or single beep: ONE atomic firmware call buzzer.start(sourceType, repeatCount).
- * - gapMs > 0 (50..750 ms) with multiple repeats: triggers each full native beep with exact spacing
- *   via tracked scheduleTimer() (never chops beep duration, works in both foreground UI and AppService).
+ * - gapMs > 0 (50..750 ms) with multiple repeats:
+ *   - In background Single Execution AppService, when total span <= 525 ms (within Zepp OS 600 ms cap),
+ *     performs an exact synchronous wait inside onInit() so screen-off setTimeout freeze / immediate
+ *     Single Execution teardown can never cancel the repeat beeps.
+ *   - In foreground UI (or spans > 525 ms), uses tracked scheduleTimer().
  */
 function playBuzzerVariant(variantId, repeatLevel, gapMs = 0, isBackground = false) {
   try {
     if (!hasHardwareBuzzer()) {
       lastUiDiag = 'NO_HW_BUZZER'
-      return false
+      return { ok: false, syncDone: true }
     }
     if (!activeBuzzer) {
       activeBuzzer = new Buzzer()
@@ -374,35 +387,52 @@ function playBuzzerVariant(variantId, repeatLevel, gapMs = 0, isBackground = fal
 
     const preferredKeys = sourceKeyMap[v] || sourceKeyMap.hw_operate
     const sourceType = resolveBuzzerType(types, preferredKeys)
+    let syncDone = true
 
     if (repeatCount > 0 && gap > 0) {
-      buzzer.start(sourceType, 0)
-      for (let i = 1; i <= repeatCount; i++) {
-        scheduleTimer(() => {
+      const totalSpanMs = repeatCount * gap
+      if (isBackground && totalSpanMs <= 525) {
+        // Exact synchronous spacing inside Single Execution onInit (< 600ms system cap)
+        buzzer.start(sourceType, 0)
+        for (let i = 1; i <= repeatCount; i++) {
+          busyWaitMs(gap)
           try {
-            if (!activeBuzzer) return
+            buzzer.stop()
+          } catch (e) {}
+          buzzer.start(sourceType, 0)
+        }
+        syncDone = true
+      } else {
+        syncDone = false
+        buzzer.start(sourceType, 0)
+        for (let i = 1; i <= repeatCount; i++) {
+          scheduleTimer(() => {
             try {
-              activeBuzzer.stop()
-            } catch (e) {}
-            activeBuzzer.start(sourceType, 0)
-          } catch (e) {
-            logger.error('playBuzzerVariant repeat failed:', e)
-          }
-        }, i * gap)
+              if (!activeBuzzer) return
+              try {
+                activeBuzzer.stop()
+              } catch (e) {}
+              activeBuzzer.start(sourceType, 0)
+            } catch (e) {
+              logger.error('playBuzzerVariant repeat failed:', e)
+            }
+          }, i * gap)
+        }
       }
     } else {
       buzzer.start(sourceType, repeatCount)
+      syncDone = true
     }
 
     if (!isBackground) {
       const gapTag = gap > 0 ? `${gap}ms` : 'auto'
       lastUiDiag = `UI:ok en=${sysEnabled} str=${sysStr} t=${sourceType} r=${repeatCount} g=${gapTag}`
     }
-    return true
+    return { ok: true, syncDone }
   } catch (e) {
     logger.error('playBuzzerVariant failed:', e)
     lastUiDiag = `UI:ERR ${e && e.message ? e.message : e}`
-    return false
+    return { ok: false, syncDone: true }
   }
 }
 
@@ -812,19 +842,18 @@ export function playHourlyChime(cfg, options = {}) {
     playVibrateMode(cfg.vibrateMode, cfg.vibrateStrength)
   }
 
+  let buzzerResult = { ok: false, syncDone: true }
   if (runBuzzer) {
-    playBuzzerVariant(cfg.buzzerVariant, cfg.buzzerRepeats, cfg.buzzerGapMs, isBackground)
+    buzzerResult = playBuzzerVariant(cfg.buzzerVariant, cfg.buzzerRepeats, cfg.buzzerGapMs, isBackground)
   }
 
   let minSettleMs = 0
-  if (runBuzzer) {
+  if (runBuzzer && !buzzerResult.syncDone) {
     const repeatCount = getBuzzerRepeatCount(cfg.buzzerRepeats)
     const rawGap = Number(cfg.buzzerGapMs)
     const gap = Number.isFinite(rawGap) ? Math.max(0, Math.min(BUZZER_GAP_MAX_MS, Math.round(rawGap))) : 0
     if (repeatCount > 0 && gap > 0) {
       minSettleMs = Math.max(minSettleMs, Math.min(3600, repeatCount * gap + 650))
-    } else {
-      minSettleMs = Math.max(minSettleMs, Math.min(2400, 450 * (repeatCount + 1) + 300))
     }
   }
   if (runVibrate) {
@@ -847,7 +876,11 @@ export function playHourlyChime(cfg, options = {}) {
       }
     })
   } else if (onDone) {
-    scheduleTimer(finishOnce, Math.max(400, minSettleMs))
+    if (minSettleMs <= 0) {
+      finishOnce()
+    } else {
+      scheduleTimer(finishOnce, minSettleMs)
+    }
   }
 
   return true

@@ -7,7 +7,8 @@ let exited = false
 function exitServiceCleanly() {
   if (exited) return
   exited = true
-  releaseAllAudioHandles()
+  // Keep active hardware Buzzer/Vibrator waveforms ringing out naturally as Single Execution exits
+  releaseAllAudioHandles({ keepActiveHardware: true })
   try {
     if (appService && typeof appService.exit === 'function') {
       appService.exit()
@@ -23,6 +24,6 @@ AppService({
 
   onDestroy() {
     exited = true
-    releaseAllAudioHandles()
+    releaseAllAudioHandles({ keepActiveHardware: true })
   }
 })

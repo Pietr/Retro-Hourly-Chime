@@ -1,6 +1,6 @@
 {
   "name": "retro-hourly-chime",
-  "version": "2.4.1",
+  "version": "2.4.2",
   "description": "Classic retro hourly chime for Amazfit (Zepp OS 3.0+) smartwatches with native buzzer, 18 speaker tones, haptics, and DND controls",
   "main": "app.js",
   "scripts": {
