@@ -198,3 +198,9 @@ msgstr "TES BG (15d)"
 
 msgid "statusBgTestSet"
 msgstr "Tes BG dlm 15d..."
+
+msgid "gapPrefix"
+msgstr "Jeda:"
+
+msgid "gapAuto"
+msgstr "Auto"

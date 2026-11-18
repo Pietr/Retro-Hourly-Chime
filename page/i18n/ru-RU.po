@@ -198,3 +198,9 @@ msgstr "ФОН ТЕСТ (15с)"
 
 msgid "statusBgTestSet"
 msgstr "Фон. тест через 15с..."
+
+msgid "gapPrefix"
+msgstr "Пауза:"
+
+msgid "gapAuto"
+msgstr "Авто"

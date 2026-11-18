@@ -198,3 +198,9 @@ msgstr "UJI BG (15s)"
 
 msgid "statusBgTestSet"
 msgstr "Uji BG dlm 15s..."
+
+msgid "gapPrefix"
+msgstr "Jeda:"
+
+msgid "gapAuto"
+msgstr "Auto"

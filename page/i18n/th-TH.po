@@ -198,3 +198,9 @@ msgstr "ทดสอบ BG (15วิ)"
 
 msgid "statusBgTestSet"
 msgstr "ทดสอบ BG ใน 15วิ..."
+
+msgid "gapPrefix"
+msgstr "เว้น:"
+
+msgid "gapAuto"
+msgstr "อัตโนมัติ"

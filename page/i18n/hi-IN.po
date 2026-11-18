@@ -198,3 +198,9 @@ msgstr "BG टेस्ट (15s)"
 
 msgid "statusBgTestSet"
 msgstr "15s में BG टेस्ट..."
+
+msgid "gapPrefix"
+msgstr "अंतर:"
+
+msgid "gapAuto"
+msgstr "ऑटो"

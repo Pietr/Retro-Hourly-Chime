@@ -198,3 +198,9 @@ msgstr "HÁTTÉR TESZT 15s"
 
 msgid "statusBgTestSet"
 msgstr "Háttérteszt 15 mp..."
+
+msgid "gapPrefix"
+msgstr "Szünet:"
+
+msgid "gapAuto"
+msgstr "Auto"

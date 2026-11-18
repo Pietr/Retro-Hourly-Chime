@@ -198,3 +198,9 @@ msgstr "背景測試 (15秒)"
 
 msgid "statusBgTestSet"
 msgstr "15秒後背景測試..."
+
+msgid "gapPrefix"
+msgstr "間隔:"
+
+msgid "gapAuto"
+msgstr "自動"

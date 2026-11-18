@@ -198,3 +198,9 @@ msgstr "HG-TEST (15s)"
 
 msgid "statusBgTestSet"
 msgstr "HG-Test in 15s..."
+
+msgid "gapPrefix"
+msgstr "Pause:"
+
+msgid "gapAuto"
+msgstr "Auto"

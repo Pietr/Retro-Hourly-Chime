@@ -198,3 +198,9 @@ msgstr "TEST NỀN (15s)"
 
 msgid "statusBgTestSet"
 msgstr "Test nền sau 15s..."
+
+msgid "gapPrefix"
+msgstr "Nghỉ:"
+
+msgid "gapAuto"
+msgstr "Tự động"

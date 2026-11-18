@@ -198,3 +198,9 @@ msgstr "TAUSTATESTI 15s"
 
 msgid "statusBgTestSet"
 msgstr "Taustatesti 15 s..."
+
+msgid "gapPrefix"
+msgstr "Tauko:"
+
+msgid "gapAuto"
+msgstr "Auto"

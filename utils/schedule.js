@@ -455,7 +455,8 @@ function executeChimeWithLog(
   const runVibrate = cfg.vibrateEnabled && allowVibrate && caps.hasVibrator
 
   if (runBuzzer) {
-    parts.push(`B:${cfg.buzzerVariant}x${getBuzzerRepeatCount(cfg.buzzerRepeats) + 1}`)
+    const gapSuffix = cfg.buzzerGapMs > 0 ? `@${cfg.buzzerGapMs}ms` : ''
+    parts.push(`B:${cfg.buzzerVariant}x${getBuzzerRepeatCount(cfg.buzzerRepeats) + 1}${gapSuffix}`)
   }
   if (runSpeaker) {
     parts.push(`S:${cfg.speakerVariant}@${cfg.speakerVolume}%`)
