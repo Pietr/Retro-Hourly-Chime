@@ -1,4 +1,4 @@
-export const APP_VERSION = '2.3.3'
+export const APP_VERSION = '2.3.4'
 export const SERVICE_FILE = 'service/hourly_chime'
 
 export const BUZZER_VARIANT_IDS = [
@@ -13,7 +13,7 @@ export const BUZZER_VARIANT_IDS = [
 export const BUZZER_REPEAT_COUNTS = [0, 1, 2, 3]
 export const BUZZER_GAP_MIN_MS = 50
 export const BUZZER_GAP_MAX_MS = 750
-export const BUZZER_GAP_STEP_MS = 50
+export const BUZZER_GAP_STEP_MS = 25
 
 export const SPEAKER_FILE_MAP = {
   retro_500_4k: 'raw/spk_500_4k.mp3',
