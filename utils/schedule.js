@@ -10,7 +10,7 @@ import {
 import * as appService from '@zos/app-service'
 import { queryPermission, requestPermission } from '@zos/app'
 import { log as Logger } from '@zos/utils'
-import { PLAYER_SERVICE_FILE, SERVICE_FILE } from './constants'
+import { SERVICE_FILE } from './constants'
 import {
   hasAnyActiveChannel,
   loadConfig,
@@ -20,7 +20,6 @@ import {
 import {
   getBuzzerRepeatCount,
   getHardwareCapabilities,
-  playAtomicChimeSync,
   playHourlyChime
 } from './audio'
 
@@ -28,6 +27,7 @@ const logger = Logger.getLogger('hourly_chime_sched')
 
 let cachedTimeSensor = null
 let activeTestAlarmId = 0
+let lastTestFiredTs = 0
 
 function getTimeSensor() {
   if (cachedTimeSensor) {
@@ -226,11 +226,31 @@ export function getNextChimeLabel(config, dayLabels = null) {
     return '--:--'
   }
   const hourStr = formatHour(next.hour)
-  const jumpsDays = next.dayDelta > 1 || (next.dayDelta === 1 && cfg.daysMode !== 'everyday' && !isDayActive(now.isoDay, cfg))
+  const jumpsDays =
+    next.dayDelta > 1 ||
+    (next.dayDelta === 1 && cfg.daysMode !== 'everyday' && !isDayActive(now.isoDay, cfg))
   if (jumpsDays && dayLabels && dayLabels[next.isoDay]) {
     return `${dayLabels[next.isoDay]} ${hourStr}`
   }
   return hourStr
+}
+
+/**
+ * Returns true if the active configuration requires async timer/media execution in background
+ * (Speaker MP3s or custom Buzzer repeat gap 50..750 ms).
+ * Pure atomic chimes (native Buzzer Auto + Vibrator) run in zero-RAM Single Execution mode!
+ */
+export function needsAsyncBackgroundService(cfg, capsOverride = null) {
+  if (!cfg || !cfg.enabled) return false
+  const caps = capsOverride || getHardwareCapabilities()
+  const needsSpeaker = Boolean(cfg.speakerEnabled && caps.hasSpeaker)
+  const needsBuzzerGap = Boolean(
+    cfg.buzzerEnabled &&
+      caps.hasBuzzer &&
+      getBuzzerRepeatCount(cfg.buzzerRepeats) > 0 &&
+      Number(cfg.buzzerGapMs) > 0
+  )
+  return needsSpeaker || needsBuzzerGap
 }
 
 function clearAllScheduledAlarms(preserveTestAlarm = false) {
@@ -254,14 +274,29 @@ function clearAllScheduledAlarms(preserveTestAlarm = false) {
   }
 }
 
+function isServiceRunning() {
+  try {
+    if (appService && typeof appService.getAllAppServices === 'function') {
+      const list = appService.getAllAppServices() || []
+      for (let i = 0; i < list.length; i++) {
+        if (String(list[i]).indexOf(SERVICE_FILE) !== -1) {
+          return true
+        }
+      }
+    }
+  } catch (e) {}
+  return false
+}
+
 /**
- * Prompt once for device:os.bg_service permission while UI is open so the short-lived
- * chime_player AppService can play async MP3 chimes & custom buzzer gaps on alarm wakeup.
+ * Prompt once for device:os.bg_service permission while UI is open (only needed for async
+ * Speaker MP3 chimes or custom Buzzer repeat gaps).
  */
 export function ensureBackgroundPermission(onDone) {
   try {
     const perms = ['device:os.bg_service']
-    const status = typeof queryPermission === 'function' ? queryPermission({ permissions: perms }) : [2]
+    const status =
+      typeof queryPermission === 'function' ? queryPermission({ permissions: perms }) : [2]
     if (status && status[0] === 2) {
       if (onDone) onDone(true)
       return
@@ -290,26 +325,59 @@ function hasBgServicePermission() {
 }
 
 /**
- * Stop any leftover continuous AppService from older app versions (v2.2.0) or stale player service.
+ * Pause any running AppService while foreground UI is open so UI holds exclusive hardware access.
  */
 export function stopLegacyContinuousService() {
   try {
-    if (appService && typeof appService.getAllAppServices === 'function') {
-      const list = appService.getAllAppServices() || []
-      let stoppedAny = false
-      for (let i = 0; i < list.length; i++) {
-        const entry = String(list[i])
-        if (entry.indexOf(SERVICE_FILE) !== -1 && typeof appService.stop === 'function') {
-          appService.stop({ file: SERVICE_FILE, complete_func: () => {} })
-          stoppedAny = true
-        } else if (entry.indexOf(PLAYER_SERVICE_FILE) !== -1 && typeof appService.stop === 'function') {
-          appService.stop({ file: PLAYER_SERVICE_FILE, complete_func: () => {} })
-          stoppedAny = true
-        }
-      }
-      return stoppedAny
+    if (isServiceRunning() && typeof appService.stop === 'function') {
+      appService.stop({
+        file: SERVICE_FILE,
+        complete_func: () => {}
+      })
+      return true
     }
   } catch (e) {}
+  return false
+}
+
+/**
+ * Called ONCE when UI Page exits (Page.onDestroy):
+ * - If config only uses atomic channels (Buzzer Auto / Vibrator): keeps 0 background services running
+ *   (pure Single Execution woken by @zos/alarm, 0 B RAM between hours!).
+ * - If config uses Speaker MP3 or custom Buzzer gap (50..750 ms): starts dormant service/hourly_chime
+ *   with ZERO timers and ZERO onPerMinute (0% idle CPU — woken exclusively by @zos/alarm) so async
+ *   timers and @zos/media Player complete cleanly without Single Execution 600ms teardown.
+ */
+export function finalizeBackgroundServiceOnPageExit(config) {
+  const cfg = config || loadConfig()
+  const caps = getHardwareCapabilities()
+
+  if (!cfg.enabled || !hasAnyActiveChannel(cfg, caps) || !needsAsyncBackgroundService(cfg, caps)) {
+    stopLegacyContinuousService()
+    return false
+  }
+
+  if (isServiceRunning()) {
+    return true
+  }
+
+  if (!hasBgServicePermission()) {
+    return false
+  }
+
+  try {
+    if (appService && typeof appService.start === 'function') {
+      appService.start({
+        file: SERVICE_FILE,
+        param: 'idle_ready',
+        reload: true,
+        complete_func: () => {}
+      })
+      return true
+    }
+  } catch (e) {
+    logger.error('Failed to start dormant async AppService:', e)
+  }
   return false
 }
 
@@ -417,13 +485,13 @@ export function scheduleTestAlarm15s() {
 }
 
 /**
- * Synchronize Single Execution background schedule (RTC alarm only — zero continuous RAM usage).
+ * Synchronize hardware RTC alarm schedule (called from UI).
  */
 export function syncBackgroundSchedule(config, preserveTestAlarm = false) {
   const cfg = config || loadConfig()
-  stopLegacyContinuousService()
   if (!cfg.enabled || !hasAnyActiveChannel(cfg, getHardwareCapabilities())) {
     clearAllScheduledAlarms(preserveTestAlarm)
+    stopLegacyContinuousService()
     return { ok: true, alarmId: 0, active: false }
   }
   return scheduleNextActiveAlarm(cfg, false, preserveTestAlarm)
@@ -448,17 +516,29 @@ export function getBackgroundDiagnostics() {
 }
 
 /**
- * Single Execution AppService entry handler woken by @zos/alarm (service/hourly_chime.js).
- * - Atomic-only chimes (native Buzzer Auto + Vibrator): execute synchronously in <5 ms and let
- *   Single Execution exit naturally without clipping hardware.
- * - Async chimes (Speaker MP3 or custom Buzzer Gap 50..750 ms): promote to short-lived
- *   service/chime_player.js via appService.start({ reload: false }) which exits immediately after
- *   playback completes (0 RAM held between hours). Falls back to atomic sync chime if start fails.
+ * AppService wakeup handler triggered exclusively by @zos/alarm ('alarm_wakeup' / 'test_wakeup').
+ * Ignores 'idle_ready' / reboot init with zero timers and zero CPU activity!
  */
 export function handleBackgroundWakeup(params) {
+  const isAlarm = params === 'alarm_wakeup'
+  const isTest = params === 'test_wakeup'
+
+  // Dormant startup ('idle_ready' or system reload): do NOTHING — 0 sensors, 0 timers, 0 flash I/O
+  if (!isAlarm && !isTest) {
+    return
+  }
+
+  // Guard against duplicate delivery if firmware fires both onInit and onEvent for the same test alarm
+  if (isTest) {
+    const nowTs = Date.now()
+    if (nowTs - lastTestFiredTs < 2500) {
+      return
+    }
+    lastTestFiredTs = nowTs
+  }
+
   const cfg = loadConfig()
   const now = getNowParts()
-  const isTest = params === 'test_wakeup'
 
   if (!isTest && (!cfg.enabled || !hasAnyActiveChannel(cfg, getHardwareCapabilities()))) {
     clearAllScheduledAlarms()
@@ -474,7 +554,7 @@ export function handleBackgroundWakeup(params) {
   if (isTest) {
     const hh = (now.hour < 10 ? '0' : '') + now.hour
     const mm = (now.minute < 10 ? '0' : '') + now.minute
-    dispatchBackgroundChime(cfg, hh, mm, 'TST15', muteReasonTag, allowSound, allowVibrate, null)
+    executeChimeWithLog(cfg, hh, mm, 'TST15', muteReasonTag, allowSound, allowVibrate, null)
     return
   }
 
@@ -527,10 +607,20 @@ export function handleBackgroundWakeup(params) {
   const hh = (logicalHour < 10 ? '0' : '') + logicalHour
   const mm = isEarlySnap ? '00' : (now.minute < 10 ? '0' : '') + now.minute
 
-  dispatchBackgroundChime(cfg, hh, mm, 'ALM', muteReasonTag, allowSound, allowVibrate, dedupKey)
+  executeChimeWithLog(cfg, hh, mm, 'ALM', muteReasonTag, allowSound, allowVibrate, dedupKey)
 }
 
-function buildChimeSummary(cfg, caps, allowSound, allowVibrate, muteReasonTag) {
+function executeChimeWithLog(
+  cfg,
+  hh,
+  mm,
+  sourceTag,
+  muteReasonTag,
+  allowSound,
+  allowVibrate,
+  dedupKey
+) {
+  const caps = getHardwareCapabilities()
   const parts = []
   const runBuzzer = cfg.buzzerEnabled && allowSound && caps.hasBuzzer
   const runSpeaker = cfg.speakerEnabled && allowSound && caps.hasSpeaker
@@ -549,112 +639,21 @@ function buildChimeSummary(cfg, caps, allowSound, allowVibrate, muteReasonTag) {
 
   const suffix = muteReasonTag ? ` (${muteReasonTag})` : ''
   const summary = parts.length > 0 ? `${parts.join(' ')}${suffix}` : `MUTED${suffix}`
-  return { runBuzzer, runSpeaker, runVibrate, summary }
-}
-
-function dispatchBackgroundChime(
-  cfg,
-  hh,
-  mm,
-  sourceTag,
-  muteReasonTag,
-  allowSound,
-  allowVibrate,
-  dedupKey
-) {
-  const caps = getHardwareCapabilities()
-  const { runBuzzer, runSpeaker, runVibrate, summary } = buildChimeSummary(
-    cfg,
-    caps,
-    allowSound,
-    allowVibrate,
-    muteReasonTag
-  )
-
-  const patch = { lastBgLog: `${hh}:${mm} [${sourceTag}] ${summary}` }
+  const patch = {
+    lastBgLog: `${hh}:${mm} [${sourceTag}] ${summary}`
+  }
   if (dedupKey) {
     patch.lastChimedKey = dedupKey
   }
+  updateRuntimeState(patch)
 
   if (!runBuzzer && !runSpeaker && !runVibrate) {
-    updateRuntimeState(patch)
     return
   }
 
-  const needsBuzzerTimer =
-    runBuzzer && getBuzzerRepeatCount(cfg.buzzerRepeats) > 0 && Number(cfg.buzzerGapMs) > 0
-  const needsAsyncPlayer = runSpeaker || needsBuzzerTimer
-
-  if (needsAsyncPlayer && appService && typeof appService.start === 'function' && hasBgServicePermission()) {
-    const payload = `${allowSound ? 1 : 0}:${allowVibrate ? 1 : 0}:${hh}:${mm}:${sourceTag}`
-    let startedOk = false
-    try {
-      const ret = appService.start({
-        file: PLAYER_SERVICE_FILE,
-        param: payload,
-        reload: false,
-        complete_func: () => {}
-      })
-      startedOk = ret === 0 || ret === true
-    } catch (e) {
-      startedOk = false
-    }
-
-    if (startedOk) {
-      patch.lastBgLog = `${hh}:${mm} [${sourceTag}->PLY] ${summary}`
-      updateRuntimeState(patch)
-      return
-    }
-    patch.lastBgLog = `${hh}:${mm} [${sourceTag}!FB] ${summary}`
-  }
-
-  // Pure synchronous atomic hardware playback (native Buzzer repeatCount + Vibrator Action[])
-  updateRuntimeState(patch)
-  playAtomicChimeSync(cfg, { allowSound, allowVibrate })
-}
-
-/**
- * Short-lived playback AppService handler (service/chime_player.js).
- * Runs full async Speaker MP3s and timed Buzzer repeat gaps, then calls onComplete() -> exit().
- */
-export function handlePlayerServiceInit(params, onComplete) {
-  const finish = () => {
-    if (typeof onComplete === 'function') {
-      onComplete()
-    }
-  }
-
-  const cfg = loadConfig()
-  const caps = getHardwareCapabilities()
-  let allowSound = true
-  let allowVibrate = true
-  let hh = '--'
-  let mm = '--'
-
-  if (typeof params === 'string' && params.length > 0) {
-    const segs = params.split(':')
-    if (segs.length >= 2) {
-      allowSound = segs[0] === '1'
-      allowVibrate = segs[1] === '1'
-    }
-    if (segs.length >= 4) {
-      hh = segs[2]
-      mm = segs[3]
-    }
-  }
-
-  const { summary } = buildChimeSummary(cfg, caps, allowSound, allowVibrate, '')
-  updateRuntimeState({
-    lastBgLog: `${hh}:${mm} [PLY] ${summary}`
-  })
-
-  const played = playHourlyChime(cfg, {
+  playHourlyChime(cfg, {
     isBackground: true,
     allowSound,
-    allowVibrate,
-    onDone: finish
+    allowVibrate
   })
-  if (!played) {
-    finish()
-  }
 }

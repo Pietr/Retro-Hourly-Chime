@@ -35,11 +35,13 @@ import {
 } from '../../../utils/audio'
 import {
   ensureBackgroundPermission,
+  finalizeBackgroundServiceOnPageExit,
   formatHour,
   getBackgroundDiagnostics,
   getNextChimeLabel,
   getSystemSilentMode,
   is12HourFormat,
+  needsAsyncBackgroundService,
   scheduleTestAlarm15s,
   stopLegacyContinuousService,
   syncBackgroundSchedule
@@ -1226,8 +1228,8 @@ Page({
       alpha: 0
     })
 
-    // Initial schedule sync + request bg_service once if enabled (for short-lived async chime_player)
-    if (cfg.enabled) {
+    // Request bg_service only when config actually needs async playback (MP3 or custom Buzzer gap)
+    if (needsAsyncBackgroundService(cfg, caps)) {
       ensureBackgroundPermission()
     }
     const res = syncBackgroundSchedule(cfg, true)
@@ -1445,12 +1447,7 @@ Page({
   applyConfigChange(partial, immediateSave = true, syncAlarm = false) {
     const updated = updateConfig(partial, this.state.config, immediateSave)
     this.state.config = updated
-    if (
-      updated.enabled &&
-      (Object.prototype.hasOwnProperty.call(partial, 'enabled') ||
-        Object.prototype.hasOwnProperty.call(partial, 'speakerEnabled') ||
-        Object.prototype.hasOwnProperty.call(partial, 'buzzerGapMs'))
-    ) {
+    if (needsAsyncBackgroundService(updated, this.state.caps)) {
       ensureBackgroundPermission()
     }
     if (syncAlarm) {
@@ -1715,6 +1712,8 @@ Page({
     this.state.destroyed = true
     flushPendingConfigSave()
     releaseAllAudioHandles()
+    const cfg = this.state.config || loadConfig()
+    finalizeBackgroundServiceOnPageExit(cfg)
     this.state.widgets = {}
   }
 })

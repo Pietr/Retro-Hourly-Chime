@@ -783,30 +783,7 @@ export function previewVibrateMode(modeId, strengthLevel) {
 }
 
 /**
- * Synchronous, zero-timer hardware chime for Single Execution AppService (and fallback when
- * bg_service permission is unavailable). Uses firmware-native Buzzer repeatCount + Vibrator Action[].
- */
-export function playAtomicChimeSync(cfg, options = {}) {
-  const allowSound = options.allowSound !== undefined ? Boolean(options.allowSound) : true
-  const allowVibrate = options.allowVibrate !== undefined ? Boolean(options.allowVibrate) : true
-  const caps = getHardwareCapabilities()
-
-  let triggered = false
-  if (cfg.vibrateEnabled && allowVibrate && caps.hasVibrator) {
-    playVibrateMode(cfg.vibrateMode, cfg.vibrateStrength)
-    triggered = true
-  }
-  if (cfg.buzzerEnabled && allowSound && caps.hasBuzzer) {
-    // Force gap = 0 (native firmware repeatCount) for 100% timer-free Single Execution reliability
-    playBuzzerVariant(cfg.buzzerVariant, cfg.buzzerRepeats, 0, true)
-    triggered = true
-  }
-  return triggered
-}
-
-/**
  * Execute enabled & hardware-supported channels (respecting optional DND overrides).
- * Calls onDone() once playback completes (used by short-lived chime_player AppService to exit cleanly).
  */
 export function playHourlyChime(cfg, options = {}) {
   const isBackground = Boolean(options.isBackground)

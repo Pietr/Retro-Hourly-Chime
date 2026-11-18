@@ -4,10 +4,9 @@ Classic retro digital watch hourly chime for **Amazfit (Zepp OS 3.0+)** smartwat
 
 ## Features
 
-- **Ultra-Low Power Single-Execution Architecture (`@zos/alarm` + `appService.exit()`):**
-  - Uses persistent hardware RTC alarms (`store: true`) to wake the chime service only on active top-of-the-hour marks.
-  - Automatically jumps over quiet overnight windows (**0 wakeups at night**).
-  - Exits immediately after playback via `appService.exit()` (**0 B RAM and 0 background service slots held between hours**).
+- **Ultra-Low Power RTC-Driven Architecture (`@zos/alarm` — 0 `onPerMinute` Wakeups):**
+  - Uses persistent hardware RTC alarms (`store: true`) to wake `service/hourly_chime.js` **exclusively on active top-of-the-hour marks** (automatically jumping quiet overnight hours and inactive days/weekends with **0 wakeups**).
+  - Pure **Single Execution** (0 B RAM between hours) when using native Buzzer `Auto` and/or Vibration; automatically engages a dormant zero-timer `AppService` (0% idle CPU, 0 flash I/O) only when async Speaker MP3 chimes or custom Buzzer repeat gaps (`50–750 ms`) are configured.
   - Uses native `@zos/sensor` `Time` (immune to QuickJS timezone/DST drift) with RTC early-wakeup jitter tolerance (`XX:59:55–59:59`).
 - **3 Independent Alert Channels with Automatic Hardware Detection:**
   - Automatically detects **Hardware Buzzer**, **Speaker**, and **Vibration Motor** capabilities on each watch model.
@@ -31,8 +30,7 @@ Classic retro digital watch hourly chime for **Amazfit (Zepp OS 3.0+)** smartwat
 ## Project Structure
 
 - `app.js` — Lightweight app entry point (schedule sync and cleanup happen directly in the page bundle)
-- `service/hourly_chime.js` — Single-execution AppService woken by `@zos/alarm` (handles atomic chimes directly and promotes async MP3 / custom buzzer gaps to `chime_player`)
-- `service/chime_player.js` — Short-lived on-demand async playback AppService that plays MP3s / timed buzzer gaps and exits immediately (`appService.exit()`, 0 RAM held between hours)
+- `service/hourly_chime.js` — Zero-polling AppService woken exclusively by `@zos/alarm` (pure Single Execution for atomic chimes; dormant zero-CPU listener for async MP3s and custom buzzer repeat gaps)
 - `page/gt/home/index.page.js` — Adaptive round & square main UI
 - `utils/constants.js` — App version, defaults, and audio/haptic ID maps
 - `utils/catalog.js` — UI-only i18n variant catalog (excluded from AppService bundle)

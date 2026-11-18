@@ -3,10 +3,11 @@ import { handleBackgroundWakeup } from '../utils/schedule'
 
 AppService({
   onInit(params) {
-    // Pure Single Execution woken by @zos/alarm:
-    // - Atomic chimes (native Buzzer Auto / Vibrator) fire synchronously in <5 ms.
-    // - Async chimes (Speaker MP3 or custom Buzzer Gap) promote to short-lived service/chime_player.
-    // Do NOT call appService.exit() inside onInit(), letting Single Execution finish naturally.
+    // Zero sensors, zero onPerMinute, zero idle timers — woken exclusively by @zos/alarm
+    handleBackgroundWakeup(params)
+  },
+
+  onEvent(params) {
     handleBackgroundWakeup(params)
   },
 

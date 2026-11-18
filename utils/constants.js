@@ -1,6 +1,5 @@
-export const APP_VERSION = '2.4.3'
+export const APP_VERSION = '2.4.4'
 export const SERVICE_FILE = 'service/hourly_chime'
-export const PLAYER_SERVICE_FILE = 'service/chime_player'
 
 export const BUZZER_VARIANT_IDS = [
   'hw_operate',
