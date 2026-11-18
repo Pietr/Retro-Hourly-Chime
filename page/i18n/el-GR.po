@@ -204,3 +204,36 @@ msgstr "Παύση:"
 
 msgid "gapAuto"
 msgstr "Αυτόμ."
+
+msgid "muteOffWrist"
+msgstr "Σίγαση εκτός χεριού"
+
+msgid "daysEveryday"
+msgstr "Μέρες: ΚΑΘΕ ΜΕΡΑ"
+
+msgid "daysWeekdays"
+msgstr "Μέρες: ΔΕΥ-ΠΑΡ"
+
+msgid "daysWeekends"
+msgstr "Μέρες: ΣΑΒ-ΚΥΡ"
+
+msgid "day1"
+msgstr "Δευ"
+
+msgid "day2"
+msgstr "Τρι"
+
+msgid "day3"
+msgstr "Τετ"
+
+msgid "day4"
+msgstr "Πεμ"
+
+msgid "day5"
+msgstr "Παρ"
+
+msgid "day6"
+msgstr "Σαβ"
+
+msgid "day7"
+msgstr "Κυρ"

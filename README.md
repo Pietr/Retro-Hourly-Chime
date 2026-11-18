@@ -15,10 +15,14 @@ Classic retro digital watch hourly chime for **Amazfit (Zepp OS 3.0+)** smartwat
   - **Hardware Buzzer:** 6 native firmware tones (`Click`, `Remind 1`, `Remind 2`, `Alarm`, `Success`, `Alert`) with repetition count (`1x–4x`), configurable repeat gap (`Auto` native or `50 ms – 750 ms` in `25 ms` steps), and warning if system Buzzer Scene (*Settings → Sound & Vibration → Buzzer Scene → Other*) is disabled.
   - **Speaker (18 MP3 Chimes):** Starts with `Retro 1989` (default), `Retro Quick`, `Retro Steel`, `Vintage 2k+4k`, multi-pulse, dual-tone, triad, bell, sonar ping, and 6 metallic piezo 500ms chimes — all mastered at comfortable -6 dB with fine volume control (`1%–100%`, 1% steps up to 20% and 5% steps above 20%, default 10%) and automatic system volume restore.
   - **Vibration:** 7 haptic patterns (`2x Short`, `2x Crown`, `3x Fast`, `Short+Long`, `Long+Short`, `1x Single`, `System 2x`) with 3 strength levels (`Light`, `Medium`, `Strong`).
-- **Independent Silent Mode Controls (`DND / Sleep / Theater`):**
+- **Independent Silent Mode & Off-Wrist Controls (`DND / Sleep / Theater` + `Wear`):**
   - Reads `@zos/settings` (`getSystemMode()`) for Do Not Disturb, Sleep Mode, and Theater Mode.
   - Two separate toggles: **`Mute Audio`** (Buzzer & Speaker) and **`Mute Vibr.`** (Vibration) — allowing you to silence sounds while optionally keeping subtle wrist vibrations.
-- **Flexible Active Hours & Automatic 12H/24H Time Format:** 24/7 mode or custom hourly range (`FROM` / `TO`, including overnight ranges), automatically displaying `24H` (`08:00`–`22:00`) or `12H AM/PM` (`8:00 AM`–`10:00 PM`) based on your watch system clock setting.
+  - **`Mute off-wrist`** (`@zos/sensor` `Wear`): optionally silences chimes whenever the watch is taken off your wrist (e.g. on a desk or charger).
+- **Flexible Active Hours, Days of Week & Automatic 12H/24H Time Format:**
+  - 24/7 mode or custom hourly range (`FROM` / `TO`, including overnight ranges).
+  - Day-of-week schedule: **`Every Day`**, **`Mon–Fri` (Weekdays)**, or **`Sat–Sun` (Weekends)** — automatically jumps entire inactive days/weekends with **0 RTC wakeups**.
+  - Automatically displays `24H` (`08:00`–`22:00`) or `12H AM/PM` (`8:00 AM`–`10:00 PM`) based on your watch system clock setting.
 - **Universal Round & Square UI + 34 Official Zepp OS Languages:**
   - Adapts automatically to round (`360×360`–`480×480`) and square (`320×380`–`432×514`) displays across `NXP`, `ZPS`, and `APOLLO` chipsets.
   - Full UI & launcher localization across all 34 Zepp OS languages (`en-US`, `pl-PL`, `de-DE`, `fr-FR`, `es-ES`, `it-IT`, `pt-PT`, `pt-BR`, `nl-NL`, `ru-RU`, `uk-UA`, `cs-CZ`, `sk-SK`, `hu-HU`, `ro-RO`, `tr-TR`, `el-GR`, `sv-SE`, `nb-NO`, `da-DK`, `fi-FI`, `sr-RS`, `ca-ES`, `zh-CN`, `zh-TW`, `ja-JP`, `ko-KR`, `id-ID`, `ms-MY`, `vi-VN`, `th-TH`, `ar-EG`, `iw-IL`, `hi-IN`).

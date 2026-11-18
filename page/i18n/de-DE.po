@@ -204,3 +204,36 @@ msgstr "Pause:"
 
 msgid "gapAuto"
 msgstr "Auto"
+
+msgid "muteOffWrist"
+msgstr "Stumm wenn abgelegt"
+
+msgid "daysEveryday"
+msgstr "Tage: TÄGLICH"
+
+msgid "daysWeekdays"
+msgstr "Tage: MO-FR"
+
+msgid "daysWeekends"
+msgstr "Tage: SA-SO"
+
+msgid "day1"
+msgstr "Mo"
+
+msgid "day2"
+msgstr "Di"
+
+msgid "day3"
+msgstr "Mi"
+
+msgid "day4"
+msgstr "Do"
+
+msgid "day5"
+msgstr "Fr"
+
+msgid "day6"
+msgstr "Sa"
+
+msgid "day7"
+msgstr "So"

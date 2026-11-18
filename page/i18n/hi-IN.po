@@ -204,3 +204,36 @@ msgstr "अंतर:"
 
 msgid "gapAuto"
 msgstr "ऑटो"
+
+msgid "muteOffWrist"
+msgstr "उतारने पर म्यूट"
+
+msgid "daysEveryday"
+msgstr "दिन: प्रतिदिन"
+
+msgid "daysWeekdays"
+msgstr "दिन: सोम-शुक्र"
+
+msgid "daysWeekends"
+msgstr "दिन: शनि-रवि"
+
+msgid "day1"
+msgstr "सोम"
+
+msgid "day2"
+msgstr "मंगल"
+
+msgid "day3"
+msgstr "बुध"
+
+msgid "day4"
+msgstr "गुरु"
+
+msgid "day5"
+msgstr "शुक्र"
+
+msgid "day6"
+msgstr "शनि"
+
+msgid "day7"
+msgstr "रवि"

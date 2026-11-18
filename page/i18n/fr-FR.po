@@ -204,3 +204,36 @@ msgstr "Délai:"
 
 msgid "gapAuto"
 msgstr "Auto"
+
+msgid "muteOffWrist"
+msgstr "Muet si retiré"
+
+msgid "daysEveryday"
+msgstr "Jours: TOUS"
+
+msgid "daysWeekdays"
+msgstr "Jours: LUN-VEN"
+
+msgid "daysWeekends"
+msgstr "Jours: SAM-DIM"
+
+msgid "day1"
+msgstr "Lun"
+
+msgid "day2"
+msgstr "Mar"
+
+msgid "day3"
+msgstr "Mer"
+
+msgid "day4"
+msgstr "Jeu"
+
+msgid "day5"
+msgstr "Ven"
+
+msgid "day6"
+msgstr "Sam"
+
+msgid "day7"
+msgstr "Dim"

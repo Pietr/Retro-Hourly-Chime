@@ -204,3 +204,36 @@ msgstr "Pausa:"
 
 msgid "gapAuto"
 msgstr "Auto"
+
+msgid "muteOffWrist"
+msgstr "Mudo sin muñeca"
+
+msgid "daysEveryday"
+msgstr "Días: TODOS"
+
+msgid "daysWeekdays"
+msgstr "Días: LUN-VIE"
+
+msgid "daysWeekends"
+msgstr "Días: SÁB-DOM"
+
+msgid "day1"
+msgstr "Lun"
+
+msgid "day2"
+msgstr "Mar"
+
+msgid "day3"
+msgstr "Mié"
+
+msgid "day4"
+msgstr "Jue"
+
+msgid "day5"
+msgstr "Vie"
+
+msgid "day6"
+msgstr "Sáb"
+
+msgid "day7"
+msgstr "Dom"

@@ -204,3 +204,36 @@ msgstr "Gap:"
 
 msgid "gapAuto"
 msgstr "Auto"
+
+msgid "muteOffWrist"
+msgstr "Mute off-wrist"
+
+msgid "daysEveryday"
+msgstr "Days: EVERY DAY"
+
+msgid "daysWeekdays"
+msgstr "Days: MON-FRI"
+
+msgid "daysWeekends"
+msgstr "Days: SAT-SUN"
+
+msgid "day1"
+msgstr "Mon"
+
+msgid "day2"
+msgstr "Tue"
+
+msgid "day3"
+msgstr "Wed"
+
+msgid "day4"
+msgstr "Thu"
+
+msgid "day5"
+msgstr "Fri"
+
+msgid "day6"
+msgstr "Sat"
+
+msgid "day7"
+msgstr "Sun"

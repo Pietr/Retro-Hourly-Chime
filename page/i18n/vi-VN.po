@@ -204,3 +204,36 @@ msgstr "Nghỉ:"
 
 msgid "gapAuto"
 msgstr "Tự động"
+
+msgid "muteOffWrist"
+msgstr "Tắt khi tháo đồng hồ"
+
+msgid "daysEveryday"
+msgstr "Ngày: HẰNG NGÀY"
+
+msgid "daysWeekdays"
+msgstr "Ngày: T2-T6"
+
+msgid "daysWeekends"
+msgstr "Ngày: T7-CN"
+
+msgid "day1"
+msgstr "T2"
+
+msgid "day2"
+msgstr "T3"
+
+msgid "day3"
+msgstr "T4"
+
+msgid "day4"
+msgstr "T5"
+
+msgid "day5"
+msgstr "T6"
+
+msgid "day6"
+msgstr "T7"
+
+msgid "day7"
+msgstr "CN"

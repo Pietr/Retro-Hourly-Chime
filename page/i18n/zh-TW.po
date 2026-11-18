@@ -204,3 +204,36 @@ msgstr "間隔:"
 
 msgid "gapAuto"
 msgstr "自動"
+
+msgid "muteOffWrist"
+msgstr "取下手錶靜音"
+
+msgid "daysEveryday"
+msgstr "日期: 每天"
+
+msgid "daysWeekdays"
+msgstr "日期: 週一至週五"
+
+msgid "daysWeekends"
+msgstr "日期: 週末"
+
+msgid "day1"
+msgstr "週一"
+
+msgid "day2"
+msgstr "週二"
+
+msgid "day3"
+msgstr "週三"
+
+msgid "day4"
+msgstr "週四"
+
+msgid "day5"
+msgstr "週五"
+
+msgid "day6"
+msgstr "週六"
+
+msgid "day7"
+msgstr "週日"

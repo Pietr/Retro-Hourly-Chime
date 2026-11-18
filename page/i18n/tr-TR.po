@@ -204,3 +204,36 @@ msgstr "Aralık:"
 
 msgid "gapAuto"
 msgstr "Oto"
+
+msgid "muteOffWrist"
+msgstr "Çıkarılınca sessiz"
+
+msgid "daysEveryday"
+msgstr "Günler: HER GÜN"
+
+msgid "daysWeekdays"
+msgstr "Günler: PZT-CUM"
+
+msgid "daysWeekends"
+msgstr "Günler: CMT-PAZ"
+
+msgid "day1"
+msgstr "Pzt"
+
+msgid "day2"
+msgstr "Sal"
+
+msgid "day3"
+msgstr "Çar"
+
+msgid "day4"
+msgstr "Per"
+
+msgid "day5"
+msgstr "Cum"
+
+msgid "day6"
+msgstr "Cmt"
+
+msgid "day7"
+msgstr "Paz"

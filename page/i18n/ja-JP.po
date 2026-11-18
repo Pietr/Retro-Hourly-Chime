@@ -204,3 +204,36 @@ msgstr "間隔:"
 
 msgid "gapAuto"
 msgstr "自動"
+
+msgid "muteOffWrist"
+msgstr "非装着時は消音"
+
+msgid "daysEveryday"
+msgstr "曜日: 毎日"
+
+msgid "daysWeekdays"
+msgstr "曜日: 平日"
+
+msgid "daysWeekends"
+msgstr "曜日: 週末"
+
+msgid "day1"
+msgstr "月"
+
+msgid "day2"
+msgstr "火"
+
+msgid "day3"
+msgstr "水"
+
+msgid "day4"
+msgstr "木"
+
+msgid "day5"
+msgstr "金"
+
+msgid "day6"
+msgstr "土"
+
+msgid "day7"
+msgstr "日"

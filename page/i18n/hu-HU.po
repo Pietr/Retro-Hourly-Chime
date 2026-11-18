@@ -204,3 +204,36 @@ msgstr "Szünet:"
 
 msgid "gapAuto"
 msgstr "Auto"
+
+msgid "muteOffWrist"
+msgstr "Némítás levéve"
+
+msgid "daysEveryday"
+msgstr "Napok: MINDEN NAP"
+
+msgid "daysWeekdays"
+msgstr "Napok: H-P"
+
+msgid "daysWeekends"
+msgstr "Napok: SZO-V"
+
+msgid "day1"
+msgstr "H"
+
+msgid "day2"
+msgstr "K"
+
+msgid "day3"
+msgstr "Sze"
+
+msgid "day4"
+msgstr "Cs"
+
+msgid "day5"
+msgstr "P"
+
+msgid "day6"
+msgstr "Szo"
+
+msgid "day7"
+msgstr "V"

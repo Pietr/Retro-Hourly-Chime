@@ -204,3 +204,36 @@ msgstr "간격:"
 
 msgid "gapAuto"
 msgstr "자동"
+
+msgid "muteOffWrist"
+msgstr "미착용 시 음소거"
+
+msgid "daysEveryday"
+msgstr "요일: 매일"
+
+msgid "daysWeekdays"
+msgstr "요일: 평일"
+
+msgid "daysWeekends"
+msgstr "요일: 주말"
+
+msgid "day1"
+msgstr "월"
+
+msgid "day2"
+msgstr "화"
+
+msgid "day3"
+msgstr "수"
+
+msgid "day4"
+msgstr "목"
+
+msgid "day5"
+msgstr "금"
+
+msgid "day6"
+msgstr "토"
+
+msgid "day7"
+msgstr "일"

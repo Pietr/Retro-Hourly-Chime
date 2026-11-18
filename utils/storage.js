@@ -7,6 +7,7 @@ import {
   BUZZER_GAP_STEP_MS,
   BUZZER_REPEAT_COUNTS,
   BUZZER_VARIANT_IDS,
+  DAYS_MODES,
   DEFAULT_CONFIG,
   DEFAULT_RUNTIME,
   SPEAKER_VARIANT_IDS,
@@ -76,6 +77,10 @@ function normalizeConfig(rawObj) {
     VIBRATE_MODE_IDS.indexOf(src.vibrateMode) !== -1
       ? src.vibrateMode
       : DEFAULT_CONFIG.vibrateMode
+  const daysMode =
+    DAYS_MODES.indexOf(src.daysMode) !== -1
+      ? src.daysMode
+      : DEFAULT_CONFIG.daysMode
 
   return {
     enabled: toBool(src.enabled, DEFAULT_CONFIG.enabled),
@@ -95,10 +100,12 @@ function normalizeConfig(rawObj) {
     vibrateMode,
     vibrateStrength: clampInt(src.vibrateStrength, 0, 2, DEFAULT_CONFIG.vibrateStrength),
     allDay: toBool(src.allDay, DEFAULT_CONFIG.allDay),
+    daysMode,
     startHour: clampInt(src.startHour, 0, 23, DEFAULT_CONFIG.startHour),
     endHour: clampInt(src.endHour, 0, 23, DEFAULT_CONFIG.endHour),
     respectDndSound: toBool(src.respectDndSound, DEFAULT_CONFIG.respectDndSound),
-    respectDndVibrate: toBool(src.respectDndVibrate, DEFAULT_CONFIG.respectDndVibrate)
+    respectDndVibrate: toBool(src.respectDndVibrate, DEFAULT_CONFIG.respectDndVibrate),
+    muteOffWrist: toBool(src.muteOffWrist, DEFAULT_CONFIG.muteOffWrist)
   }
 }
 

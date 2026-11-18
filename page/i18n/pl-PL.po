@@ -204,3 +204,36 @@ msgstr "Odstęp:"
 
 msgid "gapAuto"
 msgstr "Auto"
+
+msgid "muteOffWrist"
+msgstr "Wycisz zdjęty z ręki"
+
+msgid "daysEveryday"
+msgstr "Dni: CODZIENNIE"
+
+msgid "daysWeekdays"
+msgstr "Dni: PN-PT"
+
+msgid "daysWeekends"
+msgstr "Dni: SOB-ND"
+
+msgid "day1"
+msgstr "Pn"
+
+msgid "day2"
+msgstr "Wt"
+
+msgid "day3"
+msgstr "Śr"
+
+msgid "day4"
+msgstr "Cz"
+
+msgid "day5"
+msgstr "Pt"
+
+msgid "day6"
+msgstr "Sb"
+
+msgid "day7"
+msgstr "Nd"

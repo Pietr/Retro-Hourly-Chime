@@ -204,3 +204,36 @@ msgstr "Pauza:"
 
 msgid "gapAuto"
 msgstr "Auto"
+
+msgid "muteOffWrist"
+msgstr "Tiho kad je skinut"
+
+msgid "daysEveryday"
+msgstr "Dani: SVAKI DAN"
+
+msgid "daysWeekdays"
+msgstr "Dani: PON-PET"
+
+msgid "daysWeekends"
+msgstr "Dani: SUB-NED"
+
+msgid "day1"
+msgstr "Pon"
+
+msgid "day2"
+msgstr "Uto"
+
+msgid "day3"
+msgstr "Sre"
+
+msgid "day4"
+msgstr "Čet"
+
+msgid "day5"
+msgstr "Pet"
+
+msgid "day6"
+msgstr "Sub"
+
+msgid "day7"
+msgstr "Ned"

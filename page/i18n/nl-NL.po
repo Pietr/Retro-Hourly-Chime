@@ -204,3 +204,36 @@ msgstr "Pauze:"
 
 msgid "gapAuto"
 msgstr "Auto"
+
+msgid "muteOffWrist"
+msgstr "Stil indien afgedaan"
+
+msgid "daysEveryday"
+msgstr "Dagen: ELKE DAG"
+
+msgid "daysWeekdays"
+msgstr "Dagen: MA-VR"
+
+msgid "daysWeekends"
+msgstr "Dagen: ZA-ZO"
+
+msgid "day1"
+msgstr "Ma"
+
+msgid "day2"
+msgstr "Di"
+
+msgid "day3"
+msgstr "Wo"
+
+msgid "day4"
+msgstr "Do"
+
+msgid "day5"
+msgstr "Vr"
+
+msgid "day6"
+msgstr "Za"
+
+msgid "day7"
+msgstr "Zo"

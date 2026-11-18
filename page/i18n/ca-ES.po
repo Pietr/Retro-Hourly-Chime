@@ -204,3 +204,36 @@ msgstr "Pausa:"
 
 msgid "gapAuto"
 msgstr "Auto"
+
+msgid "muteOffWrist"
+msgstr "Mut fora del canell"
+
+msgid "daysEveryday"
+msgstr "Dies: CADA DIA"
+
+msgid "daysWeekdays"
+msgstr "Dies: DL-DV"
+
+msgid "daysWeekends"
+msgstr "Dies: DS-DG"
+
+msgid "day1"
+msgstr "Dl"
+
+msgid "day2"
+msgstr "Dt"
+
+msgid "day3"
+msgstr "Dc"
+
+msgid "day4"
+msgstr "Dj"
+
+msgid "day5"
+msgstr "Dv"
+
+msgid "day6"
+msgstr "Ds"
+
+msgid "day7"
+msgstr "Dg"

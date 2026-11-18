@@ -204,3 +204,36 @@ msgstr "เว้น:"
 
 msgid "gapAuto"
 msgstr "อัตโนมัติ"
+
+msgid "muteOffWrist"
+msgstr "ปิดเมื่อไม่ได้ใส่"
+
+msgid "daysEveryday"
+msgstr "วัน: ทุกวัน"
+
+msgid "daysWeekdays"
+msgstr "วัน: จันทร์-ศุกร์"
+
+msgid "daysWeekends"
+msgstr "วัน: เสาร์-อาทิตย์"
+
+msgid "day1"
+msgstr "จ."
+
+msgid "day2"
+msgstr "อ."
+
+msgid "day3"
+msgstr "พ."
+
+msgid "day4"
+msgstr "พฤ."
+
+msgid "day5"
+msgstr "ศ."
+
+msgid "day6"
+msgstr "ส."
+
+msgid "day7"
+msgstr "อา."

@@ -1,4 +1,4 @@
-import { Time, TIME_HOUR_FORMAT_12 } from '@zos/sensor'
+import { Time, Wear, checkSensor, TIME_HOUR_FORMAT_12 } from '@zos/sensor'
 import { getSystemMode, getTimeFormat, TIME_FORMAT_12 } from '@zos/settings'
 import {
   set as setAlarm,
@@ -41,9 +41,15 @@ function getTimeSensor() {
   return cachedTimeSensor
 }
 
+function jsDateToIsoDay(d) {
+  const jsDay = d.getDay() // 0 = Sun, 1 = Mon .. 6 = Sat
+  return jsDay === 0 ? 7 : jsDay
+}
+
 /**
  * Read current local watch time from native @zos/sensor Time (immune to QuickJS TZ/DST drift),
  * falling back to JS Date if unavailable.
+ * isoDay is always normalized to 1..7 (1 = Monday .. 7 = Sunday).
  */
 function getNowParts() {
   try {
@@ -55,9 +61,14 @@ function getNowParts() {
       const hour = ts.getHours()
       const minute = ts.getMinutes()
       const second = ts.getSeconds()
+      const rawDay = typeof ts.getDay === 'function' ? ts.getDay() : 0 // Zepp OS Time: 1=Mon..7=Sun
+      const isoDay =
+        rawDay >= 1 && rawDay <= 7
+          ? rawDay
+          : jsDateToIsoDay(new Date(year, month - 1, day))
       const utcMs = typeof ts.getTime === 'function' ? ts.getTime() : Date.now()
       if (Number.isFinite(hour) && Number.isFinite(minute) && Number.isFinite(second)) {
-        return { year, month, day, hour, minute, second, utcMs }
+        return { year, month, day, isoDay, hour, minute, second, utcMs }
       }
     }
   } catch (e) {}
@@ -67,6 +78,7 @@ function getNowParts() {
     year: d.getFullYear(),
     month: d.getMonth() + 1,
     day: d.getDate(),
+    isoDay: jsDateToIsoDay(d),
     hour: d.getHours(),
     minute: d.getMinutes(),
     second: d.getSeconds(),
@@ -98,6 +110,38 @@ export function getSystemSilentMode() {
     }
   } catch (e) {}
   return { dnd: false, sleep: false, theater: false, isQuiet: false, tag: '' }
+}
+
+/**
+ * Returns true ONLY when the Wear sensor explicitly confirms status === 0 (not wearing).
+ * Returns false if wearing (1), in motion (2), unsure (3), or sensor unavailable.
+ */
+function isWatchOffWrist() {
+  try {
+    if (typeof Wear !== 'function') {
+      return false
+    }
+    if (typeof checkSensor === 'function' && !checkSensor(Wear)) {
+      return false
+    }
+    const wear = new Wear()
+    if (wear && typeof wear.getStatus === 'function') {
+      return wear.getStatus() === 0
+    }
+  } catch (e) {}
+  return false
+}
+
+function isDayActive(isoDay, config) {
+  const cfg = config || loadConfig()
+  const mode = cfg.daysMode || 'everyday'
+  if (mode === 'weekdays') {
+    return isoDay >= 1 && isoDay <= 5
+  }
+  if (mode === 'weekends') {
+    return isoDay === 6 || isoDay === 7
+  }
+  return true
 }
 
 function isHourActive(hour, config) {
@@ -150,27 +194,41 @@ export function formatHour(hour) {
   return (h < 10 ? '0' : '') + h + ':00'
 }
 
-function findNextActiveOffsetHours(baseHour, cfg) {
-  for (let offset = 1; offset <= 24; offset++) {
-    const candidateHour = (baseHour + offset) % 24
-    if (isHourActive(candidateHour, cfg)) {
-      return offset
+/**
+ * Search up to 168 hours (7 full days) ahead for the next active (day, hour) slot.
+ */
+function findNextActiveSlot(baseIsoDay, baseHour, cfg) {
+  for (let offset = 1; offset <= 168; offset++) {
+    const totalHours = baseHour + offset
+    const dayDelta = Math.floor(totalHours / 24)
+    const candidateHour = totalHours % 24
+    const candidateIsoDay = ((baseIsoDay - 1 + dayDelta) % 7) + 1
+    if (isDayActive(candidateIsoDay, cfg) && isHourActive(candidateHour, cfg)) {
+      return { offset, hour: candidateHour, isoDay: candidateIsoDay, dayDelta }
     }
   }
-  return 0
+  return null
 }
 
-export function getNextChimeLabel(config) {
+/**
+ * Format next scheduled chime for UI status bar (includes short day prefix when jumping across days).
+ */
+export function getNextChimeLabel(config, dayLabels = null) {
   const cfg = config || loadConfig()
   if (!cfg.enabled || !hasAnyActiveChannel(cfg, getHardwareCapabilities())) {
     return '--:--'
   }
   const now = getNowParts()
-  const offset = findNextActiveOffsetHours(now.hour, cfg)
-  if (offset <= 0) {
+  const next = findNextActiveSlot(now.isoDay, now.hour, cfg)
+  if (!next) {
     return '--:--'
   }
-  return formatHour((now.hour + offset) % 24)
+  const hourStr = formatHour(next.hour)
+  const jumpsDays = next.dayDelta > 1 || (next.dayDelta === 1 && cfg.daysMode !== 'everyday' && !isDayActive(now.isoDay, cfg))
+  if (jumpsDays && dayLabels && dayLabels[next.isoDay]) {
+    return `${dayLabels[next.isoDay]} ${hourStr}`
+  }
+  return hourStr
 }
 
 function clearAllScheduledAlarms(preserveTestAlarm = false) {
@@ -218,9 +276,9 @@ export function stopLegacyContinuousService() {
 }
 
 /**
- * Schedule ONE persistent hardware RTC alarm (@zos/alarm) pointing directly to the next active hour.
- * Jumps over overnight silent windows (0 wakeups during inactive hours) while keeping REPEAT_HOUR
- * as a self-healing hourly cadence during active windows.
+ * Schedule ONE persistent hardware RTC alarm (@zos/alarm) pointing directly to the next active
+ * (day, hour) slot. Jumps over both quiet overnight windows and inactive days (e.g. entire weekends
+ * with 0 wakeups) while keeping REPEAT_HOUR as a self-healing hourly cadence during active windows.
  */
 function scheduleNextActiveAlarm(config, snapEarlyJitter = false, preserveTestAlarm = false) {
   clearAllScheduledAlarms(preserveTestAlarm)
@@ -233,23 +291,31 @@ function scheduleNextActiveAlarm(config, snapEarlyJitter = false, preserveTestAl
   try {
     const now = getNowParts()
     const isEarlySnap = snapEarlyJitter && now.minute === 59 && now.second >= 55
-    let baseHour = now.hour
     let delaySec = 0
 
     if (isEarlySnap) {
-      baseHour = (now.hour + 1) % 24
-      const offsetHours = findNextActiveOffsetHours(baseHour, cfg)
-      if (offsetHours <= 0) {
+      const snapped = new Date(
+        now.year,
+        now.month - 1,
+        now.day,
+        now.hour,
+        now.minute,
+        now.second + 10
+      )
+      const baseHour = snapped.getHours()
+      const baseIsoDay = jsDateToIsoDay(snapped)
+      const next = findNextActiveSlot(baseIsoDay, baseHour, cfg)
+      if (!next) {
         return { ok: true, alarmId: 0, active: false }
       }
-      delaySec = Math.max(1, 60 - now.second) + offsetHours * 3600
+      delaySec = Math.max(1, 60 - now.second) + next.offset * 3600
     } else {
-      const offsetHours = findNextActiveOffsetHours(baseHour, cfg)
-      if (offsetHours <= 0) {
+      const next = findNextActiveSlot(now.isoDay, now.hour, cfg)
+      if (!next) {
         return { ok: true, alarmId: 0, active: false }
       }
       const secsToNextHour = (59 - now.minute) * 60 + (60 - now.second)
-      delaySec = Math.max(10, secsToNextHour + (offsetHours - 1) * 3600)
+      delaySec = Math.max(10, secsToNextHour + (next.offset - 1) * 3600)
     }
 
     const nowUtcSec = Math.floor(now.utcMs / 1000)
@@ -345,8 +411,8 @@ export function getBackgroundDiagnostics() {
 
 /**
  * Single Execution AppService entry handler woken by @zos/alarm.
- * Evaluates time window, deduplication, and independent DND/Sleep/Theater rules for audio vs vibration,
- * triggers allowed channels, jumps overnight silent windows, and invokes onComplete() so the service exits.
+ * Evaluates active day & hour window, deduplication, off-wrist status, and DND/Sleep/Theater rules,
+ * triggers allowed channels, jumps quiet overnight/inactive-day spans, and calls onComplete() to exit.
  */
 export function handleBackgroundWakeup(params, onComplete) {
   const finish = () => {
@@ -365,14 +431,26 @@ export function handleBackgroundWakeup(params, onComplete) {
     return
   }
 
+  const offWristMuted = Boolean(cfg.muteOffWrist && isWatchOffWrist())
   const silent = getSystemSilentMode()
-  const allowSound = !(silent.isQuiet && cfg.respectDndSound)
-  const allowVibrate = !(silent.isQuiet && cfg.respectDndVibrate)
+  const allowSound = !offWristMuted && !(silent.isQuiet && cfg.respectDndSound)
+  const allowVibrate = !offWristMuted && !(silent.isQuiet && cfg.respectDndVibrate)
+
+  const muteReasonTag = offWristMuted ? 'OFF-WRIST' : silent.isQuiet ? silent.tag : ''
 
   if (isTest) {
     const hh = (now.hour < 10 ? '0' : '') + now.hour
     const mm = (now.minute < 10 ? '0' : '') + now.minute
-    const played = executeChimeWithLog(cfg, hh, mm, 'TST15', silent, allowSound, allowVibrate, finish)
+    const played = executeChimeWithLog(
+      cfg,
+      hh,
+      mm,
+      'TST15',
+      muteReasonTag,
+      allowSound,
+      allowVibrate,
+      finish
+    )
     if (!played) {
       finish()
     }
@@ -383,30 +461,40 @@ export function handleBackgroundWakeup(params, onComplete) {
   let logicalYear = now.year
   let logicalMonth = now.month
   let logicalDay = now.day
+  let logicalIsoDay = now.isoDay
   let logicalHour = now.hour
   let isEarlySnap = false
 
   if (now.minute === 59 && now.second >= 55) {
     isEarlySnap = true
-    const snapped = new Date(now.year, now.month - 1, now.day, now.hour, now.minute, now.second + 10)
+    const snapped = new Date(
+      now.year,
+      now.month - 1,
+      now.day,
+      now.hour,
+      now.minute,
+      now.second + 10
+    )
     logicalYear = snapped.getFullYear()
     logicalMonth = snapped.getMonth() + 1
     logicalDay = snapped.getDate()
+    logicalIsoDay = jsDateToIsoDay(snapped)
     logicalHour = snapped.getHours()
   } else if (now.minute > 2) {
-    // Out-of-window wakeup: re-align next active alarm and exit without chiming
     scheduleNextActiveAlarm(cfg, false)
     finish()
     return
   }
 
-  // If the next hour after logicalHour is NOT active, reschedule alarm to jump over the silent night block
-  const nextHour = (logicalHour + 1) % 24
-  if (!cfg.allDay && !isHourActive(nextHour, cfg)) {
+  // Check if the very next hour after logicalHour is inactive (night or inactive day) -> jump directly
+  const nextTotalHour = logicalHour + 1
+  const nextHour = nextTotalHour % 24
+  const nextIsoDay = nextTotalHour >= 24 ? (logicalIsoDay % 7) + 1 : logicalIsoDay
+  if (!isDayActive(nextIsoDay, cfg) || !isHourActive(nextHour, cfg)) {
     scheduleNextActiveAlarm(cfg, isEarlySnap)
   }
 
-  if (!isHourActive(logicalHour, cfg)) {
+  if (!isDayActive(logicalIsoDay, cfg) || !isHourActive(logicalHour, cfg)) {
     finish()
     return
   }
@@ -426,7 +514,7 @@ export function handleBackgroundWakeup(params, onComplete) {
     hh,
     mm,
     'ALM',
-    silent,
+    muteReasonTag,
     allowSound,
     allowVibrate,
     finish,
@@ -442,7 +530,7 @@ function executeChimeWithLog(
   hh,
   mm,
   sourceTag,
-  silent,
+  muteReasonTag,
   allowSound,
   allowVibrate,
   onDone,
@@ -465,7 +553,7 @@ function executeChimeWithLog(
     parts.push(`V:${cfg.vibrateMode}@${cfg.vibrateStrength}`)
   }
 
-  const suffix = silent.isQuiet ? ` (${silent.tag})` : ''
+  const suffix = muteReasonTag ? ` (${muteReasonTag})` : ''
   const summary = parts.length > 0 ? `${parts.join(' ')}${suffix}` : `MUTED${suffix}`
   const patch = {
     lastBgLog: `${hh}:${mm} [${sourceTag}] ${summary}`

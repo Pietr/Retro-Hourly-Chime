@@ -1,4 +1,4 @@
-export const APP_VERSION = '2.3.6'
+export const APP_VERSION = '2.4.0'
 export const SERVICE_FILE = 'service/hourly_chime'
 
 export const BUZZER_VARIANT_IDS = [
@@ -48,6 +48,8 @@ export const VIBRATE_MODE_IDS = [
   'notify_hw'
 ]
 
+export const DAYS_MODES = ['everyday', 'weekdays', 'weekends']
+
 export const DEFAULT_CONFIG = {
   enabled: true,
   buzzerEnabled: true,
@@ -61,10 +63,12 @@ export const DEFAULT_CONFIG = {
   vibrateMode: 'double_short',
   vibrateStrength: 1,
   allDay: false,
+  daysMode: 'everyday',
   startHour: 8,
   endHour: 22,
   respectDndSound: true,
-  respectDndVibrate: true
+  respectDndVibrate: true,
+  muteOffWrist: false
 }
 
 export const DEFAULT_RUNTIME = {

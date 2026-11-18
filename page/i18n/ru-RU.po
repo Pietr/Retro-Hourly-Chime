@@ -204,3 +204,36 @@ msgstr "Пауза:"
 
 msgid "gapAuto"
 msgstr "Авто"
+
+msgid "muteOffWrist"
+msgstr "Без звука если снят"
+
+msgid "daysEveryday"
+msgstr "Дни: ЕЖЕДНЕВНО"
+
+msgid "daysWeekdays"
+msgstr "Дни: ПН-ПТ"
+
+msgid "daysWeekends"
+msgstr "Дни: СБ-ВС"
+
+msgid "day1"
+msgstr "Пн"
+
+msgid "day2"
+msgstr "Вт"
+
+msgid "day3"
+msgstr "Ср"
+
+msgid "day4"
+msgstr "Чт"
+
+msgid "day5"
+msgstr "Пт"
+
+msgid "day6"
+msgstr "Сб"
+
+msgid "day7"
+msgstr "Вс"

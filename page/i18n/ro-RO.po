@@ -204,3 +204,36 @@ msgstr "Pauză:"
 
 msgid "gapAuto"
 msgstr "Auto"
+
+msgid "muteOffWrist"
+msgstr "Mut când e scos"
+
+msgid "daysEveryday"
+msgstr "Zile: ZILNIC"
+
+msgid "daysWeekdays"
+msgstr "Zile: LUN-VIN"
+
+msgid "daysWeekends"
+msgstr "Zile: SÂM-DUM"
+
+msgid "day1"
+msgstr "Lun"
+
+msgid "day2"
+msgstr "Mar"
+
+msgid "day3"
+msgstr "Mie"
+
+msgid "day4"
+msgstr "Joi"
+
+msgid "day5"
+msgstr "Vin"
+
+msgid "day6"
+msgstr "Sâm"
+
+msgid "day7"
+msgstr "Dum"

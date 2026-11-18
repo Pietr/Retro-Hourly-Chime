@@ -2,6 +2,7 @@ import {
   Buzzer,
   SystemSounds,
   Vibrator,
+  Wear,
   checkSensor,
   VIBRATOR_SCENE_SHORT_LIGHT,
   VIBRATOR_SCENE_SHORT_MIDDLE,
@@ -27,6 +28,7 @@ let activeVibrator = null
 let cachedHasBuzzer = null
 let cachedHasSpeaker = null
 let cachedHasVibrator = null
+let cachedHasWear = null
 let lastUiDiag = ''
 
 // Persistent singleton media player during a session (released on full destroy)
@@ -159,11 +161,34 @@ function hasHardwareVibrator() {
   }
 }
 
+function hasHardwareWear() {
+  if (cachedHasWear !== null) {
+    return cachedHasWear
+  }
+  try {
+    if (typeof Wear !== 'function') {
+      cachedHasWear = false
+      return false
+    }
+    if (typeof checkSensor === 'function') {
+      cachedHasWear = Boolean(checkSensor(Wear))
+      return cachedHasWear
+    }
+    const probe = new Wear()
+    cachedHasWear = Boolean(probe && typeof probe.getStatus === 'function')
+    return cachedHasWear
+  } catch (e) {
+    cachedHasWear = false
+    return false
+  }
+}
+
 export function getHardwareCapabilities() {
   return {
     hasBuzzer: hasHardwareBuzzer(),
     hasSpeaker: hasHardwareSpeaker(),
-    hasVibrator: hasHardwareVibrator()
+    hasVibrator: hasHardwareVibrator(),
+    hasWear: hasHardwareWear()
   }
 }
 

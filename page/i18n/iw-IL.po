@@ -204,3 +204,36 @@ msgstr "הפסקה:"
 
 msgid "gapAuto"
 msgstr "אוטו׳"
+
+msgid "muteOffWrist"
+msgstr "השתק כשהשעון מוסר"
+
+msgid "daysEveryday"
+msgstr "ימים: כל יום"
+
+msgid "daysWeekdays"
+msgstr "ימים: שני-שישי"
+
+msgid "daysWeekends"
+msgstr "ימים: שבת-ראשון"
+
+msgid "day1"
+msgstr "ב'"
+
+msgid "day2"
+msgstr "ג'"
+
+msgid "day3"
+msgstr "ד'"
+
+msgid "day4"
+msgstr "ה'"
+
+msgid "day5"
+msgstr "ו'"
+
+msgid "day6"
+msgstr "ש'"
+
+msgid "day7"
+msgstr "א'"

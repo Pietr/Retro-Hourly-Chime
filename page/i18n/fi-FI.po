@@ -204,3 +204,36 @@ msgstr "Tauko:"
 
 msgid "gapAuto"
 msgstr "Auto"
+
+msgid "muteOffWrist"
+msgstr "Mykistä riisuttuna"
+
+msgid "daysEveryday"
+msgstr "Päivät: JOKA PÄIVÄ"
+
+msgid "daysWeekdays"
+msgstr "Päivät: MA-PE"
+
+msgid "daysWeekends"
+msgstr "Päivät: LA-SU"
+
+msgid "day1"
+msgstr "Ma"
+
+msgid "day2"
+msgstr "Ti"
+
+msgid "day3"
+msgstr "Ke"
+
+msgid "day4"
+msgstr "To"
+
+msgid "day5"
+msgstr "Pe"
+
+msgid "day6"
+msgstr "La"
+
+msgid "day7"
+msgstr "Su"

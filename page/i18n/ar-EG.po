@@ -204,3 +204,36 @@ msgstr "الفاصل:"
 
 msgid "gapAuto"
 msgstr "تلقائي"
+
+msgid "muteOffWrist"
+msgstr "كتم عند خلع الساعة"
+
+msgid "daysEveryday"
+msgstr "الأيام: يومياً"
+
+msgid "daysWeekdays"
+msgstr "الأيام: الإثنين-الجمعة"
+
+msgid "daysWeekends"
+msgstr "الأيام: السبت-الأحد"
+
+msgid "day1"
+msgstr "إثن"
+
+msgid "day2"
+msgstr "ثلا"
+
+msgid "day3"
+msgstr "أرب"
+
+msgid "day4"
+msgstr "خمي"
+
+msgid "day5"
+msgstr "جمع"
+
+msgid "day6"
+msgstr "سبت"
+
+msgid "day7"
+msgstr "أحد"

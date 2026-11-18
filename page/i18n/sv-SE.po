@@ -204,3 +204,36 @@ msgstr "Paus:"
 
 msgid "gapAuto"
 msgstr "Auto"
+
+msgid "muteOffWrist"
+msgstr "Tyst avtagen"
+
+msgid "daysEveryday"
+msgstr "Dagar: VARJE DAG"
+
+msgid "daysWeekdays"
+msgstr "Dagar: MÅN-FRE"
+
+msgid "daysWeekends"
+msgstr "Dagar: LÖR-SÖN"
+
+msgid "day1"
+msgstr "Mån"
+
+msgid "day2"
+msgstr "Tis"
+
+msgid "day3"
+msgstr "Ons"
+
+msgid "day4"
+msgstr "Tor"
+
+msgid "day5"
+msgstr "Fre"
+
+msgid "day6"
+msgstr "Lör"
+
+msgid "day7"
+msgstr "Sön"

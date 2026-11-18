@@ -6,7 +6,8 @@ import {
   APP_VERSION,
   BUZZER_GAP_MAX_MS,
   BUZZER_GAP_MIN_MS,
-  BUZZER_GAP_STEP_MS
+  BUZZER_GAP_STEP_MS,
+  DAYS_MODES
 } from '../../../utils/constants'
 import {
   BUZZER_VARIANTS,
@@ -98,6 +99,24 @@ function getVibrateStrengthLabel(level) {
     }
   }
   return t(VIBRATE_STRENGTHS[1].i18nKey, VIBRATE_STRENGTHS[1].fallback)
+}
+
+function getDaysModeLabel(mode) {
+  if (mode === 'weekdays') return t('daysWeekdays', 'Days: MON-FRI')
+  if (mode === 'weekends') return t('daysWeekends', 'Days: SAT-SUN')
+  return t('daysEveryday', 'Days: EVERY DAY')
+}
+
+function getDayShortLabels() {
+  return {
+    1: t('day1', 'Mon'),
+    2: t('day2', 'Tue'),
+    3: t('day3', 'Wed'),
+    4: t('day4', 'Thu'),
+    5: t('day5', 'Fri'),
+    6: t('day6', 'Sat'),
+    7: t('day7', 'Sun')
+  }
 }
 
 function readDeviceMeta() {
@@ -259,7 +278,7 @@ Page({
     const cfg = this.state.config || loadConfig()
     const w = this.state.widgets
     const caps = this.state.caps
-    const { hasBuzzer, hasSpeaker, hasVibrator } = caps
+    const { hasBuzzer, hasSpeaker, hasVibrator, hasWear } = caps
     const hasAnySound = hasBuzzer || hasSpeaker
     const isSquare = this.state.isSquare
     const deviceName = this.state.deviceName
@@ -888,6 +907,26 @@ Page({
         this.applyConfigChange({ allDay: !this.state.config.allDay }, true, true)
       }
     })
+    curY += 68
+
+    // Days of Week Selector: Every Day / Mon-Fri / Sat-Sun
+    w.btnDaysMode = makeButton({
+      x: px(60),
+      y: px(curY),
+      w: px(360),
+      h: px(56),
+      radius: px(28),
+      text_size: fs(20, 15),
+      color: COLORS.WHITE,
+      normal_color: COLORS.BTN_NORMAL,
+      press_color: COLORS.BTN_PRESS,
+      text: getDaysModeLabel(cfg.daysMode),
+      click_func: () => {
+        const idx = DAYS_MODES.indexOf(this.state.config.daysMode)
+        const nextMode = DAYS_MODES[(idx + 1) % DAYS_MODES.length]
+        this.applyConfigChange({ daysMode: nextMode }, true, true)
+      }
+    })
     curY += 72
 
     const hourTextSize = is12HourFormat() ? fs(26, 19) : fs(32, 24)
@@ -1097,7 +1136,45 @@ Page({
         click_func: () => {}
       })
     }
-    curY += 88
+    curY += 80
+
+    // Off-Wrist Mute Toggle (uses @zos/sensor Wear)
+    if (hasWear) {
+      w.btnMuteOffWrist = makeButton({
+        x: px(34),
+        y: px(curY),
+        w: px(412),
+        h: px(62),
+        radius: px(18),
+        text_size: fs(18, 14),
+        color: COLORS.WHITE,
+        normal_color: COLORS.BTN_NORMAL,
+        press_color: COLORS.BTN_PRESS,
+        text: `○ ${t('muteOffWrist', 'Mute off-wrist')}`,
+        click_func: () => {
+          this.applyConfigChange(
+            { muteOffWrist: !this.state.config.muteOffWrist },
+            true,
+            false
+          )
+        }
+      })
+    } else {
+      w.btnMuteOffWrist = makeButton({
+        x: px(34),
+        y: px(curY),
+        w: px(412),
+        h: px(62),
+        radius: px(18),
+        text_size: fs(18, 14),
+        color: COLORS.TEXT_DISABLED,
+        normal_color: COLORS.BTN_DISABLED,
+        press_color: COLORS.BTN_DISABLED,
+        text: `× ${t('muteOffWrist', 'Mute off-wrist')}`,
+        click_func: () => {}
+      })
+    }
+    curY += 82
 
     // 9. Test Active Channels Button
     hmUI.createWidget(hmUI.widget.BUTTON, {
@@ -1233,8 +1310,8 @@ Page({
   refreshDebugLog() {
     const w = this.state.widgets
     if (!w.textDebugLog || this.state.destroyed) return
-    const { hasBuzzer, hasSpeaker, hasVibrator } = this.state.caps
-    const hwTag = `HW:B${hasBuzzer ? 1 : 0}S${hasSpeaker ? 1 : 0}V${hasVibrator ? 1 : 0}`
+    const { hasBuzzer, hasSpeaker, hasVibrator, hasWear } = this.state.caps
+    const hwTag = `HW:B${hasBuzzer ? 1 : 0}S${hasSpeaker ? 1 : 0}V${hasVibrator ? 1 : 0}W${hasWear ? 1 : 0}`
     const diag = getBackgroundDiagnostics()
     const silent = getSystemSilentMode()
     const uiDiag = getLastUiDiag()
@@ -1377,11 +1454,11 @@ Page({
     if (this.state.destroyed) return
     const cfg = this.state.config
     const w = this.state.widgets
-    const { hasBuzzer, hasSpeaker, hasVibrator } = this.state.caps
+    const { hasBuzzer, hasSpeaker, hasVibrator, hasWear } = this.state.caps
     const hasAnySound = hasBuzzer || hasSpeaker
 
     // Status Header
-    const nextLabel = getNextChimeLabel(cfg)
+    const nextLabel = getNextChimeLabel(cfg, getDayShortLabels())
     const activeChannels = []
     if (hasBuzzer && cfg.buzzerEnabled) activeChannels.push(t('shortBuz', 'Buz'))
     if (hasSpeaker && cfg.speakerEnabled) activeChannels.push(t('shortSpk', 'Spk'))
@@ -1531,6 +1608,14 @@ Page({
       press_color: cfg.allDay ? COLORS.ORANGE_PRESS : COLORS.BTN_PRESS
     })
 
+    // Days of Week Button
+    const isCustomDays = cfg.daysMode !== 'everyday'
+    w.btnDaysMode.update({
+      text: getDaysModeLabel(cfg.daysMode),
+      normal_color: isCustomDays ? COLORS.ORANGE : COLORS.BTN_NORMAL,
+      press_color: isCustomDays ? COLORS.ORANGE_PRESS : COLORS.BTN_PRESS
+    })
+
     // Hours Text (dynamically adapts font size & format for 12H AM/PM vs 24H)
     const hourColor = cfg.allDay ? COLORS.DIM_GRAY : COLORS.WHITE
     const hourSize = is12HourFormat() ? fs(26, 19) : fs(32, 24)
@@ -1575,6 +1660,23 @@ Page({
     } else {
       w.btnDndVibrate.update({
         text: `× ${lblDndVib}`,
+        color: COLORS.TEXT_DISABLED,
+        normal_color: COLORS.BTN_DISABLED,
+        press_color: COLORS.BTN_DISABLED
+      })
+    }
+
+    const lblOffWrist = t('muteOffWrist', 'Mute off-wrist')
+    if (hasWear) {
+      w.btnMuteOffWrist.update({
+        text: cfg.muteOffWrist ? `● ${lblOffWrist}` : `○ ${lblOffWrist}`,
+        color: COLORS.WHITE,
+        normal_color: cfg.muteOffWrist ? COLORS.ORANGE : COLORS.BTN_NORMAL,
+        press_color: cfg.muteOffWrist ? COLORS.ORANGE_PRESS : COLORS.BTN_PRESS
+      })
+    } else {
+      w.btnMuteOffWrist.update({
+        text: `× ${lblOffWrist}`,
         color: COLORS.TEXT_DISABLED,
         normal_color: COLORS.BTN_DISABLED,
         press_color: COLORS.BTN_DISABLED
