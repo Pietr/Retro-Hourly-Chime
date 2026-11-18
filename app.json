@@ -5,8 +5,8 @@
     "appName": "Retro Hourly Chime",
     "appType": "app",
     "version": {
-      "code": 37,
-      "name": "2.4.5"
+      "code": 38,
+      "name": "2.4.6"
     },
     "icon": "icon.png",
     "vender": "Pietr",
@@ -15,7 +15,6 @@
   "permissions": [
     "data:os.device.info",
     "device:os.local_storage",
-    "device:os.bg_service",
     "device:os.alarm"
   ],
   "runtime": {

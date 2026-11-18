@@ -6,7 +6,7 @@ Classic retro digital watch hourly chime for **Amazfit (Zepp OS 3.0+)** smartwat
 
 - **Ultra-Low Power RTC-Driven Architecture (`@zos/alarm` — 0 `onPerMinute` Wakeups):**
   - Uses persistent hardware RTC alarms (`store: true`) to wake `service/hourly_chime.js` **exclusively on active top-of-the-hour marks** (automatically jumping quiet overnight hours and inactive days/weekends with **0 wakeups**).
-  - Pure **Single Execution** (0 B RAM between hours) when using native Buzzer and/or Vibration; automatically engages a dormant zero-timer `AppService` (0% idle CPU, 0 flash I/O) only when async Speaker MP3 chimes are enabled.
+  - 100% pure **Single Execution** (0 B RAM between hours, 0% idle CPU, no continuous background service permission required) across all three channels: Buzzer, Speaker MP3, and Vibration.
   - Uses native `@zos/sensor` `Time` (immune to QuickJS timezone/DST drift) with RTC early-wakeup jitter tolerance (`XX:59:55–59:59`).
 - **3 Independent Alert Channels with Automatic Hardware Detection:**
   - Automatically detects **Hardware Buzzer**, **Speaker**, and **Vibration Motor** capabilities on each watch model.
@@ -30,7 +30,7 @@ Classic retro digital watch hourly chime for **Amazfit (Zepp OS 3.0+)** smartwat
 ## Project Structure
 
 - `app.js` — Lightweight app entry point (schedule sync and cleanup happen directly in the page bundle)
-- `service/hourly_chime.js` — Zero-polling AppService woken exclusively by `@zos/alarm` (pure Single Execution for atomic Buzzer/Vibration chimes; dormant zero-CPU listener only when async Speaker MP3s are enabled)
+- `service/hourly_chime.js` — Pure Single Execution AppService woken exclusively by hardware RTC `@zos/alarm` (0 B RAM between hours, no `bg_service` permission required)
 - `page/gt/home/index.page.js` — Adaptive round & square main UI
 - `utils/constants.js` — App version, defaults, and audio/haptic ID maps
 - `utils/catalog.js` — UI-only i18n variant catalog (excluded from AppService bundle)

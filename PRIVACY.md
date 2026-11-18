@@ -1,6 +1,6 @@
 # Privacy Policy — Retro Hourly Chime
 
-**Last updated:** 2026-11-17
+**Last updated:** 2026-11-18
 
 **Retro Hourly Chime** is a standalone smartwatch mini-program for Zepp OS 3.0+ devices.
 
@@ -12,8 +12,7 @@
 ## Permissions Used
 - `data:os.device.info` — Reads your watch screen shape/size and model name locally to adapt the UI and detect hardware features.
 - `device:os.local_storage` — Saves your app settings locally on the watch.
-- `device:os.alarm` — Schedules low-power hardware RTC hourly chime wakeups.
-- `device:os.bg_service` — Allows the single-execution chime service to play your alert on the hour and exit immediately afterward.
+- `device:os.alarm` — Schedules low-power hardware RTC hourly chime wakeups (Single Execution, 0 B RAM between hours).
 
 ## Contact
 If you have questions about this Privacy Policy, please open an issue at:  

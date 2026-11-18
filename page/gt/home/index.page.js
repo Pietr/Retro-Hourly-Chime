@@ -31,16 +31,12 @@ import {
   releaseAllAudioHandles
 } from '../../../utils/audio'
 import {
-  ensureBackgroundPermission,
-  finalizeBackgroundServiceOnPageExit,
   formatHour,
   getBackgroundDiagnostics,
   getNextChimeLabel,
   getSystemSilentMode,
   is12HourFormat,
-  needsAsyncBackgroundService,
   scheduleTestAlarm15s,
-  stopLegacyContinuousService,
   syncBackgroundSchedule
 } from '../../../utils/schedule'
 
@@ -228,9 +224,6 @@ Page({
     this.state.debugBuilt = false
     this.state.alarmError = false
     this.state.bgTestScheduled = false
-
-    // Cleanly stop any leftover continuous AppService from older versions (v2.2.0)
-    stopLegacyContinuousService()
 
     const meta = readDeviceMeta()
     this.state.deviceName = meta.deviceName
@@ -1162,10 +1155,6 @@ Page({
       alpha: 0
     })
 
-    // Request bg_service only when config actually needs async Speaker MP3 playback
-    if (needsAsyncBackgroundService(cfg, caps)) {
-      ensureBackgroundPermission()
-    }
     const res = syncBackgroundSchedule(cfg, true)
     this.state.alarmError = Boolean(cfg.enabled && hasAnyActiveChannel(cfg, caps) && !res.ok)
     this.refreshUI()
@@ -1359,9 +1348,6 @@ Page({
   applyConfigChange(partial, immediateSave = true, syncAlarm = false) {
     const updated = updateConfig(partial, this.state.config, immediateSave)
     this.state.config = updated
-    if (needsAsyncBackgroundService(updated, this.state.caps)) {
-      ensureBackgroundPermission()
-    }
     if (syncAlarm) {
       const res = syncBackgroundSchedule(updated, true)
       this.state.alarmError = Boolean(
@@ -1617,8 +1603,6 @@ Page({
     this.state.destroyed = true
     flushPendingConfigSave()
     releaseAllAudioHandles()
-    const cfg = this.state.config || loadConfig()
-    finalizeBackgroundServiceOnPageExit(cfg)
     this.state.widgets = {}
   }
 })

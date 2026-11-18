@@ -7,8 +7,6 @@ import {
   REPEAT_HOUR,
   REPEAT_ONCE
 } from '@zos/alarm'
-import * as appService from '@zos/app-service'
-import { queryPermission, requestPermission } from '@zos/app'
 import { log as Logger } from '@zos/utils'
 import { SERVICE_FILE } from './constants'
 import {
@@ -235,17 +233,6 @@ export function getNextChimeLabel(config, dayLabels = null) {
   return hourStr
 }
 
-/**
- * Returns true if the active configuration requires async media execution in background
- * (Speaker MP3 chimes).
- * Pure atomic chimes (native Buzzer + Vibrator) run in zero-RAM Single Execution mode!
- */
-export function needsAsyncBackgroundService(cfg, capsOverride = null) {
-  if (!cfg || !cfg.enabled) return false
-  const caps = capsOverride || getHardwareCapabilities()
-  return Boolean(cfg.speakerEnabled && caps.hasSpeaker)
-}
-
 function clearAllScheduledAlarms(preserveTestAlarm = false) {
   try {
     if (typeof getAllAlarms === 'function') {
@@ -265,113 +252,6 @@ function clearAllScheduledAlarms(preserveTestAlarm = false) {
   } catch (e) {
     logger.error('Failed to clear existing alarms:', e)
   }
-}
-
-function isServiceRunning() {
-  try {
-    if (appService && typeof appService.getAllAppServices === 'function') {
-      const list = appService.getAllAppServices() || []
-      for (let i = 0; i < list.length; i++) {
-        if (String(list[i]).indexOf(SERVICE_FILE) !== -1) {
-          return true
-        }
-      }
-    }
-  } catch (e) {}
-  return false
-}
-
-/**
- * Prompt once for device:os.bg_service permission while UI is open (only needed for async
- * Speaker MP3 chimes).
- */
-export function ensureBackgroundPermission(onDone) {
-  try {
-    const perms = ['device:os.bg_service']
-    const status =
-      typeof queryPermission === 'function' ? queryPermission({ permissions: perms }) : [2]
-    if (status && status[0] === 2) {
-      if (onDone) onDone(true)
-      return
-    }
-    if (typeof requestPermission === 'function') {
-      requestPermission({
-        permissions: perms,
-        callback: (res) => {
-          if (onDone) onDone(Boolean(res && res[0] === 2))
-        }
-      })
-      return
-    }
-  } catch (e) {}
-  if (onDone) onDone(true)
-}
-
-function hasBgServicePermission() {
-  try {
-    if (typeof queryPermission === 'function') {
-      const status = queryPermission({ permissions: ['device:os.bg_service'] })
-      return Boolean(status && status[0] === 2)
-    }
-  } catch (e) {}
-  return true
-}
-
-/**
- * Pause any running AppService while foreground UI is open so UI holds exclusive hardware access.
- */
-export function stopLegacyContinuousService() {
-  try {
-    if (isServiceRunning() && typeof appService.stop === 'function') {
-      appService.stop({
-        file: SERVICE_FILE,
-        complete_func: () => {}
-      })
-      return true
-    }
-  } catch (e) {}
-  return false
-}
-
-/**
- * Called ONCE when UI Page exits (Page.onDestroy):
- * - If config only uses atomic channels (Buzzer / Vibrator): keeps 0 background services running
- *   (pure Single Execution woken by @zos/alarm, 0 B RAM between hours!).
- * - If config uses Speaker MP3: starts dormant service/hourly_chime with ZERO timers and
- *   ZERO onPerMinute (0% idle CPU — woken exclusively by @zos/alarm) so @zos/media Player
- *   completes cleanly without Single Execution teardown.
- */
-export function finalizeBackgroundServiceOnPageExit(config) {
-  const cfg = config || loadConfig()
-  const caps = getHardwareCapabilities()
-
-  if (!cfg.enabled || !hasAnyActiveChannel(cfg, caps) || !needsAsyncBackgroundService(cfg, caps)) {
-    stopLegacyContinuousService()
-    return false
-  }
-
-  if (isServiceRunning()) {
-    return true
-  }
-
-  if (!hasBgServicePermission()) {
-    return false
-  }
-
-  try {
-    if (appService && typeof appService.start === 'function') {
-      appService.start({
-        file: SERVICE_FILE,
-        param: 'idle_ready',
-        reload: true,
-        complete_func: () => {}
-      })
-      return true
-    }
-  } catch (e) {
-    logger.error('Failed to start dormant async AppService:', e)
-  }
-  return false
 }
 
 /**
@@ -484,33 +364,25 @@ export function syncBackgroundSchedule(config, preserveTestAlarm = false) {
   const cfg = config || loadConfig()
   if (!cfg.enabled || !hasAnyActiveChannel(cfg, getHardwareCapabilities())) {
     clearAllScheduledAlarms(preserveTestAlarm)
-    stopLegacyContinuousService()
     return { ok: true, alarmId: 0, active: false }
   }
   return scheduleNextActiveAlarm(cfg, false, preserveTestAlarm)
 }
 
 export function getBackgroundDiagnostics() {
-  let svcCount = 0
   let almCount = 0
-  try {
-    if (appService && typeof appService.getAllAppServices === 'function') {
-      const list = appService.getAllAppServices() || []
-      svcCount = list.length
-    }
-  } catch (e) {}
   try {
     if (typeof getAllAlarms === 'function') {
       const list = getAllAlarms() || []
       almCount = list.length
     }
   } catch (e) {}
-  return `SVC:${svcCount} ALM:${almCount}`
+  return `ALM:${almCount}`
 }
 
 /**
- * AppService wakeup handler triggered exclusively by @zos/alarm ('alarm_wakeup' / 'test_wakeup').
- * Ignores 'idle_ready' / reboot init with zero timers and zero CPU activity!
+ * Single Execution AppService wakeup handler triggered exclusively by @zos/alarm
+ * ('alarm_wakeup' / 'test_wakeup'). Requires only device:os.alarm (0 B RAM between hours).
  */
 export function handleBackgroundWakeup(params) {
   const isAlarm = params === 'alarm_wakeup'

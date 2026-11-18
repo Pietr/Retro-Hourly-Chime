@@ -3,7 +3,7 @@ import { handleBackgroundWakeup } from '../utils/schedule'
 
 AppService({
   onInit(params) {
-    // Zero sensors, zero onPerMinute, zero idle timers — woken exclusively by @zos/alarm
+    // Pure Single Execution woken exclusively by hardware RTC @zos/alarm (0 B RAM between hours)
     handleBackgroundWakeup(params)
   },
 
