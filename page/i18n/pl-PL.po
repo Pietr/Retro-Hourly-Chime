@@ -199,12 +199,6 @@ msgstr "TEST TŁA (15s)"
 msgid "statusBgTestSet"
 msgstr "Test w tle za 15s..."
 
-msgid "gapPrefix"
-msgstr "Odstęp:"
-
-msgid "gapAuto"
-msgstr "Auto"
-
 msgid "muteOffWrist"
 msgstr "Wycisz zdjęty z ręki"
 

@@ -236,21 +236,14 @@ export function getNextChimeLabel(config, dayLabels = null) {
 }
 
 /**
- * Returns true if the active configuration requires async timer/media execution in background
- * (Speaker MP3s or custom Buzzer repeat gap 50..750 ms).
- * Pure atomic chimes (native Buzzer Auto + Vibrator) run in zero-RAM Single Execution mode!
+ * Returns true if the active configuration requires async media execution in background
+ * (Speaker MP3 chimes).
+ * Pure atomic chimes (native Buzzer + Vibrator) run in zero-RAM Single Execution mode!
  */
 export function needsAsyncBackgroundService(cfg, capsOverride = null) {
   if (!cfg || !cfg.enabled) return false
   const caps = capsOverride || getHardwareCapabilities()
-  const needsSpeaker = Boolean(cfg.speakerEnabled && caps.hasSpeaker)
-  const needsBuzzerGap = Boolean(
-    cfg.buzzerEnabled &&
-      caps.hasBuzzer &&
-      getBuzzerRepeatCount(cfg.buzzerRepeats) > 0 &&
-      Number(cfg.buzzerGapMs) > 0
-  )
-  return needsSpeaker || needsBuzzerGap
+  return Boolean(cfg.speakerEnabled && caps.hasSpeaker)
 }
 
 function clearAllScheduledAlarms(preserveTestAlarm = false) {
@@ -290,7 +283,7 @@ function isServiceRunning() {
 
 /**
  * Prompt once for device:os.bg_service permission while UI is open (only needed for async
- * Speaker MP3 chimes or custom Buzzer repeat gaps).
+ * Speaker MP3 chimes).
  */
 export function ensureBackgroundPermission(onDone) {
   try {
@@ -342,11 +335,11 @@ export function stopLegacyContinuousService() {
 
 /**
  * Called ONCE when UI Page exits (Page.onDestroy):
- * - If config only uses atomic channels (Buzzer Auto / Vibrator): keeps 0 background services running
+ * - If config only uses atomic channels (Buzzer / Vibrator): keeps 0 background services running
  *   (pure Single Execution woken by @zos/alarm, 0 B RAM between hours!).
- * - If config uses Speaker MP3 or custom Buzzer gap (50..750 ms): starts dormant service/hourly_chime
- *   with ZERO timers and ZERO onPerMinute (0% idle CPU — woken exclusively by @zos/alarm) so async
- *   timers and @zos/media Player complete cleanly without Single Execution 600ms teardown.
+ * - If config uses Speaker MP3: starts dormant service/hourly_chime with ZERO timers and
+ *   ZERO onPerMinute (0% idle CPU — woken exclusively by @zos/alarm) so @zos/media Player
+ *   completes cleanly without Single Execution teardown.
  */
 export function finalizeBackgroundServiceOnPageExit(config) {
   const cfg = config || loadConfig()
@@ -627,8 +620,7 @@ function executeChimeWithLog(
   const runVibrate = cfg.vibrateEnabled && allowVibrate && caps.hasVibrator
 
   if (runBuzzer) {
-    const gapSuffix = cfg.buzzerGapMs > 0 ? `@${cfg.buzzerGapMs}ms` : ''
-    parts.push(`B:${cfg.buzzerVariant}x${getBuzzerRepeatCount(cfg.buzzerRepeats) + 1}${gapSuffix}`)
+    parts.push(`B:${cfg.buzzerVariant}x${getBuzzerRepeatCount(cfg.buzzerRepeats) + 1}`)
   }
   if (runSpeaker) {
     parts.push(`S:${cfg.speakerVariant}@${cfg.speakerVolume}%`)

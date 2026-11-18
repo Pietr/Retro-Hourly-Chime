@@ -199,12 +199,6 @@ msgstr "后台测试 (15秒)"
 msgid "statusBgTestSet"
 msgstr "15秒后后台测试..."
 
-msgid "gapPrefix"
-msgstr "间隔:"
-
-msgid "gapAuto"
-msgstr "自动"
-
 msgid "muteOffWrist"
 msgstr "摘下手表静音"
 

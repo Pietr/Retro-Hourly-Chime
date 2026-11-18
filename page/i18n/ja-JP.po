@@ -199,12 +199,6 @@ msgstr "BGテスト (15秒)"
 msgid "statusBgTestSet"
 msgstr "15秒後にBGテスト..."
 
-msgid "gapPrefix"
-msgstr "間隔:"
-
-msgid "gapAuto"
-msgstr "自動"
-
 msgid "muteOffWrist"
 msgstr "非装着時は消音"
 

@@ -14,7 +14,6 @@ import { getDeviceInfo } from '@zos/device'
 import { create as createMedia, id as mediaId } from '@zos/media'
 import { log as Logger } from '@zos/utils'
 import {
-  BUZZER_GAP_MAX_MS,
   BUZZER_REPEAT_COUNTS,
   SPEAKER_FILE_MAP
 } from './constants'
@@ -343,12 +342,10 @@ export function getBuzzerRepeatCount(repeatLevel) {
 }
 
 /**
- * Play hardware-native Buzzer firmware waveform.
- * - gapMs === 0 (Auto) or single beep: ONE atomic firmware call buzzer.start(sourceType, repeatCount).
- * - gapMs > 0 (50..750 ms) with multiple repeats: schedules each full native beep with exact spacing
- *   via tracked scheduleTimer() (runs cleanly in foreground UI and short-lived chime_player AppService).
+ * Play hardware-native Buzzer firmware waveform in ONE atomic firmware call.
+ * Runs identically in foreground UI and zero-RAM Single Execution background wakeups.
  */
-function playBuzzerVariant(variantId, repeatLevel, gapMs = 0, isBackground = false) {
+function playBuzzerVariant(variantId, repeatLevel, isBackground = false) {
   try {
     if (!hasHardwareBuzzer()) {
       lastUiDiag = 'NO_HW_BUZZER'
@@ -363,8 +360,6 @@ function playBuzzerVariant(variantId, repeatLevel, gapMs = 0, isBackground = fal
     const sysStr = typeof buzzer.getStrength === 'function' ? buzzer.getStrength() : '?'
     const v = variantId || 'hw_operate'
     const repeatCount = getBuzzerRepeatCount(repeatLevel)
-    const rawGap = Number(gapMs)
-    const gap = Number.isFinite(rawGap) ? Math.max(0, Math.min(BUZZER_GAP_MAX_MS, Math.round(rawGap))) : 0
 
     const sourceKeyMap = {
       hw_operate: ['OPERATE', 'REMIND_1', 'ALARM'],
@@ -378,28 +373,10 @@ function playBuzzerVariant(variantId, repeatLevel, gapMs = 0, isBackground = fal
     const preferredKeys = sourceKeyMap[v] || sourceKeyMap.hw_operate
     const sourceType = resolveBuzzerType(types, preferredKeys)
 
-    if (repeatCount > 0 && gap > 0) {
-      buzzer.start(sourceType, 0)
-      for (let i = 1; i <= repeatCount; i++) {
-        scheduleTimer(() => {
-          try {
-            if (!activeBuzzer) return
-            try {
-              activeBuzzer.stop()
-            } catch (e) {}
-            activeBuzzer.start(sourceType, 0)
-          } catch (e) {
-            logger.error('playBuzzerVariant repeat failed:', e)
-          }
-        }, i * gap)
-      }
-    } else {
-      buzzer.start(sourceType, repeatCount)
-    }
+    buzzer.start(sourceType, repeatCount)
 
     if (!isBackground) {
-      const gapTag = gap > 0 ? `${gap}ms` : 'auto'
-      lastUiDiag = `UI:ok en=${sysEnabled} str=${sysStr} t=${sourceType} r=${repeatCount} g=${gapTag}`
+      lastUiDiag = `UI:ok en=${sysEnabled} str=${sysStr} t=${sourceType} r=${repeatCount}`
     }
     return true
   } catch (e) {
@@ -767,9 +744,9 @@ function playVibrateMode(modeId, strengthLevel) {
   }
 }
 
-export function previewBuzzerVariant(variantId, repeatLevel, gapMs = 0) {
+export function previewBuzzerVariant(variantId, repeatLevel) {
   clearPendingAudio(false)
-  playBuzzerVariant(variantId, repeatLevel, gapMs, false)
+  playBuzzerVariant(variantId, repeatLevel, false)
 }
 
 export function previewSpeakerVariant(variantId, volumePercent) {
@@ -815,19 +792,13 @@ export function playHourlyChime(cfg, options = {}) {
   }
 
   if (runBuzzer) {
-    playBuzzerVariant(cfg.buzzerVariant, cfg.buzzerRepeats, cfg.buzzerGapMs, isBackground)
+    playBuzzerVariant(cfg.buzzerVariant, cfg.buzzerRepeats, isBackground)
   }
 
   let minSettleMs = 0
   if (runBuzzer) {
     const repeatCount = getBuzzerRepeatCount(cfg.buzzerRepeats)
-    const rawGap = Number(cfg.buzzerGapMs)
-    const gap = Number.isFinite(rawGap) ? Math.max(0, Math.min(BUZZER_GAP_MAX_MS, Math.round(rawGap))) : 0
-    if (repeatCount > 0 && gap > 0) {
-      minSettleMs = Math.max(minSettleMs, Math.min(3600, repeatCount * gap + 650))
-    } else {
-      minSettleMs = Math.max(minSettleMs, Math.min(2400, 450 * (repeatCount + 1) + 300))
-    }
+    minSettleMs = Math.max(minSettleMs, Math.min(2400, 450 * (repeatCount + 1) + 300))
   }
   if (runVibrate) {
     minSettleMs = Math.max(minSettleMs, 950)

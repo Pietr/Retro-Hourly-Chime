@@ -199,12 +199,6 @@ msgstr "בדיקת רקע 15ש"
 msgid "statusBgTestSet"
 msgstr "בדיקה בעוד 15ש..."
 
-msgid "gapPrefix"
-msgstr "הפסקה:"
-
-msgid "gapAuto"
-msgstr "אוטו׳"
-
 msgid "muteOffWrist"
 msgstr "השתק כשהשעון מוסר"
 

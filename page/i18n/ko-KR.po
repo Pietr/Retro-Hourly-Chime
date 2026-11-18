@@ -199,12 +199,6 @@ msgstr "백그라운드 테스트"
 msgid "statusBgTestSet"
 msgstr "15초 후 테스트..."
 
-msgid "gapPrefix"
-msgstr "간격:"
-
-msgid "gapAuto"
-msgstr "자동"
-
 msgid "muteOffWrist"
 msgstr "미착용 시 음소거"
 

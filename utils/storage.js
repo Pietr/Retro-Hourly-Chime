@@ -2,9 +2,6 @@ import { readFileSync, writeFileSync, rmSync, renameSync, statSync } from '@zos/
 import { LocalStorage } from '@zos/storage'
 import { log as Logger } from '@zos/utils'
 import {
-  BUZZER_GAP_MAX_MS,
-  BUZZER_GAP_MIN_MS,
-  BUZZER_GAP_STEP_MS,
   BUZZER_REPEAT_COUNTS,
   BUZZER_VARIANT_IDS,
   DAYS_MODES,
@@ -54,15 +51,6 @@ function toBool(value, fallback) {
   return fallback
 }
 
-function normalizeBuzzerGap(value) {
-  const num = Number(value)
-  if (!Number.isFinite(num) || num <= 0) {
-    return 0
-  }
-  const clamped = Math.max(BUZZER_GAP_MIN_MS, Math.min(BUZZER_GAP_MAX_MS, num))
-  return Math.round(clamped / BUZZER_GAP_STEP_MS) * BUZZER_GAP_STEP_MS
-}
-
 function normalizeConfig(rawObj) {
   const src = rawObj && typeof rawObj === 'object' ? rawObj : {}
   const buzzerVariant =
@@ -94,7 +82,6 @@ function normalizeConfig(rawObj) {
       BUZZER_REPEAT_COUNTS.length - 1,
       DEFAULT_CONFIG.buzzerRepeats
     ),
-    buzzerGapMs: normalizeBuzzerGap(src.buzzerGapMs),
     speakerVariant,
     speakerVolume: clampInt(src.speakerVolume, 1, 100, DEFAULT_CONFIG.speakerVolume),
     vibrateMode,

@@ -4,9 +4,6 @@ import { px, log as Logger } from '@zos/utils'
 import { t } from '../../../utils/i18n'
 import {
   APP_VERSION,
-  BUZZER_GAP_MAX_MS,
-  BUZZER_GAP_MIN_MS,
-  BUZZER_GAP_STEP_MS,
   DAYS_MODES
 } from '../../../utils/constants'
 import {
@@ -517,11 +514,7 @@ Page({
         press_color: COLORS.BTN_VARIANT_PRESS,
         text: t(BUZZER_VARIANTS[0].i18nKey, BUZZER_VARIANTS[0].fallback),
         click_func: () => {
-          previewBuzzerVariant(
-            this.state.config.buzzerVariant,
-            this.state.config.buzzerRepeats,
-            this.state.config.buzzerGapMs
-          )
+          previewBuzzerVariant(this.state.config.buzzerVariant, this.state.config.buzzerRepeats)
           if (this.state.debugUnlocked) this.refreshDebugLog()
         }
       })
@@ -571,11 +564,7 @@ Page({
         press_color: COLORS.BTN_VARIANT_PRESS,
         text: `${t('repeatsPrefix', 'Repeats:')} 2x`,
         click_func: () => {
-          previewBuzzerVariant(
-            this.state.config.buzzerVariant,
-            this.state.config.buzzerRepeats,
-            this.state.config.buzzerGapMs
-          )
+          previewBuzzerVariant(this.state.config.buzzerVariant, this.state.config.buzzerRepeats)
           if (this.state.debugUnlocked) this.refreshDebugLog()
         }
       })
@@ -593,61 +582,6 @@ Page({
         text: '+',
         click_func: () => {
           this.stepBuzzerRepeats(1)
-        }
-      })
-      curY += 66
-
-      // Buzzer Repeat Gap Row: [ - ] Gap: Auto / 50..750ms [ + ]
-      hmUI.createWidget(hmUI.widget.BUTTON, {
-        x: px(34),
-        y: px(curY),
-        w: px(68),
-        h: px(56),
-        radius: px(16),
-        text_size: fs(30, 22),
-        color: COLORS.WHITE,
-        normal_color: COLORS.BTN_NORMAL,
-        press_color: COLORS.BTN_PRESS,
-        text: '-',
-        click_func: () => {
-          this.stepBuzzerGap(-1)
-        }
-      })
-
-      w.btnBuzzerGap = makeButton({
-        x: px(110),
-        y: px(curY),
-        w: px(260),
-        h: px(56),
-        radius: px(16),
-        text_size: fs(19, 14),
-        color: COLORS.WHITE,
-        normal_color: COLORS.BTN_VARIANT,
-        press_color: COLORS.BTN_VARIANT_PRESS,
-        text: `${t('gapPrefix', 'Gap:')} ${t('gapAuto', 'Auto')}`,
-        click_func: () => {
-          previewBuzzerVariant(
-            this.state.config.buzzerVariant,
-            this.state.config.buzzerRepeats,
-            this.state.config.buzzerGapMs
-          )
-          if (this.state.debugUnlocked) this.refreshDebugLog()
-        }
-      })
-
-      hmUI.createWidget(hmUI.widget.BUTTON, {
-        x: px(378),
-        y: px(curY),
-        w: px(68),
-        h: px(56),
-        radius: px(16),
-        text_size: fs(30, 22),
-        color: COLORS.WHITE,
-        normal_color: COLORS.BTN_NORMAL,
-        press_color: COLORS.BTN_PRESS,
-        text: '+',
-        click_func: () => {
-          this.stepBuzzerGap(1)
         }
       })
       curY += 74
@@ -1228,7 +1162,7 @@ Page({
       alpha: 0
     })
 
-    // Request bg_service only when config actually needs async playback (MP3 or custom Buzzer gap)
+    // Request bg_service only when config actually needs async Speaker MP3 playback
     if (needsAsyncBackgroundService(cfg, caps)) {
       ensureBackgroundPermission()
     }
@@ -1358,7 +1292,7 @@ Page({
     const nextIdx = (idx + delta + BUZZER_VARIANTS.length) % BUZZER_VARIANTS.length
     const nextId = BUZZER_VARIANTS[nextIdx].id
     this.applyConfigChange({ buzzerVariant: nextId }, false, false)
-    previewBuzzerVariant(nextId, this.state.config.buzzerRepeats, this.state.config.buzzerGapMs)
+    previewBuzzerVariant(nextId, this.state.config.buzzerRepeats)
     if (this.state.debugUnlocked) this.refreshDebugLog()
   },
 
@@ -1367,29 +1301,7 @@ Page({
     const current = Number(this.state.config.buzzerRepeats)
     const next = Math.max(0, Math.min(BUZZER_REPEAT_LEVELS.length - 1, current + delta))
     this.applyConfigChange({ buzzerRepeats: next }, false, false)
-    previewBuzzerVariant(this.state.config.buzzerVariant, next, this.state.config.buzzerGapMs)
-    if (this.state.debugUnlocked) this.refreshDebugLog()
-  },
-
-  stepBuzzerGap(direction) {
-    if (!this.state.caps.hasBuzzer) return
-    const current = Number(this.state.config.buzzerGapMs) || 0
-    let next
-    if (direction < 0) {
-      if (current <= BUZZER_GAP_MIN_MS) {
-        next = 0
-      } else {
-        next = Math.max(BUZZER_GAP_MIN_MS, current - BUZZER_GAP_STEP_MS)
-      }
-    } else {
-      if (current <= 0) {
-        next = BUZZER_GAP_MIN_MS
-      } else {
-        next = Math.min(BUZZER_GAP_MAX_MS, current + BUZZER_GAP_STEP_MS)
-      }
-    }
-    this.applyConfigChange({ buzzerGapMs: next }, false, false)
-    previewBuzzerVariant(this.state.config.buzzerVariant, this.state.config.buzzerRepeats, next)
+    previewBuzzerVariant(this.state.config.buzzerVariant, next)
     if (this.state.debugUnlocked) this.refreshDebugLog()
   },
 
@@ -1559,7 +1471,7 @@ Page({
       })
     }
 
-    // Hardware Buzzer Variant + Repeats + Gap
+    // Hardware Buzzer Variant + Repeats
     if (hasBuzzer && w.btnBuzzerName && w.btnBuzzerRepeats) {
       const buzzerIdx = findVariantIndex(BUZZER_VARIANTS, cfg.buzzerVariant)
       const bv = BUZZER_VARIANTS[buzzerIdx]
@@ -1571,13 +1483,6 @@ Page({
         text: `${t('repeatsPrefix', 'Repeats:')} ${getRepeatLabel(cfg.buzzerRepeats)}`,
         color: cfg.buzzerEnabled ? COLORS.WHITE : COLORS.GRAY
       })
-      if (w.btnBuzzerGap) {
-        const gapVal = cfg.buzzerGapMs > 0 ? `${cfg.buzzerGapMs} ms` : t('gapAuto', 'Auto')
-        w.btnBuzzerGap.update({
-          text: `${t('gapPrefix', 'Gap:')} ${gapVal}`,
-          color: cfg.buzzerEnabled && cfg.buzzerRepeats > 0 ? COLORS.WHITE : COLORS.GRAY
-        })
-      }
     }
 
     // Speaker Variant + Volume

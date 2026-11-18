@@ -199,12 +199,6 @@ msgstr "اختبار خلفية 15ث"
 msgid "statusBgTestSet"
 msgstr "اختبار بعد 15ث..."
 
-msgid "gapPrefix"
-msgstr "الفاصل:"
-
-msgid "gapAuto"
-msgstr "تلقائي"
-
 msgid "muteOffWrist"
 msgstr "كتم عند خلع الساعة"
 

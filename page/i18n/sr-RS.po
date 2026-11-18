@@ -199,12 +199,6 @@ msgstr "BG TEST (15s)"
 msgid "statusBgTestSet"
 msgstr "BG test za 15s..."
 
-msgid "gapPrefix"
-msgstr "Pauza:"
-
-msgid "gapAuto"
-msgstr "Auto"
-
 msgid "muteOffWrist"
 msgstr "Tiho kad je skinut"
 

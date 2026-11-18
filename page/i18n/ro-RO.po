@@ -199,12 +199,6 @@ msgstr "TEST FUNDAL 15s"
 msgid "statusBgTestSet"
 msgstr "Test fundal în 15s..."
 
-msgid "gapPrefix"
-msgstr "Pauză:"
-
-msgid "gapAuto"
-msgstr "Auto"
-
 msgid "muteOffWrist"
 msgstr "Mut când e scos"
 

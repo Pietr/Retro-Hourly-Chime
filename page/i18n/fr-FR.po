@@ -199,12 +199,6 @@ msgstr "TEST FOND (15s)"
 msgid "statusBgTestSet"
 msgstr "Test fond dans 15s..."
 
-msgid "gapPrefix"
-msgstr "Délai:"
-
-msgid "gapAuto"
-msgstr "Auto"
-
 msgid "muteOffWrist"
 msgstr "Muet si retiré"
 

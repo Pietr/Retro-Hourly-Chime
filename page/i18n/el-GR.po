@@ -199,12 +199,6 @@ msgstr "ΔΟΚΙΜΗ BG (15s)"
 msgid "statusBgTestSet"
 msgstr "Δοκιμή BG σε 15s..."
 
-msgid "gapPrefix"
-msgstr "Παύση:"
-
-msgid "gapAuto"
-msgstr "Αυτόμ."
-
 msgid "muteOffWrist"
 msgstr "Σίγαση εκτός χεριού"
 

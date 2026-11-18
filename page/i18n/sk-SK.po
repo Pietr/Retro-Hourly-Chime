@@ -199,12 +199,6 @@ msgstr "TEST POZADIA 15s"
 msgid "statusBgTestSet"
 msgstr "Test pozadia za 15s..."
 
-msgid "gapPrefix"
-msgstr "Pauza:"
-
-msgid "gapAuto"
-msgstr "Auto"
-
 msgid "muteOffWrist"
 msgstr "Stíšiť po zložení"
 

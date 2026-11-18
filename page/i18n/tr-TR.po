@@ -199,12 +199,6 @@ msgstr "ARKA TEST (15s)"
 msgid "statusBgTestSet"
 msgstr "Arka test 15 sn..."
 
-msgid "gapPrefix"
-msgstr "Aralık:"
-
-msgid "gapAuto"
-msgstr "Oto"
-
 msgid "muteOffWrist"
 msgstr "Çıkarılınca sessiz"
 
