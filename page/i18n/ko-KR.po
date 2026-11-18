@@ -125,58 +125,58 @@ msgid "hw_6"
 msgstr "6/6 경고"
 
 msgid "spk_1"
-msgstr "1/18 피에조 4k 500ms"
+msgstr "1/18 레트로 1989"
 
 msgid "spk_2"
-msgstr "2/18 피에조 2k 500ms"
+msgstr "2/18 레트로 퀵"
 
 msgid "spk_3"
-msgstr "3/18 피에조 3.2k 500"
+msgstr "3/18 레트로 스틸"
 
 msgid "spk_4"
-msgstr "4/18 피에조 2.7k 500"
+msgstr "4/18 빈티지 2k+4k"
 
 msgid "spk_5"
-msgstr "5/18 피에조 4k 짧은음"
+msgstr "5/18 단일 비프"
 
 msgid "spk_6"
-msgstr "6/18 피에조 듀얼 500"
+msgstr "6/18 트리플 3x"
 
 msgid "spk_7"
-msgstr "7/18 레트로 1989"
+msgstr "7/18 더블 2x2"
 
 msgid "spk_8"
-msgstr "8/18 레트로 퀵"
+msgstr "8/18 상승 2음"
 
 msgid "spk_9"
-msgstr "9/18 레트로 스틸"
+msgstr "9/18 하강 2음"
 
 msgid "spk_10"
-msgstr "10/18 빈티지 2k+4k"
+msgstr "10/18 3음 차임"
 
 msgid "spk_11"
-msgstr "11/18 단일 비프"
+msgstr "11/18 소프트 벨"
 
 msgid "spk_12"
-msgstr "12/18 트리플 3x"
+msgstr "12/18 소나 핑"
 
 msgid "spk_13"
-msgstr "13/18 더블 2x2"
+msgstr "13/18 피에조 4k 500ms"
 
 msgid "spk_14"
-msgstr "14/18 상승 2음"
+msgstr "14/18 피에조 2k 500ms"
 
 msgid "spk_15"
-msgstr "15/18 하강 2음"
+msgstr "15/18 피에조 3.2k 500"
 
 msgid "spk_16"
-msgstr "16/18 3음 차임"
+msgstr "16/18 피에조 2.7k 500"
 
 msgid "spk_17"
-msgstr "17/18 소프트 벨"
+msgstr "17/18 피에조 4k 짧은음"
 
 msgid "spk_18"
-msgstr "18/18 소나 핑"
+msgstr "18/18 피에조 듀얼 500"
 
 msgid "secSilentModes"
 msgstr "방해금지 / 수면 / 극장"

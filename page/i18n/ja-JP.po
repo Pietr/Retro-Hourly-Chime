@@ -125,58 +125,58 @@ msgid "hw_6"
 msgstr "6/6 警告"
 
 msgid "spk_1"
-msgstr "1/18 ピエゾ4k 500ms"
+msgstr "1/18 レトロ 1989"
 
 msgid "spk_2"
-msgstr "2/18 ピエゾ2k 500ms"
+msgstr "2/18 クイック"
 
 msgid "spk_3"
-msgstr "3/18 ピエゾ3.2k 500"
+msgstr "3/18 スチール"
 
 msgid "spk_4"
-msgstr "4/18 ピエゾ2.7k 500"
+msgstr "4/18 ビンテージ"
 
 msgid "spk_5"
-msgstr "5/18 ピエゾ4k 短音"
+msgstr "5/18 単音ビープ"
 
 msgid "spk_6"
-msgstr "6/18 ピエゾ2音 500"
+msgstr "6/18 トリプル 3x"
 
 msgid "spk_7"
-msgstr "7/18 レトロ 1989"
+msgstr "7/18 ダブル 2x2"
 
 msgid "spk_8"
-msgstr "8/18 クイック"
+msgstr "8/18 上昇2音"
 
 msgid "spk_9"
-msgstr "9/18 スチール"
+msgstr "9/18 下降2音"
 
 msgid "spk_10"
-msgstr "10/18 ビンテージ"
+msgstr "10/18 3音チャイム"
 
 msgid "spk_11"
-msgstr "11/18 単音ビープ"
+msgstr "11/18 ソフトベル"
 
 msgid "spk_12"
-msgstr "12/18 トリプル 3x"
+msgstr "12/18 ソナーピング"
 
 msgid "spk_13"
-msgstr "13/18 ダブル 2x2"
+msgstr "13/18 ピエゾ4k 500ms"
 
 msgid "spk_14"
-msgstr "14/18 上昇2音"
+msgstr "14/18 ピエゾ2k 500ms"
 
 msgid "spk_15"
-msgstr "15/18 下降2音"
+msgstr "15/18 ピエゾ3.2k 500"
 
 msgid "spk_16"
-msgstr "16/18 3音チャイム"
+msgstr "16/18 ピエゾ2.7k 500"
 
 msgid "spk_17"
-msgstr "17/18 ソフトベル"
+msgstr "17/18 ピエゾ4k 短音"
 
 msgid "spk_18"
-msgstr "18/18 ソナーピング"
+msgstr "18/18 ピエゾ2音 500"
 
 msgid "secSilentModes"
 msgstr "DND / 睡眠 / シアター"

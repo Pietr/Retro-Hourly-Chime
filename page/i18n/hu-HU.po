@@ -125,58 +125,58 @@ msgid "hw_6"
 msgstr "6/6 Jelzés"
 
 msgid "spk_1"
-msgstr "1/18 Piezo 4k 500ms"
+msgstr "1/18 Retro 1989"
 
 msgid "spk_2"
-msgstr "2/18 Piezo 2k 500ms"
+msgstr "2/18 Retro Gyors"
 
 msgid "spk_3"
-msgstr "3/18 Piezo 3.2k 500"
+msgstr "3/18 Retro Acél"
 
 msgid "spk_4"
-msgstr "4/18 Piezo 2.7k 500"
+msgstr "4/18 Vintage 2k+4k"
 
 msgid "spk_5"
-msgstr "5/18 Piezo 4k Éles"
+msgstr "5/18 Egyetlen Bip"
 
 msgid "spk_6"
-msgstr "6/18 Piezo Dual 500"
+msgstr "6/18 Hármas 3x"
 
 msgid "spk_7"
-msgstr "7/18 Retro 1989"
+msgstr "7/18 Dupla 2x2"
 
 msgid "spk_8"
-msgstr "8/18 Retro Gyors"
+msgstr "8/18 Kettős Fel"
 
 msgid "spk_9"
-msgstr "9/18 Retro Acél"
+msgstr "9/18 Kettős Le"
 
 msgid "spk_10"
-msgstr "10/18 Vintage 2k+4k"
+msgstr "10/18 Hármashangzat"
 
 msgid "spk_11"
-msgstr "11/18 Egyetlen Bip"
+msgstr "11/18 Lágy Harang"
 
 msgid "spk_12"
-msgstr "12/18 Hármas 3x"
+msgstr "12/18 Szonár Ping"
 
 msgid "spk_13"
-msgstr "13/18 Dupla 2x2"
+msgstr "13/18 Piezo 4k 500ms"
 
 msgid "spk_14"
-msgstr "14/18 Kettős Fel"
+msgstr "14/18 Piezo 2k 500ms"
 
 msgid "spk_15"
-msgstr "15/18 Kettős Le"
+msgstr "15/18 Piezo 3.2k 500"
 
 msgid "spk_16"
-msgstr "16/18 Hármashangzat"
+msgstr "16/18 Piezo 2.7k 500"
 
 msgid "spk_17"
-msgstr "17/18 Lágy Harang"
+msgstr "17/18 Piezo 4k Éles"
 
 msgid "spk_18"
-msgstr "18/18 Szonár Ping"
+msgstr "18/18 Piezo Dual 500"
 
 msgid "secSilentModes"
 msgstr "DND / ALVÁS / MOZI"

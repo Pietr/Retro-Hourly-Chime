@@ -125,58 +125,58 @@ msgid "hw_6"
 msgstr "6/6 התראה"
 
 msgid "spk_1"
-msgstr "1/18 פיזו 4k 500ms"
+msgstr "1/18 רטרו 1989"
 
 msgid "spk_2"
-msgstr "2/18 פיזו 2k 500ms"
+msgstr "2/18 רטרו מהיר"
 
 msgid "spk_3"
-msgstr "3/18 פיזו 3.2k 500"
+msgstr "3/18 רטרו פלדה"
 
 msgid "spk_4"
-msgstr "4/18 פיזו 2.7k 500"
+msgstr "4/18 וינטג׳ 2k+4k"
 
 msgid "spk_5"
-msgstr "5/18 פיזו 4k חד"
+msgstr "5/18 ביפ יחיד"
 
 msgid "spk_6"
-msgstr "6/18 פיזו כפול 500"
+msgstr "6/18 משולש 3x"
 
 msgid "spk_7"
-msgstr "7/18 רטרו 1989"
+msgstr "7/18 כפול 2x2"
 
 msgid "spk_8"
-msgstr "8/18 רטרו מהיר"
+msgstr "8/18 כפול עולה"
 
 msgid "spk_9"
-msgstr "9/18 רטרו פלדה"
+msgstr "9/18 כפול יורד"
 
 msgid "spk_10"
-msgstr "10/18 וינטג׳ 2k+4k"
+msgstr "10/18 3 צלילים"
 
 msgid "spk_11"
-msgstr "11/18 ביפ יחיד"
+msgstr "11/18 פעמון רך"
 
 msgid "spk_12"
-msgstr "12/18 משולש 3x"
+msgstr "12/18 פינג סונאר"
 
 msgid "spk_13"
-msgstr "13/18 כפול 2x2"
+msgstr "13/18 פיזו 4k 500ms"
 
 msgid "spk_14"
-msgstr "14/18 כפול עולה"
+msgstr "14/18 פיזו 2k 500ms"
 
 msgid "spk_15"
-msgstr "15/18 כפול יורד"
+msgstr "15/18 פיזו 3.2k 500"
 
 msgid "spk_16"
-msgstr "16/18 3 צלילים"
+msgstr "16/18 פיזו 2.7k 500"
 
 msgid "spk_17"
-msgstr "17/18 פעמון רך"
+msgstr "17/18 פיזו 4k חד"
 
 msgid "spk_18"
-msgstr "18/18 פינג סונאר"
+msgstr "18/18 פיזו כפול 500"
 
 msgid "secSilentModes"
 msgstr "נא לא להפריע / שינה"

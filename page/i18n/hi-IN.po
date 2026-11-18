@@ -125,58 +125,58 @@ msgid "hw_6"
 msgstr "6/6 अलर्ट"
 
 msgid "spk_1"
-msgstr "1/18 पीज़ो 4k 500ms"
+msgstr "1/18 रेट्रो 1989"
 
 msgid "spk_2"
-msgstr "2/18 पीज़ो 2k 500ms"
+msgstr "2/18 रेट्रो फास्ट"
 
 msgid "spk_3"
-msgstr "3/18 पीज़ो 3.2k 500"
+msgstr "3/18 रेट्रो स्टील"
 
 msgid "spk_4"
-msgstr "4/18 पीज़ो 2.7k 500"
+msgstr "4/18 विंटेज 2k+4k"
 
 msgid "spk_5"
-msgstr "5/18 पीज़ो 4k शार्प"
+msgstr "5/18 सिंगल बीप"
 
 msgid "spk_6"
-msgstr "6/18 पीज़ो डुअल 500"
+msgstr "6/18 ट्रिपल 3x"
 
 msgid "spk_7"
-msgstr "7/18 रेट्रो 1989"
+msgstr "7/18 डबल 2x2"
 
 msgid "spk_8"
-msgstr "8/18 रेट्रो फास्ट"
+msgstr "8/18 डुअल अप"
 
 msgid "spk_9"
-msgstr "9/18 रेट्रो स्टील"
+msgstr "9/18 डुअल डाउन"
 
 msgid "spk_10"
-msgstr "10/18 विंटेज 2k+4k"
+msgstr "10/18 3-नोट चाइम"
 
 msgid "spk_11"
-msgstr "11/18 सिंगल बीप"
+msgstr "11/18 सॉफ्ट बेल"
 
 msgid "spk_12"
-msgstr "12/18 ट्रिपल 3x"
+msgstr "12/18 सोनार पिंग"
 
 msgid "spk_13"
-msgstr "13/18 डबल 2x2"
+msgstr "13/18 पीज़ो 4k 500ms"
 
 msgid "spk_14"
-msgstr "14/18 डुअल अप"
+msgstr "14/18 पीज़ो 2k 500ms"
 
 msgid "spk_15"
-msgstr "15/18 डुअल डाउन"
+msgstr "15/18 पीज़ो 3.2k 500"
 
 msgid "spk_16"
-msgstr "16/18 3-नोट चाइम"
+msgstr "16/18 पीज़ो 2.7k 500"
 
 msgid "spk_17"
-msgstr "17/18 सॉफ्ट बेल"
+msgstr "17/18 पीज़ो 4k शार्प"
 
 msgid "spk_18"
-msgstr "18/18 सोनार पिंग"
+msgstr "18/18 पीज़ो डुअल 500"
 
 msgid "secSilentModes"
 msgstr "DND / नींद / थिएटर"

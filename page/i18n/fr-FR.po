@@ -125,58 +125,58 @@ msgid "hw_6"
 msgstr "6/6 Alerte"
 
 msgid "spk_1"
-msgstr "1/18 Piézo 4k 500ms"
+msgstr "1/18 Rétro 1989"
 
 msgid "spk_2"
-msgstr "2/18 Piézo 2k 500ms"
+msgstr "2/18 Rétro Rapide"
 
 msgid "spk_3"
-msgstr "3/18 Piézo 3.2k 500"
+msgstr "3/18 Rétro Acier"
 
 msgid "spk_4"
-msgstr "4/18 Piézo 2.7k 500"
+msgstr "4/18 Vintage 2k+4k"
 
 msgid "spk_5"
-msgstr "5/18 Piézo 4k Sec"
+msgstr "5/18 Bip Simple"
 
 msgid "spk_6"
-msgstr "6/18 Piézo Duo 500"
+msgstr "6/18 Triple 3x"
 
 msgid "spk_7"
-msgstr "7/18 Rétro 1989"
+msgstr "7/18 Double 2x2"
 
 msgid "spk_8"
-msgstr "8/18 Rétro Rapide"
+msgstr "8/18 Duo Montant"
 
 msgid "spk_9"
-msgstr "9/18 Rétro Acier"
+msgstr "9/18 Duo Descend."
 
 msgid "spk_10"
-msgstr "10/18 Vintage 2k+4k"
+msgstr "10/18 Arpège 3 Notes"
 
 msgid "spk_11"
-msgstr "11/18 Bip Simple"
+msgstr "11/18 Cloche Douce"
 
 msgid "spk_12"
-msgstr "12/18 Triple 3x"
+msgstr "12/18 Ping Sonar"
 
 msgid "spk_13"
-msgstr "13/18 Double 2x2"
+msgstr "13/18 Piézo 4k 500ms"
 
 msgid "spk_14"
-msgstr "14/18 Duo Montant"
+msgstr "14/18 Piézo 2k 500ms"
 
 msgid "spk_15"
-msgstr "15/18 Duo Descend."
+msgstr "15/18 Piézo 3.2k 500"
 
 msgid "spk_16"
-msgstr "16/18 Arpège 3 Notes"
+msgstr "16/18 Piézo 2.7k 500"
 
 msgid "spk_17"
-msgstr "17/18 Cloche Douce"
+msgstr "17/18 Piézo 4k Sec"
 
 msgid "spk_18"
-msgstr "18/18 Ping Sonar"
+msgstr "18/18 Piézo Duo 500"
 
 msgid "secSilentModes"
 msgstr "NPD / SOMMEIL / CINÉMA"

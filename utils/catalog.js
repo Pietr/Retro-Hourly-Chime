@@ -19,24 +19,24 @@ export const BUZZER_REPEAT_LEVELS = [
 ]
 
 export const SPEAKER_VARIANTS = [
-  { id: 'retro_500_4k', i18nKey: 'spk_1', fallback: '1/18 Piezo 4k 500ms' },
-  { id: 'retro_500_2k', i18nKey: 'spk_2', fallback: '2/18 Piezo 2k 500ms' },
-  { id: 'retro_500_32k', i18nKey: 'spk_3', fallback: '3/18 Piezo 3.2k 500' },
-  { id: 'retro_500_27k', i18nKey: 'spk_4', fallback: '4/18 Piezo 2.7k 500' },
-  { id: 'retro_500_4k_short', i18nKey: 'spk_5', fallback: '5/18 Piezo 4k Sharp' },
-  { id: 'retro_500_dual', i18nKey: 'spk_6', fallback: '6/18 Piezo Dual 500' },
-  { id: 'retro_1989', i18nKey: 'spk_7', fallback: '7/18 Retro 1989' },
-  { id: 'retro_fast', i18nKey: 'spk_8', fallback: '8/18 Retro Quick' },
-  { id: 'retro_steel', i18nKey: 'spk_9', fallback: '9/18 Retro Steel' },
-  { id: 'vintage_2k4k', i18nKey: 'spk_10', fallback: '10/18 Vintage 2k+4k' },
-  { id: 'single_crisp', i18nKey: 'spk_11', fallback: '11/18 Single Crisp' },
-  { id: 'triple_3x', i18nKey: 'spk_12', fallback: '12/18 Triple 3x' },
-  { id: 'double_pair', i18nKey: 'spk_13', fallback: '13/18 Double 2x2' },
-  { id: 'dual_up', i18nKey: 'spk_14', fallback: '14/18 Dual Up' },
-  { id: 'dual_down', i18nKey: 'spk_15', fallback: '15/18 Dual Down' },
-  { id: 'triad_3note', i18nKey: 'spk_16', fallback: '16/18 3-Note Chime' },
-  { id: 'soft_bell', i18nKey: 'spk_17', fallback: '17/18 Soft Bell' },
-  { id: 'tactical_ping', i18nKey: 'spk_18', fallback: '18/18 Tactical Ping' }
+  { id: 'retro_1989', i18nKey: 'spk_1', fallback: '1/18 Retro 1989' },
+  { id: 'retro_fast', i18nKey: 'spk_2', fallback: '2/18 Retro Quick' },
+  { id: 'retro_steel', i18nKey: 'spk_3', fallback: '3/18 Retro Steel' },
+  { id: 'vintage_2k4k', i18nKey: 'spk_4', fallback: '4/18 Vintage 2k+4k' },
+  { id: 'single_crisp', i18nKey: 'spk_5', fallback: '5/18 Single Crisp' },
+  { id: 'triple_3x', i18nKey: 'spk_6', fallback: '6/18 Triple 3x' },
+  { id: 'double_pair', i18nKey: 'spk_7', fallback: '7/18 Double 2x2' },
+  { id: 'dual_up', i18nKey: 'spk_8', fallback: '8/18 Dual Up' },
+  { id: 'dual_down', i18nKey: 'spk_9', fallback: '9/18 Dual Down' },
+  { id: 'triad_3note', i18nKey: 'spk_10', fallback: '10/18 3-Note Chime' },
+  { id: 'soft_bell', i18nKey: 'spk_11', fallback: '11/18 Soft Bell' },
+  { id: 'tactical_ping', i18nKey: 'spk_12', fallback: '12/18 Tactical Ping' },
+  { id: 'retro_500_4k', i18nKey: 'spk_13', fallback: '13/18 Piezo 4k 500ms' },
+  { id: 'retro_500_2k', i18nKey: 'spk_14', fallback: '14/18 Piezo 2k 500ms' },
+  { id: 'retro_500_32k', i18nKey: 'spk_15', fallback: '15/18 Piezo 3.2k 500' },
+  { id: 'retro_500_27k', i18nKey: 'spk_16', fallback: '16/18 Piezo 2.7k 500' },
+  { id: 'retro_500_4k_short', i18nKey: 'spk_17', fallback: '17/18 Piezo 4k Sharp' },
+  { id: 'retro_500_dual', i18nKey: 'spk_18', fallback: '18/18 Piezo Dual 500' }
 ]
 
 export const VIBRATE_MODES = [

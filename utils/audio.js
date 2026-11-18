@@ -517,12 +517,12 @@ function playSpeakerVariant(variantId, volumePercent, onDone) {
     return false
   }
 
-  const v = variantId || 'retro_500_4k'
+  const v = variantId || 'retro_1989'
   const rawVol = Number(volumePercent)
   const vol = Number.isFinite(rawVol) ? Math.max(1, Math.min(100, Math.round(rawVol))) : 10
   pendingVolumeToApply = vol
 
-  const mp3File = SPEAKER_FILE_MAP[v] || SPEAKER_FILE_MAP.retro_500_4k
+  const mp3File = SPEAKER_FILE_MAP[v] || SPEAKER_FILE_MAP.retro_1989
 
   try {
     const player = getOrCreatePlayer()

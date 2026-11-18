@@ -125,58 +125,58 @@ msgid "hw_6"
 msgstr "6/6 Ειδοπ."
 
 msgid "spk_1"
-msgstr "1/18 Piezo 4k 500ms"
+msgstr "1/18 Ρετρό 1989"
 
 msgid "spk_2"
-msgstr "2/18 Piezo 2k 500ms"
+msgstr "2/18 Ρετρό Γρήγορο"
 
 msgid "spk_3"
-msgstr "3/18 Piezo 3.2k 500"
+msgstr "3/18 Ρετρό Ατσάλι"
 
 msgid "spk_4"
-msgstr "4/18 Piezo 2.7k 500"
+msgstr "4/18 Vintage 2k+4k"
 
 msgid "spk_5"
-msgstr "5/18 Piezo 4k Οξύ"
+msgstr "5/18 Μονό Μπιπ"
 
 msgid "spk_6"
-msgstr "6/18 Piezo Dual 500"
+msgstr "6/18 Τριπλό 3x"
 
 msgid "spk_7"
-msgstr "7/18 Ρετρό 1989"
+msgstr "7/18 Διπλό 2x2"
 
 msgid "spk_8"
-msgstr "8/18 Ρετρό Γρήγορο"
+msgstr "8/18 Δίτονο Πάνω"
 
 msgid "spk_9"
-msgstr "9/18 Ρετρό Ατσάλι"
+msgstr "9/18 Δίτονο Κάτω"
 
 msgid "spk_10"
-msgstr "10/18 Vintage 2k+4k"
+msgstr "10/18 Τρίηχο"
 
 msgid "spk_11"
-msgstr "11/18 Μονό Μπιπ"
+msgstr "11/18 Απαλό Καμπανάκι"
 
 msgid "spk_12"
-msgstr "12/18 Τριπλό 3x"
+msgstr "12/18 Σόναρ Πινγκ"
 
 msgid "spk_13"
-msgstr "13/18 Διπλό 2x2"
+msgstr "13/18 Piezo 4k 500ms"
 
 msgid "spk_14"
-msgstr "14/18 Δίτονο Πάνω"
+msgstr "14/18 Piezo 2k 500ms"
 
 msgid "spk_15"
-msgstr "15/18 Δίτονο Κάτω"
+msgstr "15/18 Piezo 3.2k 500"
 
 msgid "spk_16"
-msgstr "16/18 Τρίηχο"
+msgstr "16/18 Piezo 2.7k 500"
 
 msgid "spk_17"
-msgstr "17/18 Απαλό Καμπανάκι"
+msgstr "17/18 Piezo 4k Οξύ"
 
 msgid "spk_18"
-msgstr "18/18 Σόναρ Πινγκ"
+msgstr "18/18 Piezo Dual 500"
 
 msgid "secSilentModes"
 msgstr "DND / ΥΠΝΟΣ / ΘΕΑΤΡΟ"

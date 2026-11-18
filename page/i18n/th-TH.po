@@ -125,58 +125,58 @@ msgid "hw_6"
 msgstr "6/6 แจ้งเตือน"
 
 msgid "spk_1"
-msgstr "1/18 พีโซ 4k 500ms"
+msgstr "1/18 เรโทร 1989"
 
 msgid "spk_2"
-msgstr "2/18 พีโซ 2k 500ms"
+msgstr "2/18 เรโทรเร็ว"
 
 msgid "spk_3"
-msgstr "3/18 พีโซ 3.2k 500"
+msgstr "3/18 เรโทรสตีล"
 
 msgid "spk_4"
-msgstr "4/18 พีโซ 2.7k 500"
+msgstr "4/18 วินเทจ 2k+4k"
 
 msgid "spk_5"
-msgstr "5/18 พีโซ 4k สั้น"
+msgstr "5/18 บี๊บเดี่ยว"
 
 msgid "spk_6"
-msgstr "6/18 พีโซคู่ 500"
+msgstr "6/18 สามครั้ง 3x"
 
 msgid "spk_7"
-msgstr "7/18 เรโทร 1989"
+msgstr "7/18 สองคู่ 2x2"
 
 msgid "spk_8"
-msgstr "8/18 เรโทรเร็ว"
+msgstr "8/18 สองเสียงขึ้น"
 
 msgid "spk_9"
-msgstr "9/18 เรโทรสตีล"
+msgstr "9/18 สองเสียงลง"
 
 msgid "spk_10"
-msgstr "10/18 วินเทจ 2k+4k"
+msgstr "10/18 สามโน้ต"
 
 msgid "spk_11"
-msgstr "11/18 บี๊บเดี่ยว"
+msgstr "11/18 กระดิ่งนุ่ม"
 
 msgid "spk_12"
-msgstr "12/18 สามครั้ง 3x"
+msgstr "12/18 โซนาร์ปิง"
 
 msgid "spk_13"
-msgstr "13/18 สองคู่ 2x2"
+msgstr "13/18 พีโซ 4k 500ms"
 
 msgid "spk_14"
-msgstr "14/18 สองเสียงขึ้น"
+msgstr "14/18 พีโซ 2k 500ms"
 
 msgid "spk_15"
-msgstr "15/18 สองเสียงลง"
+msgstr "15/18 พีโซ 3.2k 500"
 
 msgid "spk_16"
-msgstr "16/18 สามโน้ต"
+msgstr "16/18 พีโซ 2.7k 500"
 
 msgid "spk_17"
-msgstr "17/18 กระดิ่งนุ่ม"
+msgstr "17/18 พีโซ 4k สั้น"
 
 msgid "spk_18"
-msgstr "18/18 โซนาร์ปิง"
+msgstr "18/18 พีโซคู่ 500"
 
 msgid "secSilentModes"
 msgstr "ห้ามรบกวน / นอน / โรงหนัง"

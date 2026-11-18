@@ -125,58 +125,58 @@ msgid "hw_6"
 msgstr "6/6 警告"
 
 msgid "spk_1"
-msgstr "1/18 压电 4k 500ms"
+msgstr "1/18 经典 1989"
 
 msgid "spk_2"
-msgstr "2/18 压电 2k 500ms"
+msgstr "2/18 复古快音"
 
 msgid "spk_3"
-msgstr "3/18 压电 3.2k 500"
+msgstr "3/18 复古钢壳"
 
 msgid "spk_4"
-msgstr "4/18 压电 2.7k 500"
+msgstr "4/18 复古双谐波"
 
 msgid "spk_5"
-msgstr "5/18 压电 4k 短促"
+msgstr "5/18 清脆单音"
 
 msgid "spk_6"
-msgstr "6/18 压电双音 500"
+msgstr "6/18 三连音 3x"
 
 msgid "spk_7"
-msgstr "7/18 经典 1989"
+msgstr "7/18 双组 2x2"
 
 msgid "spk_8"
-msgstr "8/18 复古快音"
+msgstr "8/18 上行双音"
 
 msgid "spk_9"
-msgstr "9/18 复古钢壳"
+msgstr "9/18 下行双音"
 
 msgid "spk_10"
-msgstr "10/18 复古双谐波"
+msgstr "10/18 三音和弦"
 
 msgid "spk_11"
-msgstr "11/18 清脆单音"
+msgstr "11/18 柔和铃声"
 
 msgid "spk_12"
-msgstr "12/18 三连音 3x"
+msgstr "12/18 声纳提示"
 
 msgid "spk_13"
-msgstr "13/18 双组 2x2"
+msgstr "13/18 压电 4k 500ms"
 
 msgid "spk_14"
-msgstr "14/18 上行双音"
+msgstr "14/18 压电 2k 500ms"
 
 msgid "spk_15"
-msgstr "15/18 下行双音"
+msgstr "15/18 压电 3.2k 500"
 
 msgid "spk_16"
-msgstr "16/18 三音和弦"
+msgstr "16/18 压电 2.7k 500"
 
 msgid "spk_17"
-msgstr "17/18 柔和铃声"
+msgstr "17/18 压电 4k 短促"
 
 msgid "spk_18"
-msgstr "18/18 声纳提示"
+msgstr "18/18 压电双音 500"
 
 msgid "secSilentModes"
 msgstr "勿扰 / 睡眠 / 影院"

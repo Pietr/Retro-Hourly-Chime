@@ -125,58 +125,58 @@ msgid "hw_6"
 msgstr "6/6 Тревога"
 
 msgid "spk_1"
-msgstr "1/18 Пьезо 4к 500мс"
+msgstr "1/18 Ретро 1989"
 
 msgid "spk_2"
-msgstr "2/18 Пьезо 2к 500мс"
+msgstr "2/18 Ретро Быстрый"
 
 msgid "spk_3"
-msgstr "3/18 Пьезо 3.2к 500"
+msgstr "3/18 Ретро Сталь"
 
 msgid "spk_4"
-msgstr "4/18 Пьезо 2.7к 500"
+msgstr "4/18 Винтаж 2к+4к"
 
 msgid "spk_5"
-msgstr "5/18 Пьезо 4к Резк."
+msgstr "5/18 Одиночный"
 
 msgid "spk_6"
-msgstr "6/18 Пьезо Дуал 500"
+msgstr "6/18 Тройной 3x"
 
 msgid "spk_7"
-msgstr "7/18 Ретро 1989"
+msgstr "7/18 Двойной 2x2"
 
 msgid "spk_8"
-msgstr "8/18 Ретро Быстрый"
+msgstr "8/18 Двутон Вверх"
 
 msgid "spk_9"
-msgstr "9/18 Ретро Сталь"
+msgstr "9/18 Двутон Вниз"
 
 msgid "spk_10"
-msgstr "10/18 Винтаж 2к+4к"
+msgstr "10/18 Трезвучие"
 
 msgid "spk_11"
-msgstr "11/18 Одиночный"
+msgstr "11/18 Мягкий Звон"
 
 msgid "spk_12"
-msgstr "12/18 Тройной 3x"
+msgstr "12/18 Сонар Пинг"
 
 msgid "spk_13"
-msgstr "13/18 Двойной 2x2"
+msgstr "13/18 Пьезо 4к 500мс"
 
 msgid "spk_14"
-msgstr "14/18 Двутон Вверх"
+msgstr "14/18 Пьезо 2к 500мс"
 
 msgid "spk_15"
-msgstr "15/18 Двутон Вниз"
+msgstr "15/18 Пьезо 3.2к 500"
 
 msgid "spk_16"
-msgstr "16/18 Трезвучие"
+msgstr "16/18 Пьезо 2.7к 500"
 
 msgid "spk_17"
-msgstr "17/18 Мягкий Звон"
+msgstr "17/18 Пьезо 4к Резк."
 
 msgid "spk_18"
-msgstr "18/18 Сонар Пинг"
+msgstr "18/18 Пьезо Дуал 500"
 
 msgid "secSilentModes"
 msgstr "DND / СОН / ТЕАТР"

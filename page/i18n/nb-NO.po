@@ -125,58 +125,58 @@ msgid "hw_6"
 msgstr "6/6 Varsel"
 
 msgid "spk_1"
-msgstr "1/18 Piezo 4k 500ms"
+msgstr "1/18 Retro 1989"
 
 msgid "spk_2"
-msgstr "2/18 Piezo 2k 500ms"
+msgstr "2/18 Retro Rask"
 
 msgid "spk_3"
-msgstr "3/18 Piezo 3.2k 500"
+msgstr "3/18 Retro Stål"
 
 msgid "spk_4"
-msgstr "4/18 Piezo 2.7k 500"
+msgstr "4/18 Vintage 2k+4k"
 
 msgid "spk_5"
-msgstr "5/18 Piezo 4k Skarp"
+msgstr "5/18 Enkelt Pip"
 
 msgid "spk_6"
-msgstr "6/18 Piezo Dual 500"
+msgstr "6/18 Trippel 3x"
 
 msgid "spk_7"
-msgstr "7/18 Retro 1989"
+msgstr "7/18 Dobbel 2x2"
 
 msgid "spk_8"
-msgstr "8/18 Retro Rask"
+msgstr "8/18 Totoner Opp"
 
 msgid "spk_9"
-msgstr "9/18 Retro Stål"
+msgstr "9/18 Totoner Ned"
 
 msgid "spk_10"
-msgstr "10/18 Vintage 2k+4k"
+msgstr "10/18 Treklang"
 
 msgid "spk_11"
-msgstr "11/18 Enkelt Pip"
+msgstr "11/18 Myk Klokke"
 
 msgid "spk_12"
-msgstr "12/18 Trippel 3x"
+msgstr "12/18 Sonar Ping"
 
 msgid "spk_13"
-msgstr "13/18 Dobbel 2x2"
+msgstr "13/18 Piezo 4k 500ms"
 
 msgid "spk_14"
-msgstr "14/18 Totoner Opp"
+msgstr "14/18 Piezo 2k 500ms"
 
 msgid "spk_15"
-msgstr "15/18 Totoner Ned"
+msgstr "15/18 Piezo 3.2k 500"
 
 msgid "spk_16"
-msgstr "16/18 Treklang"
+msgstr "16/18 Piezo 2.7k 500"
 
 msgid "spk_17"
-msgstr "17/18 Myk Klokke"
+msgstr "17/18 Piezo 4k Skarp"
 
 msgid "spk_18"
-msgstr "18/18 Sonar Ping"
+msgstr "18/18 Piezo Dual 500"
 
 msgid "secSilentModes"
 msgstr "DND / SØVN / KINO"

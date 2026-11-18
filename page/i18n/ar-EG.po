@@ -125,58 +125,58 @@ msgid "hw_6"
 msgstr "6/6 تنبيه"
 
 msgid "spk_1"
-msgstr "1/18 بيزو 4k 500ms"
+msgstr "1/18 ريترو 1989"
 
 msgid "spk_2"
-msgstr "2/18 بيزو 2k 500ms"
+msgstr "2/18 ريترو سريع"
 
 msgid "spk_3"
-msgstr "3/18 بيزو 3.2k 500"
+msgstr "3/18 ريترو فولاذ"
 
 msgid "spk_4"
-msgstr "4/18 بيزو 2.7k 500"
+msgstr "4/18 كلاسيك 2k+4k"
 
 msgid "spk_5"
-msgstr "5/18 بيزو 4k حاد"
+msgstr "5/18 نقرة واحدة"
 
 msgid "spk_6"
-msgstr "6/18 بيزو ثنائي 500"
+msgstr "6/18 ثلاثي 3x"
 
 msgid "spk_7"
-msgstr "7/18 ريترو 1989"
+msgstr "7/18 مزدوج 2x2"
 
 msgid "spk_8"
-msgstr "8/18 ريترو سريع"
+msgstr "8/18 نغمتان صاعد"
 
 msgid "spk_9"
-msgstr "9/18 ريترو فولاذ"
+msgstr "9/18 نغمتان هابط"
 
 msgid "spk_10"
-msgstr "10/18 كلاسيك 2k+4k"
+msgstr "10/18 3 نغمات"
 
 msgid "spk_11"
-msgstr "11/18 نقرة واحدة"
+msgstr "11/18 جرس ناعم"
 
 msgid "spk_12"
-msgstr "12/18 ثلاثي 3x"
+msgstr "12/18 رنين سونار"
 
 msgid "spk_13"
-msgstr "13/18 مزدوج 2x2"
+msgstr "13/18 بيزو 4k 500ms"
 
 msgid "spk_14"
-msgstr "14/18 نغمتان صاعد"
+msgstr "14/18 بيزو 2k 500ms"
 
 msgid "spk_15"
-msgstr "15/18 نغمتان هابط"
+msgstr "15/18 بيزو 3.2k 500"
 
 msgid "spk_16"
-msgstr "16/18 3 نغمات"
+msgstr "16/18 بيزو 2.7k 500"
 
 msgid "spk_17"
-msgstr "17/18 جرس ناعم"
+msgstr "17/18 بيزو 4k حاد"
 
 msgid "spk_18"
-msgstr "18/18 رنين سونار"
+msgstr "18/18 بيزو ثنائي 500"
 
 msgid "secSilentModes"
 msgstr "عدم الإزعاج / النوم / المسرح"

@@ -125,58 +125,58 @@ msgid "hw_6"
 msgstr "6/6 Výstraha"
 
 msgid "spk_1"
-msgstr "1/18 Piezo 4k 500ms"
+msgstr "1/18 Retro 1989"
 
 msgid "spk_2"
-msgstr "2/18 Piezo 2k 500ms"
+msgstr "2/18 Retro Rýchly"
 
 msgid "spk_3"
-msgstr "3/18 Piezo 3.2k 500"
+msgstr "3/18 Retro Oceľ"
 
 msgid "spk_4"
-msgstr "4/18 Piezo 2.7k 500"
+msgstr "4/18 Vintage 2k+4k"
 
 msgid "spk_5"
-msgstr "5/18 Piezo 4k Ostrý"
+msgstr "5/18 Jednoduchý"
 
 msgid "spk_6"
-msgstr "6/18 Piezo Dual 500"
+msgstr "6/18 Trojitý 3x"
 
 msgid "spk_7"
-msgstr "7/18 Retro 1989"
+msgstr "7/18 Dvojitý 2x2"
 
 msgid "spk_8"
-msgstr "8/18 Retro Rýchly"
+msgstr "8/18 Dvojtón Hore"
 
 msgid "spk_9"
-msgstr "9/18 Retro Oceľ"
+msgstr "9/18 Dvojtón Dole"
 
 msgid "spk_10"
-msgstr "10/18 Vintage 2k+4k"
+msgstr "10/18 Trojzvuk"
 
 msgid "spk_11"
-msgstr "11/18 Jednoduchý"
+msgstr "11/18 Jemný Zvon"
 
 msgid "spk_12"
-msgstr "12/18 Trojitý 3x"
+msgstr "12/18 Sonar Ping"
 
 msgid "spk_13"
-msgstr "13/18 Dvojitý 2x2"
+msgstr "13/18 Piezo 4k 500ms"
 
 msgid "spk_14"
-msgstr "14/18 Dvojtón Hore"
+msgstr "14/18 Piezo 2k 500ms"
 
 msgid "spk_15"
-msgstr "15/18 Dvojtón Dole"
+msgstr "15/18 Piezo 3.2k 500"
 
 msgid "spk_16"
-msgstr "16/18 Trojzvuk"
+msgstr "16/18 Piezo 2.7k 500"
 
 msgid "spk_17"
-msgstr "17/18 Jemný Zvon"
+msgstr "17/18 Piezo 4k Ostrý"
 
 msgid "spk_18"
-msgstr "18/18 Sonar Ping"
+msgstr "18/18 Piezo Dual 500"
 
 msgid "secSilentModes"
 msgstr "DND / SPÁNOK / KINO"

@@ -125,58 +125,58 @@ msgid "hw_6"
 msgstr "6/6 Alerta"
 
 msgid "spk_1"
-msgstr "1/18 Piezo 4k 500ms"
+msgstr "1/18 Retro 1989"
 
 msgid "spk_2"
-msgstr "2/18 Piezo 2k 500ms"
+msgstr "2/18 Retro Rápido"
 
 msgid "spk_3"
-msgstr "3/18 Piezo 3.2k 500"
+msgstr "3/18 Retro Aço"
 
 msgid "spk_4"
-msgstr "4/18 Piezo 2.7k 500"
+msgstr "4/18 Vintage 2k+4k"
 
 msgid "spk_5"
-msgstr "5/18 Piezo 4k Curto"
+msgstr "5/18 Bipe Simples"
 
 msgid "spk_6"
-msgstr "6/18 Piezo Dual 500"
+msgstr "6/18 Triplo 3x"
 
 msgid "spk_7"
-msgstr "7/18 Retro 1989"
+msgstr "7/18 Duplo 2x2"
 
 msgid "spk_8"
-msgstr "8/18 Retro Rápido"
+msgstr "8/18 Duplo Sobe"
 
 msgid "spk_9"
-msgstr "9/18 Retro Aço"
+msgstr "9/18 Duplo Desce"
 
 msgid "spk_10"
-msgstr "10/18 Vintage 2k+4k"
+msgstr "10/18 Tríade 3 Notas"
 
 msgid "spk_11"
-msgstr "11/18 Bipe Simples"
+msgstr "11/18 Sino Suave"
 
 msgid "spk_12"
-msgstr "12/18 Triplo 3x"
+msgstr "12/18 Ping Sonar"
 
 msgid "spk_13"
-msgstr "13/18 Duplo 2x2"
+msgstr "13/18 Piezo 4k 500ms"
 
 msgid "spk_14"
-msgstr "14/18 Duplo Sobe"
+msgstr "14/18 Piezo 2k 500ms"
 
 msgid "spk_15"
-msgstr "15/18 Duplo Desce"
+msgstr "15/18 Piezo 3.2k 500"
 
 msgid "spk_16"
-msgstr "16/18 Tríade 3 Notas"
+msgstr "16/18 Piezo 2.7k 500"
 
 msgid "spk_17"
-msgstr "17/18 Sino Suave"
+msgstr "17/18 Piezo 4k Curto"
 
 msgid "spk_18"
-msgstr "18/18 Ping Sonar"
+msgstr "18/18 Piezo Dual 500"
 
 msgid "secSilentModes"
 msgstr "DND / SONO / TEATRO"

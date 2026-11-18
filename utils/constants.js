@@ -1,4 +1,4 @@
-export const APP_VERSION = '2.3.5'
+export const APP_VERSION = '2.3.6'
 export const SERVICE_FILE = 'service/hourly_chime'
 
 export const BUZZER_VARIANT_IDS = [
@@ -16,12 +16,6 @@ export const BUZZER_GAP_MAX_MS = 750
 export const BUZZER_GAP_STEP_MS = 25
 
 export const SPEAKER_FILE_MAP = {
-  retro_500_4k: 'raw/spk_500_4k.mp3',
-  retro_500_2k: 'raw/spk_500_2k.mp3',
-  retro_500_32k: 'raw/spk_500_32k.mp3',
-  retro_500_27k: 'raw/spk_500_27k.mp3',
-  retro_500_4k_short: 'raw/spk_500_4k_short.mp3',
-  retro_500_dual: 'raw/spk_500_dual.mp3',
   retro_1989: 'raw/spk_retro_1989.mp3',
   retro_fast: 'raw/spk_retro_fast.mp3',
   retro_steel: 'raw/spk_retro_steel.mp3',
@@ -33,7 +27,13 @@ export const SPEAKER_FILE_MAP = {
   dual_down: 'raw/spk_dual_down.mp3',
   triad_3note: 'raw/spk_triad.mp3',
   soft_bell: 'raw/spk_soft_bell.mp3',
-  tactical_ping: 'raw/spk_tactical_ping.mp3'
+  tactical_ping: 'raw/spk_tactical_ping.mp3',
+  retro_500_4k: 'raw/spk_500_4k.mp3',
+  retro_500_2k: 'raw/spk_500_2k.mp3',
+  retro_500_32k: 'raw/spk_500_32k.mp3',
+  retro_500_27k: 'raw/spk_500_27k.mp3',
+  retro_500_4k_short: 'raw/spk_500_4k_short.mp3',
+  retro_500_dual: 'raw/spk_500_dual.mp3'
 }
 
 export const SPEAKER_VARIANT_IDS = Object.keys(SPEAKER_FILE_MAP)
@@ -56,7 +56,7 @@ export const DEFAULT_CONFIG = {
   buzzerVariant: 'hw_operate',
   buzzerRepeats: 1,
   buzzerGapMs: 0,
-  speakerVariant: 'retro_500_4k',
+  speakerVariant: 'retro_1989',
   speakerVolume: 10,
   vibrateMode: 'double_short',
   vibrateStrength: 1,

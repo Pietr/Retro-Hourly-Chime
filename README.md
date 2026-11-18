@@ -13,7 +13,7 @@ Classic retro digital watch hourly chime for **Amazfit (Zepp OS 3.0+)** smartwat
   - Automatically detects **Hardware Buzzer**, **Speaker**, and **Vibration Motor** capabilities on each watch model.
   - Unsupported hardware channels are automatically grayed out and their configuration sections hidden without blank spacing.
   - **Hardware Buzzer:** 6 native firmware tones (`Click`, `Remind 1`, `Remind 2`, `Alarm`, `Success`, `Alert`) with repetition count (`1x–4x`), configurable repeat gap (`Auto` native or `50 ms – 750 ms` in `25 ms` steps), and warning if system Buzzer Scene (*Settings → Sound & Vibration → Buzzer Scene → Other*) is disabled.
-  - **Speaker (18 MP3 Chimes):** Classic metallic piezo double-beeps (`Piezo 4k/2k/3.2k/2.7k 500ms`), `Retro 1989`, `Retro Quick`, `Retro Steel`, `Vintage 2k+4k`, multi-pulse, dual-tone, triad, bell, and sonar pings with comfortable -6 dB mastering, fine volume control (`1%–100%`, 1% steps up to 20% and 5% steps above 20%, default 10%), and automatic system volume restore.
+  - **Speaker (18 MP3 Chimes):** Starts with `Retro 1989` (default), `Retro Quick`, `Retro Steel`, `Vintage 2k+4k`, multi-pulse, dual-tone, triad, bell, sonar ping, and 6 metallic piezo 500ms chimes — all mastered at comfortable -6 dB with fine volume control (`1%–100%`, 1% steps up to 20% and 5% steps above 20%, default 10%) and automatic system volume restore.
   - **Vibration:** 7 haptic patterns (`2x Short`, `2x Crown`, `3x Fast`, `Short+Long`, `Long+Short`, `1x Single`, `System 2x`) with 3 strength levels (`Light`, `Medium`, `Strong`).
 - **Independent Silent Mode Controls (`DND / Sleep / Theater`):**
   - Reads `@zos/settings` (`getSystemMode()`) for Do Not Disturb, Sleep Mode, and Theater Mode.

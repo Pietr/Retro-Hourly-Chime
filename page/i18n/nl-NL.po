@@ -125,58 +125,58 @@ msgid "hw_6"
 msgstr "6/6 Alert"
 
 msgid "spk_1"
-msgstr "1/18 Piëzo 4k 500ms"
+msgstr "1/18 Retro 1989"
 
 msgid "spk_2"
-msgstr "2/18 Piëzo 2k 500ms"
+msgstr "2/18 Retro Snel"
 
 msgid "spk_3"
-msgstr "3/18 Piëzo 3.2k 500"
+msgstr "3/18 Retro Staal"
 
 msgid "spk_4"
-msgstr "4/18 Piëzo 2.7k 500"
+msgstr "4/18 Vintage 2k+4k"
 
 msgid "spk_5"
-msgstr "5/18 Piëzo 4k Kort"
+msgstr "5/18 Enkele Piep"
 
 msgid "spk_6"
-msgstr "6/18 Piëzo Dual 500"
+msgstr "6/18 Drievoudig 3x"
 
 msgid "spk_7"
-msgstr "7/18 Retro 1989"
+msgstr "7/18 Dubbel 2x2"
 
 msgid "spk_8"
-msgstr "8/18 Retro Snel"
+msgstr "8/18 Twee Omhoog"
 
 msgid "spk_9"
-msgstr "9/18 Retro Staal"
+msgstr "9/18 Twee Omlaag"
 
 msgid "spk_10"
-msgstr "10/18 Vintage 2k+4k"
+msgstr "10/18 Drieklank"
 
 msgid "spk_11"
-msgstr "11/18 Enkele Piep"
+msgstr "11/18 Zachte Bel"
 
 msgid "spk_12"
-msgstr "12/18 Drievoudig 3x"
+msgstr "12/18 Sonar Ping"
 
 msgid "spk_13"
-msgstr "13/18 Dubbel 2x2"
+msgstr "13/18 Piëzo 4k 500ms"
 
 msgid "spk_14"
-msgstr "14/18 Twee Omhoog"
+msgstr "14/18 Piëzo 2k 500ms"
 
 msgid "spk_15"
-msgstr "15/18 Twee Omlaag"
+msgstr "15/18 Piëzo 3.2k 500"
 
 msgid "spk_16"
-msgstr "16/18 Drieklank"
+msgstr "16/18 Piëzo 2.7k 500"
 
 msgid "spk_17"
-msgstr "17/18 Zachte Bel"
+msgstr "17/18 Piëzo 4k Kort"
 
 msgid "spk_18"
-msgstr "18/18 Sonar Ping"
+msgstr "18/18 Piëzo Dual 500"
 
 msgid "secSilentModes"
 msgstr "DND / SLAAP / THEATER"
