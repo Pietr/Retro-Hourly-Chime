@@ -1,29 +1,16 @@
-import * as appService from '@zos/app-service'
 import { releaseAllAudioHandles } from '../utils/audio'
 import { handleBackgroundWakeup } from '../utils/schedule'
 
-let exited = false
-
-function exitServiceCleanly() {
-  if (exited) return
-  exited = true
-  // Keep active hardware Buzzer/Vibrator waveforms ringing out naturally as Single Execution exits
-  releaseAllAudioHandles({ keepActiveHardware: true })
-  try {
-    if (appService && typeof appService.exit === 'function') {
-      appService.exit()
-    }
-  } catch (e) {}
-}
-
 AppService({
   onInit(params) {
-    exited = false
-    handleBackgroundWakeup(params, exitServiceCleanly)
+    // Pure Single Execution woken by @zos/alarm:
+    // - Atomic chimes (native Buzzer Auto / Vibrator) fire synchronously in <5 ms.
+    // - Async chimes (Speaker MP3 or custom Buzzer Gap) promote to short-lived service/chime_player.
+    // Do NOT call appService.exit() inside onInit(), letting Single Execution finish naturally.
+    handleBackgroundWakeup(params)
   },
 
   onDestroy() {
-    exited = true
     releaseAllAudioHandles({ keepActiveHardware: true })
   }
 })

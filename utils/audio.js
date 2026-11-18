@@ -342,27 +342,17 @@ export function getBuzzerRepeatCount(repeatLevel) {
   return 0
 }
 
-function busyWaitMs(ms) {
-  const target = Date.now() + ms
-  while (Date.now() < target) {
-    // Short synchronous wait for Single Execution AppService (immune to screen-off setTimeout freeze)
-  }
-}
-
 /**
  * Play hardware-native Buzzer firmware waveform.
  * - gapMs === 0 (Auto) or single beep: ONE atomic firmware call buzzer.start(sourceType, repeatCount).
- * - gapMs > 0 (50..750 ms) with multiple repeats:
- *   - In background Single Execution AppService, when total span <= 525 ms (within Zepp OS 600 ms cap),
- *     performs an exact synchronous wait inside onInit() so screen-off setTimeout freeze / immediate
- *     Single Execution teardown can never cancel the repeat beeps.
- *   - In foreground UI (or spans > 525 ms), uses tracked scheduleTimer().
+ * - gapMs > 0 (50..750 ms) with multiple repeats: schedules each full native beep with exact spacing
+ *   via tracked scheduleTimer() (runs cleanly in foreground UI and short-lived chime_player AppService).
  */
 function playBuzzerVariant(variantId, repeatLevel, gapMs = 0, isBackground = false) {
   try {
     if (!hasHardwareBuzzer()) {
       lastUiDiag = 'NO_HW_BUZZER'
-      return { ok: false, syncDone: true }
+      return false
     }
     if (!activeBuzzer) {
       activeBuzzer = new Buzzer()
@@ -387,52 +377,35 @@ function playBuzzerVariant(variantId, repeatLevel, gapMs = 0, isBackground = fal
 
     const preferredKeys = sourceKeyMap[v] || sourceKeyMap.hw_operate
     const sourceType = resolveBuzzerType(types, preferredKeys)
-    let syncDone = true
 
     if (repeatCount > 0 && gap > 0) {
-      const totalSpanMs = repeatCount * gap
-      if (isBackground && totalSpanMs <= 525) {
-        // Exact synchronous spacing inside Single Execution onInit (< 600ms system cap)
-        buzzer.start(sourceType, 0)
-        for (let i = 1; i <= repeatCount; i++) {
-          busyWaitMs(gap)
+      buzzer.start(sourceType, 0)
+      for (let i = 1; i <= repeatCount; i++) {
+        scheduleTimer(() => {
           try {
-            buzzer.stop()
-          } catch (e) {}
-          buzzer.start(sourceType, 0)
-        }
-        syncDone = true
-      } else {
-        syncDone = false
-        buzzer.start(sourceType, 0)
-        for (let i = 1; i <= repeatCount; i++) {
-          scheduleTimer(() => {
+            if (!activeBuzzer) return
             try {
-              if (!activeBuzzer) return
-              try {
-                activeBuzzer.stop()
-              } catch (e) {}
-              activeBuzzer.start(sourceType, 0)
-            } catch (e) {
-              logger.error('playBuzzerVariant repeat failed:', e)
-            }
-          }, i * gap)
-        }
+              activeBuzzer.stop()
+            } catch (e) {}
+            activeBuzzer.start(sourceType, 0)
+          } catch (e) {
+            logger.error('playBuzzerVariant repeat failed:', e)
+          }
+        }, i * gap)
       }
     } else {
       buzzer.start(sourceType, repeatCount)
-      syncDone = true
     }
 
     if (!isBackground) {
       const gapTag = gap > 0 ? `${gap}ms` : 'auto'
       lastUiDiag = `UI:ok en=${sysEnabled} str=${sysStr} t=${sourceType} r=${repeatCount} g=${gapTag}`
     }
-    return { ok: true, syncDone }
+    return true
   } catch (e) {
     logger.error('playBuzzerVariant failed:', e)
     lastUiDiag = `UI:ERR ${e && e.message ? e.message : e}`
-    return { ok: false, syncDone: true }
+    return false
   }
 }
 
@@ -810,8 +783,30 @@ export function previewVibrateMode(modeId, strengthLevel) {
 }
 
 /**
+ * Synchronous, zero-timer hardware chime for Single Execution AppService (and fallback when
+ * bg_service permission is unavailable). Uses firmware-native Buzzer repeatCount + Vibrator Action[].
+ */
+export function playAtomicChimeSync(cfg, options = {}) {
+  const allowSound = options.allowSound !== undefined ? Boolean(options.allowSound) : true
+  const allowVibrate = options.allowVibrate !== undefined ? Boolean(options.allowVibrate) : true
+  const caps = getHardwareCapabilities()
+
+  let triggered = false
+  if (cfg.vibrateEnabled && allowVibrate && caps.hasVibrator) {
+    playVibrateMode(cfg.vibrateMode, cfg.vibrateStrength)
+    triggered = true
+  }
+  if (cfg.buzzerEnabled && allowSound && caps.hasBuzzer) {
+    // Force gap = 0 (native firmware repeatCount) for 100% timer-free Single Execution reliability
+    playBuzzerVariant(cfg.buzzerVariant, cfg.buzzerRepeats, 0, true)
+    triggered = true
+  }
+  return triggered
+}
+
+/**
  * Execute enabled & hardware-supported channels (respecting optional DND overrides).
- * Calls onDone() once playback completes (used by Single Execution AppService to exit cleanly).
+ * Calls onDone() once playback completes (used by short-lived chime_player AppService to exit cleanly).
  */
 export function playHourlyChime(cfg, options = {}) {
   const isBackground = Boolean(options.isBackground)
@@ -842,18 +837,19 @@ export function playHourlyChime(cfg, options = {}) {
     playVibrateMode(cfg.vibrateMode, cfg.vibrateStrength)
   }
 
-  let buzzerResult = { ok: false, syncDone: true }
   if (runBuzzer) {
-    buzzerResult = playBuzzerVariant(cfg.buzzerVariant, cfg.buzzerRepeats, cfg.buzzerGapMs, isBackground)
+    playBuzzerVariant(cfg.buzzerVariant, cfg.buzzerRepeats, cfg.buzzerGapMs, isBackground)
   }
 
   let minSettleMs = 0
-  if (runBuzzer && !buzzerResult.syncDone) {
+  if (runBuzzer) {
     const repeatCount = getBuzzerRepeatCount(cfg.buzzerRepeats)
     const rawGap = Number(cfg.buzzerGapMs)
     const gap = Number.isFinite(rawGap) ? Math.max(0, Math.min(BUZZER_GAP_MAX_MS, Math.round(rawGap))) : 0
     if (repeatCount > 0 && gap > 0) {
       minSettleMs = Math.max(minSettleMs, Math.min(3600, repeatCount * gap + 650))
+    } else {
+      minSettleMs = Math.max(minSettleMs, Math.min(2400, 450 * (repeatCount + 1) + 300))
     }
   }
   if (runVibrate) {
@@ -863,7 +859,7 @@ export function playHourlyChime(cfg, options = {}) {
   if (runSpeaker) {
     const startTs = Date.now()
     if (onDone) {
-      scheduleTimer(finishOnce, Math.max(3800, minSettleMs + 500))
+      scheduleTimer(finishOnce, Math.max(3800, minSettleMs + 600))
     }
     playSpeakerVariant(cfg.speakerVariant, cfg.speakerVolume, () => {
       if (!onDone) return
@@ -876,11 +872,7 @@ export function playHourlyChime(cfg, options = {}) {
       }
     })
   } else if (onDone) {
-    if (minSettleMs <= 0) {
-      finishOnce()
-    } else {
-      scheduleTimer(finishOnce, minSettleMs)
-    }
+    scheduleTimer(finishOnce, Math.max(500, minSettleMs))
   }
 
   return true

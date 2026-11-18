@@ -31,7 +31,8 @@ Classic retro digital watch hourly chime for **Amazfit (Zepp OS 3.0+)** smartwat
 ## Project Structure
 
 - `app.js` — Lightweight app entry point (schedule sync and cleanup happen directly in the page bundle)
-- `service/hourly_chime.js` — Single-execution AppService woken by `@zos/alarm`
+- `service/hourly_chime.js` — Single-execution AppService woken by `@zos/alarm` (handles atomic chimes directly and promotes async MP3 / custom buzzer gaps to `chime_player`)
+- `service/chime_player.js` — Short-lived on-demand async playback AppService that plays MP3s / timed buzzer gaps and exits immediately (`appService.exit()`, 0 RAM held between hours)
 - `page/gt/home/index.page.js` — Adaptive round & square main UI
 - `utils/constants.js` — App version, defaults, and audio/haptic ID maps
 - `utils/catalog.js` — UI-only i18n variant catalog (excluded from AppService bundle)

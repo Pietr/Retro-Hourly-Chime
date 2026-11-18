@@ -34,6 +34,7 @@ import {
   releaseAllAudioHandles
 } from '../../../utils/audio'
 import {
+  ensureBackgroundPermission,
   formatHour,
   getBackgroundDiagnostics,
   getNextChimeLabel,
@@ -1225,7 +1226,10 @@ Page({
       alpha: 0
     })
 
-    // Initial schedule sync + visual refresh
+    // Initial schedule sync + request bg_service once if enabled (for short-lived async chime_player)
+    if (cfg.enabled) {
+      ensureBackgroundPermission()
+    }
     const res = syncBackgroundSchedule(cfg, true)
     this.state.alarmError = Boolean(cfg.enabled && hasAnyActiveChannel(cfg, caps) && !res.ok)
     this.refreshUI()
@@ -1441,6 +1445,14 @@ Page({
   applyConfigChange(partial, immediateSave = true, syncAlarm = false) {
     const updated = updateConfig(partial, this.state.config, immediateSave)
     this.state.config = updated
+    if (
+      updated.enabled &&
+      (Object.prototype.hasOwnProperty.call(partial, 'enabled') ||
+        Object.prototype.hasOwnProperty.call(partial, 'speakerEnabled') ||
+        Object.prototype.hasOwnProperty.call(partial, 'buzzerGapMs'))
+    ) {
+      ensureBackgroundPermission()
+    }
     if (syncAlarm) {
       const res = syncBackgroundSchedule(updated, true)
       this.state.alarmError = Boolean(
