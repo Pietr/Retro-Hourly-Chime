@@ -34,7 +34,7 @@ let singletonPlayer = null
 let playerPlayToken = 0
 let playerIsPlaying = false
 let playerWatchdogId = null
-let pendingVolumeToApply = 50
+let pendingVolumeToApply = 10
 let savedSystemVolume = null
 let lastPlayerStopTs = 0
 let pendingSpeakerDone = null
@@ -519,7 +519,7 @@ function playSpeakerVariant(variantId, volumePercent, onDone) {
 
   const v = variantId || 'retro_500_4k'
   const rawVol = Number(volumePercent)
-  const vol = Number.isFinite(rawVol) ? Math.max(1, Math.min(100, Math.round(rawVol))) : 50
+  const vol = Number.isFinite(rawVol) ? Math.max(1, Math.min(100, Math.round(rawVol))) : 10
   pendingVolumeToApply = vol
 
   const mp3File = SPEAKER_FILE_MAP[v] || SPEAKER_FILE_MAP.retro_500_4k

@@ -721,7 +721,7 @@ Page({
         color: COLORS.WHITE,
         normal_color: COLORS.BTN_VARIANT,
         press_color: COLORS.BTN_VARIANT_PRESS,
-        text: `${t('volumePrefix', 'Volume:')} 50%`,
+        text: `${t('volumePrefix', 'Volume:')} 10%`,
         click_func: () => {
           previewSpeakerVariant(this.state.config.speakerVariant, this.state.config.speakerVolume)
         }
@@ -1324,16 +1324,16 @@ Page({
     const current = Number(this.state.config.speakerVolume)
     let next
     if (direction < 0) {
-      if (current <= 10) {
+      if (current <= 20) {
         next = Math.max(1, current - 1)
       } else {
         const rem = current % 5
         next = rem === 0 ? current - 5 : current - rem
-        next = Math.max(10, next)
+        next = Math.max(20, next)
       }
     } else {
-      if (current < 10) {
-        next = Math.min(10, current + 1)
+      if (current < 20) {
+        next = Math.min(20, current + 1)
       } else {
         const rem = current % 5
         next = rem === 0 ? current + 5 : current + (5 - rem)
