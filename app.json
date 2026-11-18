@@ -5,8 +5,8 @@
     "appName": "Retro Hourly Chime",
     "appType": "app",
     "version": {
-      "code": 32,
-      "name": "2.4.0"
+      "code": 33,
+      "name": "2.4.1"
     },
     "icon": "icon.png",
     "vender": "Pietr",

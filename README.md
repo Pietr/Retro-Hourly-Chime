@@ -30,7 +30,7 @@ Classic retro digital watch hourly chime for **Amazfit (Zepp OS 3.0+)** smartwat
 
 ## Project Structure
 
-- `app.js` — App lifecycle and single RTC schedule sync on exit
+- `app.js` — Lightweight app entry point (schedule sync and cleanup happen directly in the page bundle)
 - `service/hourly_chime.js` — Single-execution AppService woken by `@zos/alarm`
 - `page/gt/home/index.page.js` — Adaptive round & square main UI
 - `utils/constants.js` — App version, defaults, and audio/haptic ID maps
